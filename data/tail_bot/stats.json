@@ -1,16 +1,16 @@
 {
-  "total_bets": 44,
-  "pending_bets": 44,
+  "total_bets": 45,
+  "pending_bets": 45,
   "resolved_bets": 0,
   "wins": 0,
   "losses": 0,
   "cancelled": 0,
-  "total_invested": 88.0,
+  "total_invested": 90.0,
   "total_returned": 0,
   "total_profit": 0,
   "hit_rate": 0,
   "roi": -100.0,
   "best_win": 0,
   "avg_win_multiplier": 0,
-  "last_updated": "2025-12-30T22:29:53.152994"
+  "last_updated": "2025-12-30T23:02:10.787129"
 }

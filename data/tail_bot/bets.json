@@ -658,5 +658,20 @@
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
+  },
+  {
+    "id": "TAIL-1767131868-45",
+    "timestamp": 1767131868.8701203,
+    "question": "Will Gold close between $4500 and $4600 at the end of 2025?",
+    "condition_id": "0x87329b0a31ce002e2e8ee5a6e7fa9d835075e8fb8324769bd3f87c53b35b6934",
+    "token_id": "72867813791254727791747322083772065580604141552028961198257130696835329755581",
+    "entry_price": 0.0115,
+    "stake": 2.0,
+    "size": 173.91,
+    "potential_return": 173.91304347826087,
+    "status": "pending",
+    "exit_price": null,
+    "pnl": 0.0,
+    "resolved_at": null
   }
 ]

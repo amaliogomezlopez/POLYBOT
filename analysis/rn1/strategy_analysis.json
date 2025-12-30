@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "username": "RN1",
+    "joined": "Dec 2024",
+    "views": 170900,
+    "positions_value": 508000,
+    "biggest_win": 129100,
+    "predictions": 14127,
+    "profit_loss": 774956
+  },
+  "positions": [
+    {
+      "market": "Will Aston Villa FC win on 2025-12-30?",
+      "side": "NO",
+      "shares": 60796.5,
+      "entry_price": 0.86,
+      "value": 60553.27,
+      "profit": 8127.64,
+      "profit_pct": 15.5,
+      "category": "sports",
+      "type": "favorite_fade"
+    },
+    {
+      "market": "Will Arsenal FC vs. Aston Villa FC end in a draw?",
+      "side": "NO",
+      "shares": 58219.9,
+      "entry_price": 0.79,
+      "value": 57055.48,
+      "profit": 11329.24,
+      "profit_pct": 24.78,
+      "category": "sports",
+      "type": "draw_fade"
+    },
+    {
+      "market": "Will Manchester United FC win on 2025-12-30?",
+      "side": "NO",
+      "shares": 50000,
+      "entry_price": 0.75,
+      "value": 45000,
+      "profit": 5000,
+      "profit_pct": 12.5,
+      "category": "sports",
+      "type": "favorite_fade"
+    }
+  ],
+  "metrics": {
+    "avg_position_size": 54202.916666666664,
+    "avg_profit_pct": 17.593333333333334,
+    "trades_per_day": 470.9
+  },
+  "strategy": {
+    "type": "high_frequency_sports_betting",
+    "specialization": "EPL football",
+    "approach": "favorite_fading",
+    "risk_profile": "high_stake_moderate_odds"
+  },
+  "analyzed_at": "2025-12-30T22:57:37.068331"
+}

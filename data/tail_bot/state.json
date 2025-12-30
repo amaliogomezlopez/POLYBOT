@@ -1,13 +1,13 @@
 {
-  "total_bets": 44,
-  "open_bets": 44,
+  "total_bets": 45,
+  "open_bets": 45,
   "won_bets": 0,
   "lost_bets": 0,
-  "total_invested": 88.0,
+  "total_invested": 90.0,
   "total_returns": 0.0,
-  "current_exposure": 88.0,
-  "bets_today": 44,
-  "last_scan": 1767129234.2734694,
+  "current_exposure": 90.0,
+  "bets_today": 45,
+  "last_scan": 1767132109.9937637,
   "seen_conditions": [
     "0x6c6f70168265ec2dadd6808a9afdc9fdcda6cda4b81875e31dba8d0b38d50871",
     "0x760d0b414a5a1db4db13c48585e0a73b8a4eb08b050983c023efc01dbb2c5fa3",
@@ -52,6 +52,7 @@
     "0x3036b8b4719230036daeb85cd869e3f24295640e9f6fcfbff512cfd96f2e36f3",
     "0x1a22fdee8c6ae07d69c8a5ef1736207fde34128421326b18383d8ed1a6192cc1",
     "0xb013e2a61c4087e2d86339ebc0eb424bed22744f1b1dbafe7f504fcbfe114ef1",
-    "0xab03a5adc30a70d64279a1e894b94665583fcec6ef6d6fcfd2d4687968847ef5"
+    "0xab03a5adc30a70d64279a1e894b94665583fcec6ef6d6fcfd2d4687968847ef5",
+    "0x87329b0a31ce002e2e8ee5a6e7fa9d835075e8fb8324769bd3f87c53b35b6934"
   ]
 }
