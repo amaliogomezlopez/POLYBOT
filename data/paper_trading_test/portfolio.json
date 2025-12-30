@@ -1,0 +1,10 @@
+{
+  "initial_balance": 100.0,
+  "current_balance": 100.0909090909091,
+  "total_trades": 2,
+  "winning_trades": 1,
+  "losing_trades": 1,
+  "total_pnl": 0.09090909090908994,
+  "peak_balance": 104.0909090909091,
+  "max_drawdown": 0.03842794759825328
+}

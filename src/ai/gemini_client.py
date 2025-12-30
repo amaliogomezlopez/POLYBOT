@@ -22,6 +22,11 @@ class GeminiModel(Enum):
     FLASH_20 = "gemini-2.0-flash"          # Faster, slightly less stable
     FLASH_LITE = "gemini-2.0-flash-lite"   # Fastest, less accurate
     PRO_25 = "gemini-2.5-pro"              # Most accurate, slower
+    FLASH_LITE_25 = "gemini-2.5-flash-lite" # Fastest 2.5 version
+
+
+# Default model to use
+DEFAULT_MODEL = GeminiModel.FLASH_25
 
 
 @dataclass

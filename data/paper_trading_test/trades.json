@@ -1,0 +1,38 @@
+[
+  {
+    "id": "paper_1767125803861",
+    "timestamp": 1767125803.861642,
+    "asset": "BTC",
+    "market_id": "test_btc_flash",
+    "market_question": "Will BTC go UP in 1 hour?",
+    "side": "UP",
+    "entry_price": 0.55,
+    "size_usdc": 5.0,
+    "tokens_bought": 9.09090909090909,
+    "ai_bias": "UP",
+    "ai_confidence": 0.75,
+    "status": "won",
+    "exit_price": 1.0,
+    "pnl": 4.09090909090909,
+    "resolved_at": 1767125803.8636413,
+    "notes": "Test paper trade"
+  },
+  {
+    "id": "paper_1767125803864",
+    "timestamp": 1767125803.864641,
+    "asset": "ETH",
+    "market_id": "test_eth_flash",
+    "market_question": "Will ETH go DOWN in 1 hour?",
+    "side": "DOWN",
+    "entry_price": 0.4,
+    "size_usdc": 4.0,
+    "tokens_bought": 10.0,
+    "ai_bias": "DOWN",
+    "ai_confidence": 0.65,
+    "status": "lost",
+    "exit_price": 0.0,
+    "pnl": -4.0,
+    "resolved_at": 1767125803.8656428,
+    "notes": "Test paper trade 2"
+  }
+]
