@@ -1,0 +1,506 @@
+{
+  "timestamp": "2025-12-30T23:03:54.055077",
+  "total_markets": 161,
+  "scored_opportunities": [
+    {
+      "condition_id": "0xdb4143780c085f54f82e6baf461e4df46ad900df8148d03258da93cf2c64b165",
+      "question": "Will MicroStrategy hold 680k+ BTC by December 31?",
+      "yes_price": 0.0035,
+      "potential": 285.7142857142857,
+      "category": "crypto",
+      "ml_score": 0.7745203599596656,
+      "recommendation": "STRONG_BET",
+      "expected_value": 20.206605177700702
+    },
+    {
+      "condition_id": "0x6c6f70168265ec2dadd6808a9afdc9fdcda6cda4b81875e31dba8d0b38d50871",
+      "question": "Will Google have the best AI model for math at the end of 2025?",
+      "yes_price": 0.0015,
+      "potential": 666.6666666666666,
+      "category": "tech",
+      "ml_score": 0.7611188025255824,
+      "recommendation": "STRONG_BET",
+      "expected_value": 48.817365381958055
+    },
+    {
+      "condition_id": "0x35f20927091b3d3725d63ed337b61bc081578385a97c6e202d6d2aa687a7ebcc",
+      "question": "Will Nvidia (NVDA) hit a 52-Week High by December 31?",
+      "yes_price": 0.0045,
+      "potential": 222.22222222222223,
+      "category": "tech",
+      "ml_score": 0.7580901225072769,
+      "recommendation": "STRONG_BET",
+      "expected_value": 14.922256179079104
+    },
+    {
+      "condition_id": "0x4b1c6ee4b9a0d635ff56a5e2e17eda425eabf081cf0fbcb325980cdfe597d845",
+      "question": "Will Microsoft (MSFT) hit a 52-Week High by December 31?",
+      "yes_price": 0.004,
+      "potential": 250.0,
+      "category": "tech",
+      "ml_score": 0.7572808880692632,
+      "recommendation": "STRONG_BET",
+      "expected_value": 17.00775029053851
+    },
+    {
+      "condition_id": "0x830eb792fa2f2a591b5a0610a76400f80228629105f4f5896434be777665265c",
+      "question": "Will Henri Bontenbal become the next Prime Minister of the Netherlands?",
+      "yes_price": 0.0025,
+      "potential": 400.0,
+      "category": "crypto",
+      "ml_score": 0.7554556172967356,
+      "recommendation": "STRONG_BET",
+      "expected_value": 28.2937702535991
+    },
+    {
+      "condition_id": "0xbade2032beae36c01fdd9bf4caef7bed88774b73f43552456f472b57af50fe2f",
+      "question": "Will Trump publicly disparage Netanyahu by December 31?",
+      "yes_price": 0.0035,
+      "potential": 285.7142857142857,
+      "category": "political",
+      "ml_score": 0.7459238096554276,
+      "recommendation": "STRONG_BET",
+      "expected_value": 19.386701228263476
+    },
+    {
+      "condition_id": "0x53b77ff9a4584d7e6e5bf222445cd55112947fcce711d2337866227925b485ec",
+      "question": "Will OpenAI have the best AI model for math at the end of 2025?",
+      "yes_price": 0.002,
+      "potential": 500.0,
+      "category": "tech",
+      "ml_score": 0.7449739047860836,
+      "recommendation": "STRONG_BET",
+      "expected_value": 35.32319262978278
+    },
+    {
+      "condition_id": "0x2eaf444c649e7a1d8d83ca3eb8486b91edcbe409970d8369dacd806b2a964638",
+      "question": "Will Trump disparage Nick Fuentes by December 31?",
+      "yes_price": 0.007,
+      "potential": 142.85714285714286,
+      "category": "political",
+      "ml_score": 0.7366666726765866,
+      "recommendation": "STRONG_BET",
+      "expected_value": 8.597476276933183
+    },
+    {
+      "condition_id": "0x760d0b414a5a1db4db13c48585e0a73b8a4eb08b050983c023efc01dbb2c5fa3",
+      "question": "Will El Salvador hold $1b+ of BTC by December 31?",
+      "yes_price": 0.0035,
+      "potential": 285.7142857142857,
+      "category": "crypto",
+      "ml_score": 0.7308975904152222,
+      "recommendation": "STRONG_BET",
+      "expected_value": 18.9558780566193
+    },
+    {
+      "condition_id": "0xfe5a3b231254aa366ba7578e260cd2a2c34e23e70a4a8ff6868775dc75263a0e",
+      "question": "Will OpenAI be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?",
+      "yes_price": 0.014,
+      "potential": 71.42857142857143,
+      "category": "tech",
+      "ml_score": 0.7179248638899423,
+      "recommendation": "STRONG_BET",
+      "expected_value": 3.199827228460011
+    },
+    {
+      "condition_id": "0x8173b330ce03b541e883ee05ac10709449dc35bb70b8e210cb95d70014d774f2",
+      "question": "Will Meta (META) hit a 52-Week High by December 31?",
+      "yes_price": 0.0065,
+      "potential": 153.84615384615384,
+      "category": "tech",
+      "ml_score": 0.7143118484554912,
+      "recommendation": "STRONG_BET",
+      "expected_value": 9.060844238006952
+    },
+    {
+      "condition_id": "0x6dfe6b208b9c5cef6aab980e3106f400c54530c42fc9ab28cb7a8cd07a9a43e1",
+      "question": "Will Half-Life 3 be announced before 2026?",
+      "yes_price": 0.0045,
+      "potential": 222.22222222222223,
+      "category": "other",
+      "ml_score": 0.7137156654000648,
+      "recommendation": "STRONG_BET",
+      "expected_value": 13.931719686541447
+    },
+    {
+      "condition_id": "0xb9ce6bdbe12a13edac7f8ca5bb9a2c8a50da0be47b01080867ca7d8b7c4eef5d",
+      "question": "Will Amazon (AMZN) hit a 52-Week High by December 31?",
+      "yes_price": 0.0045,
+      "potential": 222.22222222222223,
+      "category": "tech",
+      "ml_score": 0.7122055213625209,
+      "recommendation": "STRONG_BET",
+      "expected_value": 13.89800991574783
+    },
+    {
+      "condition_id": "0x2d653b2987ba4a2ab6858d39aab560651a868b15f41322153caa28fe21dc29d7",
+      "question": "Lighter market cap (FDV) >$6B one day after launch?",
+      "yes_price": 0.0025,
+      "potential": 400.0,
+      "category": "finance",
+      "ml_score": 0.7107588351488985,
+      "recommendation": "STRONG_BET",
+      "expected_value": 26.501429289470828
+    },
+    {
+      "condition_id": "0x46de9eb9e217dd44e40110ba6559dca1b3bd31f98ddc506ad9a5dc258b810f76",
+      "question": "Will BBB be part of the next Government of the Netherlands?",
+      "yes_price": 0.029,
+      "potential": 34.48275862068965,
+      "category": "crypto",
+      "ml_score": 0.7100718598905963,
+      "recommendation": "STRONG_BET",
+      "expected_value": 0.5195308407842187
+    },
+    {
+      "condition_id": "0x69b009591dd768c3878e2ff9b28b8661e039409ea2f156ad70aa5224c08702e0",
+      "question": "Will Russia capture Lyman by December 31?",
+      "yes_price": 0.0035,
+      "potential": 285.7142857142857,
+      "category": "other",
+      "ml_score": 0.7089227050577758,
+      "recommendation": "STRONG_BET",
+      "expected_value": 18.325826700727944
+    },
+    {
+      "condition_id": "0x0e510292279866b83d6e5539538751ac1d3965972fd04971db2c642c37aee102",
+      "question": "Will Nicol\u00e1s Maduro be the next leader out in 2025?",
+      "yes_price": 0.0025,
+      "potential": 400.0,
+      "category": "other",
+      "ml_score": 0.7056026679095139,
+      "recommendation": "STRONG_BET",
+      "expected_value": 26.294666983171506
+    },
+    {
+      "condition_id": "0x8ee2f1640386310eb5e7ffa596ba9335f2d324e303d21b0dfea6998874445791",
+      "question": "Russia x Ukraine ceasefire in 2025?",
+      "yes_price": 0.0025,
+      "potential": 400.0,
+      "category": "tech",
+      "ml_score": 0.7032230947399681,
+      "recommendation": "STRONG_BET",
+      "expected_value": 26.199246099072724
+    },
+    {
+      "condition_id": "0x6afdc2e579e740922f1b4253cf338b752eed3cc65e94f573d87ba08df4367227",
+      "question": "Will Ja Morant be traded in 2025?",
+      "yes_price": 0.0045,
+      "potential": 222.22222222222223,
+      "category": "other",
+      "ml_score": 0.7020433017278441,
+      "recommendation": "STRONG_BET",
+      "expected_value": 13.671166590791545
+    },
+    {
+      "condition_id": "0x700b422f79a08e5c31e6b05160cabb3d5e4f30f13d731c1a6056515e461a1f40",
+      "question": "Will Trump announce Kevin Hassett as next Fed Chair in 2025?",
+      "yes_price": 0.003,
+      "potential": 333.3333333333333,
+      "category": "political",
+      "ml_score": 0.6988603622269638,
+      "recommendation": "BET",
+      "expected_value": 21.365231443788154
+    },
+    {
+      "condition_id": "0x8c8da1b42514326113bfacc19f2a12431e66e5e55ed9d8978ee146b35b1618c4",
+      "question": "Will Anthropic have the best AI model for coding at the end of 2025?",
+      "yes_price": 0.0055,
+      "potential": 181.81818181818184,
+      "category": "tech",
+      "ml_score": 0.6946190192207002,
+      "recommendation": "BET",
+      "expected_value": 10.698898615025712
+    },
+    {
+      "condition_id": "0xafc235557ace53ff0b0d2e93392314a7c3f3daab26a79050e985c11282f66df7",
+      "question": "Maduro out in 2025?",
+      "yes_price": 0.004,
+      "potential": 250.0,
+      "category": "other",
+      "ml_score": 0.6898688610057143,
+      "recommendation": "BET",
+      "expected_value": 15.315708411243431
+    },
+    {
+      "condition_id": "0x18e4755dbeea07612bb8a7eca2a65f2a216f739e0df0ae844c9f8dd99d897b2f",
+      "question": "Will Keith Kellogg be next National Security Advisor?",
+      "yes_price": 0.0015,
+      "potential": 666.6666666666666,
+      "category": "other",
+      "ml_score": 0.687430151282838,
+      "recommendation": "BET",
+      "expected_value": 43.89741976731749
+    },
+    {
+      "condition_id": "0x339d8be5cb57653a9ee63e07d216543622cdefb45eed81b1680e83887a2d7bc6",
+      "question": "Aziz Akhannouch out as Morocco Prime Minister by December 31?",
+      "yes_price": 0.0025,
+      "potential": 400.0,
+      "category": "other",
+      "ml_score": 0.6866426665067817,
+      "recommendation": "BET",
+      "expected_value": 25.53437092692195
+    },
+    {
+      "condition_id": "0x0c4bcd4daf57940c5f3a27f80d378d4ca0d90ac8a6f7096528b13b4475299b51",
+      "question": "Will Gold close between $4600 and $4700 at the end of 2025?",
+      "yes_price": 0.003,
+      "potential": 333.3333333333333,
+      "category": "other",
+      "ml_score": 0.683452296850516,
+      "recommendation": "BET",
+      "expected_value": 20.850088458035586
+    },
+    {
+      "condition_id": "0xda2699840a84b3388cf1162df4b8d4e249a22c44380e55d7820e25c1513121b0",
+      "question": "Cardano ETF in 2025?",
+      "yes_price": 0.0055,
+      "potential": 181.81818181818184,
+      "category": "other",
+      "ml_score": 0.6826855540871812,
+      "recommendation": "BET",
+      "expected_value": 10.48073317517565
+    },
+    {
+      "condition_id": "0x820c249986044ad3ab808a4fb401f355a97eeac28d1e905ea37c849700e9cfd4",
+      "question": "Will Trump sell 1-100 Gold Cards in 2025?",
+      "yes_price": 0.01,
+      "potential": 100.0,
+      "category": "political",
+      "ml_score": 0.6822451668729419,
+      "recommendation": "BET",
+      "expected_value": 4.890676185416714
+    },
+    {
+      "condition_id": "0xf89eceb4c0e7c5da6a2caff35b73554ca0498fbc9e109380f2ce6fe4a31b6c5a",
+      "question": "U.S. agrees to give Ukraine security guarantee in 2025?",
+      "yes_price": 0.0045,
+      "potential": 222.22222222222223,
+      "category": "tech",
+      "ml_score": 0.681981735159473,
+      "recommendation": "BET",
+      "expected_value": 13.223347843726458
+    },
+    {
+      "condition_id": "0xd131137f1f93f7e2492083f3a27c68d4398da7c5025a035229cf6bb0384a9dbd",
+      "question": "Will Tony Blair be named in newly released Epstein files?",
+      "yes_price": 0.018,
+      "potential": 55.55555555555556,
+      "category": "tech",
+      "ml_score": 0.6806282007169373,
+      "recommendation": "BET",
+      "expected_value": 1.8493306018324567
+    },
+    {
+      "condition_id": "0xba4493c626ec27930b6c580c956b69580e77c488a84140997180f054230a4553",
+      "question": "Lighter market cap (FDV) >$4B one day after launch?",
+      "yes_price": 0.0135,
+      "potential": 74.07407407407408,
+      "category": "finance",
+      "ml_score": 0.6704048135764789,
+      "recommendation": "BET",
+      "expected_value": 3.033002063405639
+    },
+    {
+      "condition_id": "0xae3fbb421663b30f5438e3bdce9b45af2069bad5b5ef16ec17c38553ea42c787",
+      "question": "Will Grok have a MacOS desktop app live by December 31?",
+      "yes_price": 0.008,
+      "potential": 125.0,
+      "category": "other",
+      "ml_score": 0.669146903415929,
+      "recommendation": "BET",
+      "expected_value": 6.431250983040705
+    },
+    {
+      "condition_id": "0x2aede95caef87e83a74d53fd876eb3840d810d8eb822e009d9ae0fd9c1bf7d7e",
+      "question": "Will there be exactly 3 earthquakes of magnitude 7.0 or higher worldwide by December 31?",
+      "yes_price": 0.017,
+      "potential": 58.8235294117647,
+      "category": "other",
+      "ml_score": 0.6650409229084433,
+      "recommendation": "BET",
+      "expected_value": 1.9785095211640402
+    },
+    {
+      "condition_id": "0xab03a5adc30a70d64279a1e894b94665583fcec6ef6d6fcfd2d4687968847ef5",
+      "question": "Will Russia capture all of Pokrovsk by December 31?",
+      "yes_price": 0.01,
+      "potential": 100.0,
+      "category": "other",
+      "ml_score": 0.6645398863231643,
+      "recommendation": "BET",
+      "expected_value": 4.711852851863959
+    },
+    {
+      "condition_id": "0xb991b7cae887579fd1087144cc41fdb3c1a255ac20b2a39cc886ad5acd73322f",
+      "question": "Will Steve Witkoff be next National Security Advisor?",
+      "yes_price": 0.003,
+      "potential": 333.3333333333333,
+      "category": "other",
+      "ml_score": 0.6571446153460674,
+      "recommendation": "BET",
+      "expected_value": 19.970534973070183
+    },
+    {
+      "condition_id": "0x1a22fdee8c6ae07d69c8a5ef1736207fde34128421326b18383d8ed1a6192cc1",
+      "question": "Will Trump send the national guard to Detroit by December 31?",
+      "yes_price": 0.013,
+      "potential": 76.92307692307692,
+      "category": "political",
+      "ml_score": 0.6552180134216429,
+      "recommendation": "BET",
+      "expected_value": 3.1056603661240327
+    },
+    {
+      "condition_id": "0x770298d8f96bac54802d3f39fcbecdec42b725c994c26f5245827e1e78cfc8d7",
+      "question": "Will any AI model reach 1500+ on Chatbot Arena by Dec 31?",
+      "yes_price": 0.017,
+      "potential": 58.8235294117647,
+      "category": "tech",
+      "ml_score": 0.6507233974230427,
+      "recommendation": "BET",
+      "expected_value": 1.8928570304660854
+    },
+    {
+      "condition_id": "0x96dab3df931e9bea24dece049bf5632392fb83a185686c42a07e4a28191c6594",
+      "question": "\"The Witcher: Season 4\" Rotten Tomatoes score is between 60 and 74?",
+      "yes_price": 0.008,
+      "potential": 125.0,
+      "category": "other",
+      "ml_score": 0.6493960338621036,
+      "recommendation": "BET",
+      "expected_value": 6.182390026662506
+    },
+    {
+      "condition_id": "0x4a82344b10b98ef371f09bdb08044e65929f8ac98af63e8dd2d5897c548b4e9c",
+      "question": "Will Trump spend >25% of 2025 presidency golfing?",
+      "yes_price": 0.026,
+      "potential": 38.46153846153846,
+      "category": "political",
+      "ml_score": 0.6484167552801021,
+      "recommendation": "BET",
+      "expected_value": 0.5587522727591725
+    },
+    {
+      "condition_id": "0x4273517fc8141d57ad1528ede46efdceebdb6a4da746d5de5bad216564209a1e",
+      "question": "Will Tucker Carlson win the 2028 Republican presidential nomination?",
+      "yes_price": 0.0285,
+      "potential": 35.08771929824561,
+      "category": "political",
+      "ml_score": 0.6480753776045922,
+      "recommendation": "BET",
+      "expected_value": 0.3387562311099055
+    },
+    {
+      "condition_id": "0x2393ed0b0fdc450054c7b9071907eca75cf4fc36e385adf4a0a5f99ee62243e8",
+      "question": "Will Trump deport 500,000-750,000- people?",
+      "yes_price": 0.014,
+      "potential": 71.42857142857143,
+      "category": "political",
+      "ml_score": 0.6439452841142135,
+      "recommendation": "BET",
+      "expected_value": 2.6640037006558037
+    },
+    {
+      "condition_id": "0x677c19032d9fc09658a4b05826e3efd656d725394bc2f5a4ea4b2c4e41a2077a",
+      "question": "Will ChatGPT reach 1b monthly active users in 2025?",
+      "yes_price": 0.0095,
+      "potential": 105.26315789473685,
+      "category": "other",
+      "ml_score": 0.642830908070901,
+      "recommendation": "BET",
+      "expected_value": 4.8309242283955225
+    },
+    {
+      "condition_id": "0x33468ef7d3ca12293c0dd23c7271faeafa9d695ccf2ec841024f0a195fa9f9cf",
+      "question": "Will Trump recognize Somaliland in 2025?",
+      "yes_price": 0.0105,
+      "potential": 95.23809523809523,
+      "category": "political",
+      "ml_score": 0.6376163154665268,
+      "recommendation": "BET",
+      "expected_value": 4.136297969323098
+    },
+    {
+      "condition_id": "0x14823b0e1d93a06fd9ee287b5a437f98642213aa3a45d04a070a9e03282059b9",
+      "question": "Will the G\u00e4vle Goat burn in 2025?",
+      "yes_price": 0.0015,
+      "potential": 666.6666666666666,
+      "category": "other",
+      "ml_score": 0.6372237959464767,
+      "recommendation": "BET",
+      "expected_value": 40.54530877602643
+    },
+    {
+      "condition_id": "0xdfe85a9a601009b751b088145c93d04ec33b055644a989c65c981420e345435e",
+      "question": "Hyperliquid listed on Coinbase in 2025?",
+      "yes_price": 0.003,
+      "potential": 333.3333333333333,
+      "category": "sports",
+      "ml_score": 0.6363874013257322,
+      "recommendation": "BET",
+      "expected_value": 19.276552117656983
+    },
+    {
+      "condition_id": "0x860ec01ce0019bae35193a389b01758ac253f38b2370c3041c302d54df53b7f2",
+      "question": "Will Volt be part of the next Government of the Netherlands?",
+      "yes_price": 0.036,
+      "potential": 27.77777777777778,
+      "category": "crypto",
+      "ml_score": 0.6355531347217754,
+      "recommendation": "BET",
+      "expected_value": -0.17101931230066825
+    },
+    {
+      "condition_id": "0x7e686c4e975ec785c37f24b9f6e189d874148fa19baa3f807960ccae80cc5d85",
+      "question": "Will CR win the most seats in the 2026 Colombian Senate election?",
+      "yes_price": 0.028,
+      "potential": 35.714285714285715,
+      "category": "political",
+      "ml_score": 0.6351194271672163,
+      "recommendation": "BET",
+      "expected_value": 0.3317956111710658
+    },
+    {
+      "condition_id": "0x1873b08bfae016f830af95e2f04c4f5ce86e2e7e5a8711c2bb0f312b00fa3478",
+      "question": "Megaquake by December 31?",
+      "yes_price": 0.0075,
+      "potential": 133.33333333333334,
+      "category": "other",
+      "ml_score": 0.6278937436790082,
+      "recommendation": "BET",
+      "expected_value": 6.4347059567546765
+    },
+    {
+      "condition_id": "0x87329b0a31ce002e2e8ee5a6e7fa9d835075e8fb8324769bd3f87c53b35b6934",
+      "question": "Will Gold close between $4500 and $4600 at the end of 2025?",
+      "yes_price": 0.01,
+      "potential": 100.0,
+      "category": "other",
+      "ml_score": 0.6274936948033435,
+      "recommendation": "BET",
+      "expected_value": 4.33768631751377
+    },
+    {
+      "condition_id": "0xe9414f45c80be10825b65c9712bd46bbe1c6c4202921b0a138cccdcb3f93b640",
+      "question": "Will Robert Downey Jr. be named in newly released Epstein files?",
+      "yes_price": 0.0225,
+      "potential": 44.44444444444444,
+      "category": "other",
+      "ml_score": 0.6240934274046774,
+      "recommendation": "BET",
+      "expected_value": 0.8361579089834787
+    },
+    {
+      "condition_id": "0x4b56a82b5f168f7d72a93139f43fe5c6b7cb3ec140c914b272029d78136421b4",
+      "question": "Timoth\u00e9e Chalamet and Kylie Jenner engaged in 2025?",
+      "yes_price": 0.0155,
+      "potential": 64.51612903225806,
+      "category": "other",
+      "ml_score": 0.6204550952470527,
+      "recommendation": "BET",
+      "expected_value": 2.064981607892787
+    }
+  ]
+}
