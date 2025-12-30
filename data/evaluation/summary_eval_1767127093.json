@@ -1,0 +1,38 @@
+{
+  "session_id": "eval_1767127093",
+  "duration_seconds": 118.70425486564636,
+  "total_trades": 30,
+  "methods": {
+    "llm": {
+      "total": 30,
+      "correct": 10,
+      "accuracy": 0.3333333333333333,
+      "avg_latency_ms": 885.6949329376221
+    },
+    "xgb": {
+      "total": 30,
+      "correct": 19,
+      "accuracy": 0.6333333333333333,
+      "avg_latency_ms": 0.0
+    },
+    "rules": {
+      "total": 30,
+      "correct": 16,
+      "accuracy": 0.5333333333333333,
+      "avg_latency_ms": 0.0
+    },
+    "hybrid": {
+      "total": 30,
+      "correct": 12,
+      "accuracy": 0.4,
+      "avg_latency_ms": 0.0
+    }
+  },
+  "hybrid_pnl": -8.823797762130468,
+  "hybrid_weights": {
+    "llm": 0.2317661867445021,
+    "xgb": 0.4195227968514069,
+    "rules": 0.348711016404091
+  },
+  "xgb_trained": false
+}
