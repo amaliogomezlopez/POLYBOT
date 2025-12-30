@@ -1,23 +1,40 @@
-# Polymarket Arbitrage Bot
+# Polymarket Tail Betting Bot
 
-Delta-neutral arbitrage bot for Polymarket's 15-minute crypto flash markets.
+🎯 **Automated tail betting system** for Polymarket prediction markets.
+
+> **Strategy Pivot**: After discovering no flash markets exist (all spreads 98%+), we pivoted to **tail betting** - the optimal strategy for low-capital traders.
+
+## 📊 Current Status (December 2025)
+
+| Metric | Value |
+|--------|-------|
+| **Paper Bets** | 100 |
+| **Invested** | $200 (paper) |
+| **Avg Multiplier** | 252x |
+| **Required Hit Rate** | 0.4% |
 
 ## 📚 Documentation
-For detailed information, please refer to the [Documentation Index](docs/index.md).
 
+- [**Current Status & Roadmap**](docs/current_status.md) ⭐
 - [Architecture & Design](docs/architecture.md)
 - [Trading Strategy](docs/strategy.md)
 - [Installation & Setup](docs/setup.md)
-- [Competitor Reverse Engineering](docs/competitor_analysis.md)
-- [Project Status & Roadmap](docs/current_status.md)
+- [Competitor Analysis (@RN1)](docs/competitor_analysis.md)
 
-## Strategy
+## 🎯 Strategy: Tail Betting
 
-This bot replicates the "Jane Street" strategy: buying both UP and DOWN tokens when their combined cost is below $1.00, guaranteeing profit regardless of outcome.
+Buy YES tokens priced < $0.04 for potential **25x-1000x returns**.
 
-- **Target**: 15-minute UP/DOWN crypto markets (BTC, ETH, SOL)
-- **Mechanism**: Delta-neutral arbitrage
-- **Expected profit**: 4-16 cents per $1 contract
+- **Stake**: $2 per bet (fixed)
+- **Target**: YES < 4¢ (potential 25x+)
+- **ML Scoring**: Category-weighted selection
+- **Required hit rate**: 0.4% (1 win per 250 bets)
+
+### Why Tail Betting?
+1. **No flash markets** on Polymarket - HFT arbitrage not viable
+2. **@RN1 analysis** showed $774k profit requires $500k+ capital
+3. **Monte Carlo**: 30% chance to 2x vs 0% copying pros
+4. **Low risk**: Only $2 per bet, diversified across 100+ bets
 
 ## Installation
 
@@ -30,7 +47,17 @@ poetry install
 
 # Copy environment file
 cp .env.example .env
-# Edit .env with your credentials
+## Installation
+
+```bash
+# Install dependencies
+pip install httpx
+
+# Or with Poetry
+poetry install
+
+# Copy environment file
+cp .env.example .env
 ```
 
 ## Configuration
@@ -38,39 +65,64 @@ cp .env.example .env
 Edit `.env` with your settings:
 
 ```env
+PAPER_TRADING=true
 POLYMARKET_PRIVATE_KEY=your_private_key
-POLYMARKET_FUNDER_ADDRESS=your_funder_address
-MAX_POSITION_SIZE_USDC=1000
-MIN_PROFIT_THRESHOLD=0.04
 ```
 
-## Usage
+## 🚀 Quick Start
 
 ```bash
-# Start the bot
-poetry run polybot run
+# View dashboard
+python tools/tail_dashboard.py
 
-# Paper trading mode (no real orders)
-poetry run polybot run --paper
+# Place new tail bets
+python tools/place_tail_bets.py --max 25
 
-# Check current positions
-poetry run polybot status
+# Scan for opportunities
+python tools/scan_tails.py
 
-# View trade history
-poetry run polybot history
+# Run scheduled monitor (daemon)
+python scripts/scheduled_monitor.py --daemon --interval 30
+```
+
+## 🖥️ Server Deployment
+
+### Windows Scheduled Task
+```powershell
+.\scripts\create_windows_task.ps1
+```
+
+### Linux Server (systemd)
+```bash
+./scripts/deploy_server.sh systemd
+sudo systemctl enable polymarket-tail-monitor
+sudo systemctl start polymarket-tail-monitor
 ```
 
 ## Project Structure
 
 ```
 src/
-├── config/      # Settings and constants
-├── scanner/     # Market discovery and WebSocket feeds
-├── detector/    # Spread analysis and opportunity detection
-├── trading/     # Order execution and position management
-├── risk/        # Risk management and validation
-├── db/          # Database models and repository
-└── monitoring/  # P&L tracking, alerts, dashboard
+├── trading/     # TailBot, order execution
+├── ai/          # XGBoost tail scorer
+├── risk/        # Risk management
+└── monitoring/  # Dashboard, alerts
+
+tools/
+├── tail_dashboard.py    # Real-time monitoring
+├── place_tail_bets.py   # ML-scored betting
+├── scan_tails.py        # Market scanner
+└── analyze_rn1.py       # Competitor analysis
+
+scripts/
+├── scheduled_monitor.py     # Daemon monitor
+├── create_windows_task.ps1  # Windows task
+└── deploy_server.sh         # Linux deploy
+
+data/tail_bot/
+├── bets.json            # Paper bets (100)
+├── resolved.json        # Resolved bets
+└── training_data.json   # XGBoost training
 ```
 
 ## Development
@@ -81,7 +133,6 @@ poetry run pytest
 
 # Format code
 poetry run black src tests
-poetry run ruff check src tests --fix
 
 # Type checking
 poetry run mypy src
