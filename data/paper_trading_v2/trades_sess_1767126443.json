@@ -1,0 +1,362 @@
+[
+  {
+    "id": "paper_1767126443885",
+    "timestamp": 1767126443.8908093,
+    "datetime_str": "2025-12-30T21:27:23.890809",
+    "asset": "ETH",
+    "side": "UP",
+    "entry_price": 0.572355414423724,
+    "size_usdc": 13.595073077544807,
+    "tokens": 23.752851348900066,
+    "prediction_source": "momentum",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": -0.4252143979126917,
+      "volatility": 1.0689906288100035,
+      "momentum": 0.982265145717858
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.572355414423724,
+      "trend": -0.4252143979126917,
+      "volatility": 1.0689906288100035,
+      "momentum": 0.982265145717858,
+      "volume_ratio": 0.9570422551493387,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 4.999399185180664,
+    "outcome": "loss",
+    "pnl": -13.595073077544807,
+    "actual_direction": "DOWN"
+  },
+  {
+    "id": "paper_1767126443999",
+    "timestamp": 1767126444.0038095,
+    "datetime_str": "2025-12-30T21:27:24.003809",
+    "asset": "ETH",
+    "side": "DOWN",
+    "entry_price": 0.4216771241826096,
+    "size_usdc": 12.847344058279841,
+    "tokens": 30.46725402328495,
+    "prediction_source": "contrarian",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": 0.5716910111738898,
+      "volatility": 1.0489272475001747,
+      "momentum": 0.2847563605183465
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.4216771241826096,
+      "trend": 0.5716910111738898,
+      "volatility": 1.0489272475001747,
+      "momentum": 0.2847563605183465,
+      "volume_ratio": 1.538998397953589,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 4.000186920166016,
+    "outcome": "win",
+    "pnl": 17.61990996500511,
+    "actual_direction": "DOWN"
+  },
+  {
+    "id": "paper_1767126444107",
+    "timestamp": 1767126444.1128302,
+    "datetime_str": "2025-12-30T21:27:24.112830",
+    "asset": "ETH",
+    "side": "UP",
+    "entry_price": 0.4292168701285761,
+    "size_usdc": 37.68119756278666,
+    "tokens": 87.79057904107749,
+    "prediction_source": "momentum",
+    "prediction_confidence": 0.721175921658073,
+    "prediction_features": {
+      "trend": 0.7372530721935765,
+      "volatility": 1.1537261757002537,
+      "momentum": 0.24320006294792623
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.4292168701285761,
+      "trend": 0.7372530721935765,
+      "volatility": 1.1537261757002537,
+      "momentum": 0.24320006294792623,
+      "volume_ratio": 1.2210929431607194,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 5.000591278076172,
+    "outcome": "win",
+    "pnl": 50.109381478290835,
+    "actual_direction": "UP"
+  },
+  {
+    "id": "paper_1767126444234",
+    "timestamp": 1767126444.2393856,
+    "datetime_str": "2025-12-30T21:27:24.239385",
+    "asset": "ETH",
+    "side": "UP",
+    "entry_price": 0.4037526987402393,
+    "size_usdc": 16.572455087661123,
+    "tokens": 41.046054031017825,
+    "prediction_source": "contrarian",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": -0.5580256658171767,
+      "volatility": 1.1740334790410896,
+      "momentum": 0.5035958042652088
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.4037526987402393,
+      "trend": -0.5580256658171767,
+      "volatility": 1.1740334790410896,
+      "momentum": 0.5035958042652088,
+      "volume_ratio": 1.366502159216349,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 5.00035285949707,
+    "outcome": "loss",
+    "pnl": -16.572455087661123,
+    "actual_direction": "DOWN"
+  },
+  {
+    "id": "paper_1767126444360",
+    "timestamp": 1767126444.3643851,
+    "datetime_str": "2025-12-30T21:27:24.364384",
+    "asset": "BTC",
+    "side": "DOWN",
+    "entry_price": 0.5076715195995068,
+    "size_usdc": 15.660970057839759,
+    "tokens": 30.84862840088887,
+    "prediction_source": "momentum",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": 0.23444991439775675,
+      "volatility": 1.1098344027736562,
+      "momentum": 0.20388805160896853
+    },
+    "market_state": {
+      "asset": "BTC",
+      "current_price": 0.5076715195995068,
+      "trend": 0.23444991439775675,
+      "volatility": 1.1098344027736562,
+      "momentum": 0.20388805160896853,
+      "volume_ratio": 1.7797168319560328,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 3.998279571533203,
+    "outcome": "win",
+    "pnl": 15.187658343049112,
+    "actual_direction": "DOWN"
+  },
+  {
+    "id": "paper_1767126444484",
+    "timestamp": 1767126444.4893818,
+    "datetime_str": "2025-12-30T21:27:24.489381",
+    "asset": "BTC",
+    "side": "DOWN",
+    "entry_price": 0.6261765248794182,
+    "size_usdc": 16.496291266707463,
+    "tokens": 26.34447413991466,
+    "prediction_source": "contrarian",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": 0.44960459919741524,
+      "volatility": 0.5271844965328549,
+      "momentum": -0.798973772167459
+    },
+    "market_state": {
+      "asset": "BTC",
+      "current_price": 0.6261765248794182,
+      "trend": 0.44960459919741524,
+      "volatility": 0.5271844965328549,
+      "momentum": -0.798973772167459,
+      "volume_ratio": 1.648613763412139,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 4.999399185180664,
+    "outcome": "win",
+    "pnl": 9.848182873207199,
+    "actual_direction": "DOWN"
+  },
+  {
+    "id": "paper_1767126444610",
+    "timestamp": 1767126444.614113,
+    "datetime_str": "2025-12-30T21:27:24.614112",
+    "asset": "ETH",
+    "side": "DOWN",
+    "entry_price": 0.5973667561223386,
+    "size_usdc": 17.037941324733858,
+    "tokens": 28.521743384803536,
+    "prediction_source": "momentum",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": 0.1911615638659294,
+      "volatility": 1.7599425250083542,
+      "momentum": 0.16026853154113055
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.5973667561223386,
+      "trend": 0.1911615638659294,
+      "volatility": 1.7599425250083542,
+      "momentum": 0.16026853154113055,
+      "volume_ratio": 1.411231458091174,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 4.001140594482422,
+    "outcome": "win",
+    "pnl": 11.483802060069678,
+    "actual_direction": "DOWN"
+  },
+  {
+    "id": "paper_1767126444735",
+    "timestamp": 1767126444.7427297,
+    "datetime_str": "2025-12-30T21:27:24.742729",
+    "asset": "ETH",
+    "side": "UP",
+    "entry_price": 0.4545317072289007,
+    "size_usdc": 48.18968301283001,
+    "tokens": 106.02050912272627,
+    "prediction_source": "mean_reversion",
+    "prediction_confidence": 0.8,
+    "prediction_features": {
+      "trend": -1.6542161355409837,
+      "volatility": 1.3829228535329887,
+      "momentum": 0.47178736413118433
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.4545317072289007,
+      "trend": -1.6542161355409837,
+      "volatility": 1.3829228535329887,
+      "momentum": 0.47178736413118433,
+      "volume_ratio": 1.7667911784073485,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 6.998300552368164,
+    "outcome": "loss",
+    "pnl": -48.18968301283001,
+    "actual_direction": "DOWN"
+  },
+  {
+    "id": "paper_1767126444859",
+    "timestamp": 1767126444.86473,
+    "datetime_str": "2025-12-30T21:27:24.864729",
+    "asset": "BTC",
+    "side": "DOWN",
+    "entry_price": 0.6048414636050201,
+    "size_usdc": 15.019117872332036,
+    "tokens": 24.831495153811044,
+    "prediction_source": "contrarian",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": 0.7906456830090021,
+      "volatility": 1.964813235780552,
+      "momentum": -0.7743247387128959
+    },
+    "market_state": {
+      "asset": "BTC",
+      "current_price": 0.6048414636050201,
+      "trend": 0.7906456830090021,
+      "volatility": 1.964813235780552,
+      "momentum": -0.7743247387128959,
+      "volume_ratio": 0.9216942563483376,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 5.001068115234375,
+    "outcome": "loss",
+    "pnl": -15.019117872332036,
+    "actual_direction": "UP"
+  },
+  {
+    "id": "paper_1767126444984",
+    "timestamp": 1767126444.9906993,
+    "datetime_str": "2025-12-30T21:27:24.990699",
+    "asset": "ETH",
+    "side": "DOWN",
+    "entry_price": 0.5196692902780126,
+    "size_usdc": 38.708362880055695,
+    "tokens": 74.48653134640206,
+    "prediction_source": "momentum",
+    "prediction_confidence": 0.7111856544489186,
+    "prediction_features": {
+      "trend": -0.7039521814963953,
+      "volatility": 0.6834317353156395,
+      "momentum": -0.07075564200273819
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.5196692902780126,
+      "trend": -0.7039521814963953,
+      "volatility": 0.6834317353156395,
+      "momentum": -0.07075564200273819,
+      "volume_ratio": 1.1351725912777892,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 5.9986114501953125,
+    "outcome": "loss",
+    "pnl": -38.708362880055695,
+    "actual_direction": "UP"
+  },
+  {
+    "id": "paper_1767126445111",
+    "timestamp": 1767126445.1166978,
+    "datetime_str": "2025-12-30T21:27:25.116697",
+    "asset": "BTC",
+    "side": "DOWN",
+    "entry_price": 0.44615481140703955,
+    "size_usdc": 32.90210844804734,
+    "tokens": 73.74594559292969,
+    "prediction_source": "mean_reversion",
+    "prediction_confidence": 0.8,
+    "prediction_features": {
+      "trend": 1.507100518934272,
+      "volatility": 0.5695603989942413,
+      "momentum": 0.17696269860748567
+    },
+    "market_state": {
+      "asset": "BTC",
+      "current_price": 0.44615481140703955,
+      "trend": 1.507100518934272,
+      "volatility": 0.5695603989942413,
+      "momentum": 0.17696269860748567,
+      "volume_ratio": 0.8246470390241549,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 5.001306533813477,
+    "outcome": "loss",
+    "pnl": -32.90210844804734,
+    "actual_direction": "UP"
+  },
+  {
+    "id": "paper_1767126445234",
+    "timestamp": 1767126445.2412543,
+    "datetime_str": "2025-12-30T21:27:25.241254",
+    "asset": "ETH",
+    "side": "UP",
+    "entry_price": 0.5214450755478224,
+    "size_usdc": 10.2544904663081,
+    "tokens": 19.665523651814883,
+    "prediction_source": "contrarian",
+    "prediction_confidence": 0.55,
+    "prediction_features": {
+      "trend": -2.047879550202538,
+      "volatility": 0.7658576036542719,
+      "momentum": 0.5775698577688406
+    },
+    "market_state": {
+      "asset": "ETH",
+      "current_price": 0.5214450755478224,
+      "trend": -2.047879550202538,
+      "volatility": 0.7658576036542719,
+      "momentum": 0.5775698577688406,
+      "volume_ratio": 0.7557136851041387,
+      "time_of_day": 21
+    },
+    "execution_time_ms": 6.302595138549805,
+    "outcome": "win",
+    "pnl": 9.411033185506783,
+    "actual_direction": "UP"
+  }
+]

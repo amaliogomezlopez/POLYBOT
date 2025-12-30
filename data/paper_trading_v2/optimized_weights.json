@@ -1,0 +1,11 @@
+{
+  "weights": {
+    "momentum": 0.3090008617631252,
+    "mean_reversion": 0.41082105447334266,
+    "contrarian": 0.28017808376353226
+  },
+  "expected_win_rate": 0.5558716331601926,
+  "expected_pnl": 1.801900277100098,
+  "confidence": 1.0,
+  "based_on_trades": 79
+}

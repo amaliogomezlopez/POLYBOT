@@ -1,0 +1,248 @@
+[
+  {
+    "session_id": "sess_1767126321",
+    "start_time": 1767126321.9805288,
+    "end_time": 1767126323.7741418,
+    "starting_balance": 100.0,
+    "ending_balance": 58.69835761687828,
+    "total_pnl": -41.30164238312172,
+    "max_balance": 100.0,
+    "min_balance": 58.69835761687828,
+    "max_drawdown": 0.41301642383121717,
+    "total_trades": 16,
+    "wins": 6,
+    "losses": 10,
+    "stats_by_source": {
+      "momentum": {
+        "total": 7,
+        "wins": 2,
+        "losses": 5,
+        "win_rate": 0.2857142857142857
+      },
+      "mean_reversion": {
+        "total": 3,
+        "wins": 1,
+        "losses": 2,
+        "win_rate": 0.3333333333333333
+      },
+      "random": {
+        "total": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0
+      },
+      "contrarian": {
+        "total": 6,
+        "wins": 3,
+        "losses": 3,
+        "win_rate": 0.5
+      }
+    },
+    "avg_execution_ms": 1.729235053062439
+  },
+  {
+    "session_id": "sess_1767126436",
+    "start_time": 1767126436.0482318,
+    "end_time": 1767126437.4936862,
+    "starting_balance": 100.0,
+    "ending_balance": 100.47924916903364,
+    "total_pnl": 0.47924916903363624,
+    "max_balance": 107.97726661093736,
+    "min_balance": 44.556235689190814,
+    "max_drawdown": 0.5544376431080918,
+    "total_trades": 13,
+    "wins": 8,
+    "losses": 5,
+    "stats_by_source": {
+      "momentum": {
+        "total": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 0.6
+      },
+      "mean_reversion": {
+        "total": 3,
+        "wins": 2,
+        "losses": 1,
+        "win_rate": 0.6666666666666666
+      },
+      "random": {
+        "total": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0
+      },
+      "contrarian": {
+        "total": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 0.6
+      }
+    },
+    "avg_execution_ms": 2.999415764441857
+  },
+  {
+    "session_id": "sess_1767126438",
+    "start_time": 1767126438.0234108,
+    "end_time": 1767126439.445478,
+    "starting_balance": 100.0,
+    "ending_balance": 215.3343575485612,
+    "total_pnl": 115.3343575485612,
+    "max_balance": 215.3343575485612,
+    "min_balance": 85.40736179367859,
+    "max_drawdown": 0.27925949322551935,
+    "total_trades": 13,
+    "wins": 10,
+    "losses": 3,
+    "stats_by_source": {
+      "momentum": {
+        "total": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 0.6
+      },
+      "mean_reversion": {
+        "total": 3,
+        "wins": 3,
+        "losses": 0,
+        "win_rate": 1.0
+      },
+      "random": {
+        "total": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0
+      },
+      "contrarian": {
+        "total": 5,
+        "wins": 4,
+        "losses": 1,
+        "win_rate": 0.8
+      }
+    },
+    "avg_execution_ms": 2.834026630108173
+  },
+  {
+    "session_id": "sess_1767126439",
+    "start_time": 1767126439.9911628,
+    "end_time": 1767126441.4232733,
+    "starting_balance": 100.0,
+    "ending_balance": 182.63601292083274,
+    "total_pnl": 82.63601292083274,
+    "max_balance": 260.60944890046676,
+    "min_balance": 100.0,
+    "max_drawdown": 0.4836189023468502,
+    "total_trades": 13,
+    "wins": 6,
+    "losses": 7,
+    "stats_by_source": {
+      "momentum": {
+        "total": 5,
+        "wins": 2,
+        "losses": 3,
+        "win_rate": 0.4
+      },
+      "mean_reversion": {
+        "total": 3,
+        "wins": 2,
+        "losses": 1,
+        "win_rate": 0.6666666666666666
+      },
+      "random": {
+        "total": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0
+      },
+      "contrarian": {
+        "total": 5,
+        "wins": 2,
+        "losses": 3,
+        "win_rate": 0.4
+      }
+    },
+    "avg_execution_ms": 3.5382967728834887
+  },
+  {
+    "session_id": "sess_1767126441",
+    "start_time": 1767126441.9673245,
+    "end_time": 1767126443.3521974,
+    "starting_balance": 100.0,
+    "ending_balance": 247.18314686445078,
+    "total_pnl": 147.18314686445078,
+    "max_balance": 270.19143725554767,
+    "min_balance": 100.0,
+    "max_drawdown": 0.31723750000000006,
+    "total_trades": 12,
+    "wins": 6,
+    "losses": 6,
+    "stats_by_source": {
+      "momentum": {
+        "total": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 0.6
+      },
+      "mean_reversion": {
+        "total": 2,
+        "wins": 2,
+        "losses": 0,
+        "win_rate": 1.0
+      },
+      "random": {
+        "total": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0
+      },
+      "contrarian": {
+        "total": 5,
+        "wins": 1,
+        "losses": 4,
+        "win_rate": 0.2
+      }
+    },
+    "avg_execution_ms": 4.249413808186849
+  },
+  {
+    "session_id": "sess_1767126443",
+    "start_time": 1767126443.884809,
+    "end_time": 1767126445.3599524,
+    "starting_balance": 100.0,
+    "ending_balance": 195.8563143911084,
+    "total_pnl": 95.85631439110841,
+    "max_balance": 321.26455341886674,
+    "min_balance": 100.0,
+    "max_drawdown": 0.4515710218750001,
+    "total_trades": 12,
+    "wins": 6,
+    "losses": 6,
+    "stats_by_source": {
+      "momentum": {
+        "total": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 0.6
+      },
+      "mean_reversion": {
+        "total": 2,
+        "wins": 0,
+        "losses": 2,
+        "win_rate": 0.0
+      },
+      "random": {
+        "total": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0
+      },
+      "contrarian": {
+        "total": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 0.6
+      }
+    },
+    "avg_execution_ms": 5.108435948689778
+  }
+]
