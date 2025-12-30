@@ -1,0 +1,1610 @@
+[
+  {
+    "question": "Will Google have the best AI model for math at the end of 2025?",
+    "price": 0.0015,
+    "outcome": "yes",
+    "condition_id": "0x6c6f70168265ec2dadd6808a9afdc9fdcda6cda4b81875e31dba8d0b38d50871",
+    "token_id": "113995286945878890589280874900574638994091370196612742217399139201395229305369",
+    "potential_return": 1333.3333333333333
+  },
+  {
+    "question": "Will El Salvador hold $1b+ of BTC by December 31?",
+    "price": 0.0015,
+    "outcome": "yes",
+    "condition_id": "0x760d0b414a5a1db4db13c48585e0a73b8a4eb08b050983c023efc01dbb2c5fa3",
+    "token_id": "109302385109307197337745709417408317734380220104740268697991908784468943612265",
+    "potential_return": 1333.3333333333333
+  },
+  {
+    "question": "Will OpenAI have the best AI model for math at the end of 2025?",
+    "price": 0.002,
+    "outcome": "yes",
+    "condition_id": "0x53b77ff9a4584d7e6e5bf222445cd55112947fcce711d2337866227925b485ec",
+    "token_id": "53445336006280293944328901648702559433838247032966407103082351972030392439643",
+    "potential_return": 1000.0
+  },
+  {
+    "question": "Will the G\u00e4vle Goat burn in 2025?",
+    "price": 0.002,
+    "outcome": "yes",
+    "condition_id": "0x14823b0e1d93a06fd9ee287b5a437f98642213aa3a45d04a070a9e03282059b9",
+    "token_id": "60346366754193375066478428828022388693297856744350754636381731570567649824600",
+    "potential_return": 1000.0
+  },
+  {
+    "question": "Aziz Akhannouch out as Morocco Prime Minister by December 31?",
+    "price": 0.0025,
+    "outcome": "yes",
+    "condition_id": "0x339d8be5cb57653a9ee63e07d216543622cdefb45eed81b1680e83887a2d7bc6",
+    "token_id": "49913535691357405888189005795777119729203074497784553050607906527813175648482",
+    "potential_return": 800.0
+  },
+  {
+    "question": "Russia x Ukraine ceasefire in 2025?",
+    "price": 0.0025,
+    "outcome": "yes",
+    "condition_id": "0x8ee2f1640386310eb5e7ffa596ba9335f2d324e303d21b0dfea6998874445791",
+    "token_id": "15974786252393396629980467963784550802583781222733347534844974829144359265969",
+    "potential_return": 800.0
+  },
+  {
+    "question": "Hyperliquid listed on Coinbase in 2025?",
+    "price": 0.0025,
+    "outcome": "yes",
+    "condition_id": "0xdfe85a9a601009b751b088145c93d04ec33b055644a989c65c981420e345435e",
+    "token_id": "72111237001093028212763921723631481836210139498389057357896030642910594584975",
+    "potential_return": 800.0
+  },
+  {
+    "question": "Lighter market cap (FDV) >$6B one day after launch?",
+    "price": 0.0025,
+    "outcome": "yes",
+    "condition_id": "0x2d653b2987ba4a2ab6858d39aab560651a868b15f41322153caa28fe21dc29d7",
+    "token_id": "22371179586988554835990556118520194783725046132579845834642380817963855370367",
+    "potential_return": 800.0
+  },
+  {
+    "question": "Will Henri Bontenbal become the next Prime Minister of the Netherlands?",
+    "price": 0.0025,
+    "outcome": "yes",
+    "condition_id": "0x830eb792fa2f2a591b5a0610a76400f80228629105f4f5896434be777665265c",
+    "token_id": "11849537964728414257925689141990484493388867667327301846126684624971300453955",
+    "potential_return": 800.0
+  },
+  {
+    "question": "Will Steve Witkoff be next National Security Advisor?",
+    "price": 0.003,
+    "outcome": "yes",
+    "condition_id": "0xb991b7cae887579fd1087144cc41fdb3c1a255ac20b2a39cc886ad5acd73322f",
+    "token_id": "82998420914423887933244044477728512815508065059418129941320072430323110627278",
+    "potential_return": 666.6666666666666
+  },
+  {
+    "question": "Will Gold close between $4600 and $4700 at the end of 2025?",
+    "price": 0.003,
+    "outcome": "yes",
+    "condition_id": "0x0c4bcd4daf57940c5f3a27f80d378d4ca0d90ac8a6f7096528b13b4475299b51",
+    "token_id": "39747867697992619674448966868100802208847146709823893634133779594720953692011",
+    "potential_return": 666.6666666666666
+  },
+  {
+    "question": "U.S. agrees to give Ukraine security guarantee in 2025?",
+    "price": 0.003,
+    "outcome": "yes",
+    "condition_id": "0xf89eceb4c0e7c5da6a2caff35b73554ca0498fbc9e109380f2ce6fe4a31b6c5a",
+    "token_id": "114238110798800656755671464824574360280206522660348162543433815303951486974640",
+    "potential_return": 666.6666666666666
+  },
+  {
+    "question": "Will Keith Kellogg be next National Security Advisor?",
+    "price": 0.003,
+    "outcome": "yes",
+    "condition_id": "0x18e4755dbeea07612bb8a7eca2a65f2a216f739e0df0ae844c9f8dd99d897b2f",
+    "token_id": "24592377423944005232345538319393520387054190194575965106516235904825080591008",
+    "potential_return": 666.6666666666666
+  },
+  {
+    "question": "Will Nicol\u00e1s Maduro be the next leader out in 2025?",
+    "price": 0.003,
+    "outcome": "yes",
+    "condition_id": "0x0e510292279866b83d6e5539538751ac1d3965972fd04971db2c642c37aee102",
+    "token_id": "53308920828538558199214906786930455658846507350336174658835511179167078663302",
+    "potential_return": 666.6666666666666
+  },
+  {
+    "question": "Will Trump publicly disparage Netanyahu by December 31?",
+    "price": 0.003,
+    "outcome": "yes",
+    "condition_id": "0xbade2032beae36c01fdd9bf4caef7bed88774b73f43552456f472b57af50fe2f",
+    "token_id": "5421817369223703151574045359684644774399450893912385765103592068890798347569",
+    "potential_return": 666.6666666666666
+  },
+  {
+    "question": "Will Trump announce Kevin Hassett as next Fed Chair in 2025?",
+    "price": 0.0035,
+    "outcome": "yes",
+    "condition_id": "0x700b422f79a08e5c31e6b05160cabb3d5e4f30f13d731c1a6056515e461a1f40",
+    "token_id": "20073174529059874855499079178246229833444738182406897946883188638499737314406",
+    "potential_return": 571.4285714285714
+  },
+  {
+    "question": "Will Russia capture Lyman by December 31?",
+    "price": 0.0035,
+    "outcome": "yes",
+    "condition_id": "0x69b009591dd768c3878e2ff9b28b8661e039409ea2f156ad70aa5224c08702e0",
+    "token_id": "69413471342025853123539970827210554097320981860401606713566428969527133746868",
+    "potential_return": 571.4285714285714
+  },
+  {
+    "question": "Will MicroStrategy hold 680k+ BTC by December 31?",
+    "price": 0.0035,
+    "outcome": "yes",
+    "condition_id": "0xdb4143780c085f54f82e6baf461e4df46ad900df8148d03258da93cf2c64b165",
+    "token_id": "95475087269677423883454176186179116822274869761302883333044252983187696660417",
+    "potential_return": 571.4285714285714
+  },
+  {
+    "question": "Will Half-Life 3 be announced before 2026?",
+    "price": 0.0035,
+    "outcome": "yes",
+    "condition_id": "0x6dfe6b208b9c5cef6aab980e3106f400c54530c42fc9ab28cb7a8cd07a9a43e1",
+    "token_id": "54322490662691641234321052969678214084447081180754866154813720405340186791881",
+    "potential_return": 571.4285714285714
+  },
+  {
+    "question": "Will Microsoft (MSFT) hit a 52-Week High by December 31?",
+    "price": 0.004,
+    "outcome": "yes",
+    "condition_id": "0x4b1c6ee4b9a0d635ff56a5e2e17eda425eabf081cf0fbcb325980cdfe597d845",
+    "token_id": "65191076095551432113193547172848903397920654470484751490070428403195614754495",
+    "potential_return": 500.0
+  },
+  {
+    "question": "Maduro out in 2025?",
+    "price": 0.0045,
+    "outcome": "yes",
+    "condition_id": "0xafc235557ace53ff0b0d2e93392314a7c3f3daab26a79050e985c11282f66df7",
+    "token_id": "45343480653694577807177505914664405669209636932459044719445554137639656106379",
+    "potential_return": 444.44444444444446
+  },
+  {
+    "question": "Will Amazon (AMZN) hit a 52-Week High by December 31?",
+    "price": 0.0045,
+    "outcome": "yes",
+    "condition_id": "0xb9ce6bdbe12a13edac7f8ca5bb9a2c8a50da0be47b01080867ca7d8b7c4eef5d",
+    "token_id": "40451714927658940156690846647632398984138470148174013180316919618638009685999",
+    "potential_return": 444.44444444444446
+  },
+  {
+    "question": "D4vd arrested by December 31?",
+    "price": 0.005,
+    "outcome": "yes",
+    "condition_id": "0xbeefb5fe85847e19986284222ebd2e3d5c04d66338dd04183cb91b4944b546cd",
+    "token_id": "55340667413778314745712733088659769802010999932272856996593965584894802122799",
+    "potential_return": 400.0
+  },
+  {
+    "question": "Will any AI model reach 1500+ on Chatbot Arena by Dec 31?",
+    "price": 0.005,
+    "outcome": "yes",
+    "condition_id": "0x770298d8f96bac54802d3f39fcbecdec42b725c994c26f5245827e1e78cfc8d7",
+    "token_id": "14546623519987532453818991319681944806306778070968703563115039310819702790908",
+    "potential_return": 400.0
+  },
+  {
+    "question": "Will Ja Morant be traded in 2025?",
+    "price": 0.005,
+    "outcome": "yes",
+    "condition_id": "0x6afdc2e579e740922f1b4253cf338b752eed3cc65e94f573d87ba08df4367227",
+    "token_id": "7330015177434957764396542952115992623464967310761581930764602315344908127000",
+    "potential_return": 400.0
+  },
+  {
+    "question": "Cardano ETF in 2025?",
+    "price": 0.0055,
+    "outcome": "yes",
+    "condition_id": "0xda2699840a84b3388cf1162df4b8d4e249a22c44380e55d7820e25c1513121b0",
+    "token_id": "57904639948532778002248435788724940210404315989659385112544649656833850984460",
+    "potential_return": 363.6363636363637
+  },
+  {
+    "question": "Will Nvidia (NVDA) hit a 52-Week High by December 31?",
+    "price": 0.0055,
+    "outcome": "yes",
+    "condition_id": "0x35f20927091b3d3725d63ed337b61bc081578385a97c6e202d6d2aa687a7ebcc",
+    "token_id": "50569991194939299791432689342450769122861406976305632212861346343394066291535",
+    "potential_return": 363.6363636363637
+  },
+  {
+    "question": "Will Meta (META) hit a 52-Week High by December 31?",
+    "price": 0.0065,
+    "outcome": "yes",
+    "condition_id": "0x8173b330ce03b541e883ee05ac10709449dc35bb70b8e210cb95d70014d774f2",
+    "token_id": "51049867948806087490002243110613409735172073815316469363031849801745679600045",
+    "potential_return": 307.6923076923077
+  },
+  {
+    "question": "Will Trump disparage Nick Fuentes by December 31?",
+    "price": 0.007,
+    "outcome": "yes",
+    "condition_id": "0x2eaf444c649e7a1d8d83ca3eb8486b91edcbe409970d8369dacd806b2a964638",
+    "token_id": "87748904941125054460874434597996851945943530763169053460086812866864552301461",
+    "potential_return": 285.7142857142857
+  },
+  {
+    "question": "Luigi Mangione plea deal in 2025?",
+    "price": 0.0075,
+    "outcome": "yes",
+    "condition_id": "0x35c3203b35ce299c6e65afd00d07c5c2b561acf522f4fe1f1322e6e67c092adb",
+    "token_id": "20244656410496119633637176580888572822795336808693757973566456523317429619143",
+    "potential_return": 266.6666666666667
+  },
+  {
+    "question": "Hezbollah strike on Israel by December 31?",
+    "price": 0.008,
+    "outcome": "yes",
+    "condition_id": "0x04a04ae1e67d0d5bf5fbd602953f18870ce22711e851a0bcc3413b935c8ed26a",
+    "token_id": "17984651420863767301427795312169256860833309099778675771288405787520465439847",
+    "potential_return": 250.0
+  },
+  {
+    "question": "\"The Witcher: Season 4\" Rotten Tomatoes score is between 60 and 74?",
+    "price": 0.008,
+    "outcome": "yes",
+    "condition_id": "0x96dab3df931e9bea24dece049bf5632392fb83a185686c42a07e4a28191c6594",
+    "token_id": "69484751022370520198200194259255094949443355872043864854362132460029430815892",
+    "potential_return": 250.0
+  },
+  {
+    "question": "Will Grok have a MacOS desktop app live by December 31?",
+    "price": 0.008,
+    "outcome": "yes",
+    "condition_id": "0xae3fbb421663b30f5438e3bdce9b45af2069bad5b5ef16ec17c38553ea42c787",
+    "token_id": "14440638192058713232920975717566115428541123298322187132361311550327156862010",
+    "potential_return": 250.0
+  },
+  {
+    "question": "Megaquake by December 31?",
+    "price": 0.01,
+    "outcome": "yes",
+    "condition_id": "0x1873b08bfae016f830af95e2f04c4f5ce86e2e7e5a8711c2bb0f312b00fa3478",
+    "token_id": "70173651533867133813037778810002894047944029658657013054789389758024394038176",
+    "potential_return": 200.0
+  },
+  {
+    "question": "Will Trump sell 1-100 Gold Cards in 2025?",
+    "price": 0.01,
+    "outcome": "yes",
+    "condition_id": "0x820c249986044ad3ab808a4fb401f355a97eeac28d1e905ea37c849700e9cfd4",
+    "token_id": "25987107518365239556853698264787345851011501636442282840153957208556838436107",
+    "potential_return": 200.0
+  },
+  {
+    "question": "Will Anthropic have the best AI model for coding at the end of 2025?",
+    "price": 0.0105,
+    "outcome": "yes",
+    "condition_id": "0x8c8da1b42514326113bfacc19f2a12431e66e5e55ed9d8978ee146b35b1618c4",
+    "token_id": "104795394847641117307730887966872160740795552784264964538173890461331043251661",
+    "potential_return": 190.47619047619045
+  },
+  {
+    "question": "Will Trump recognize Somaliland in 2025?",
+    "price": 0.0105,
+    "outcome": "yes",
+    "condition_id": "0x33468ef7d3ca12293c0dd23c7271faeafa9d695ccf2ec841024f0a195fa9f9cf",
+    "token_id": "69751315407680810811078548178181602946412826395123598212135936160898791362899",
+    "potential_return": 190.47619047619045
+  },
+  {
+    "question": "Will any of the stolen Louvre jewels be returned by December 31?",
+    "price": 0.0115,
+    "outcome": "yes",
+    "condition_id": "0x4085a5e2d95b0057fd9575369b24e653bce463a1c1e1d861188ce11b7690c9fb",
+    "token_id": "46995581848179777021922443051002463158332208005111621103842533327861163976941",
+    "potential_return": 173.91304347826087
+  },
+  {
+    "question": "NATO downs another Russian drone by December 31?",
+    "price": 0.012,
+    "outcome": "yes",
+    "condition_id": "0xd69bb3e836f197604e8adea058b673dc7a9e4f3425351c06644136e5616a84c0",
+    "token_id": "99127271019012503200101755092109865584572610531225840996672334117642289418553",
+    "potential_return": 166.66666666666666
+  },
+  {
+    "question": "Will ChatGPT reach 1b monthly active users in 2025?",
+    "price": 0.012,
+    "outcome": "yes",
+    "condition_id": "0x677c19032d9fc09658a4b05826e3efd656d725394bc2f5a4ea4b2c4e41a2077a",
+    "token_id": "19724938132900659619443303883363154128982414713091172918359422655348707557438",
+    "potential_return": 166.66666666666666
+  },
+  {
+    "question": "Will Brendan Fraser be nominated for Best Actor at the 98th Academy Awards?",
+    "price": 0.0125,
+    "outcome": "yes",
+    "condition_id": "0x3036b8b4719230036daeb85cd869e3f24295640e9f6fcfbff512cfd96f2e36f3",
+    "token_id": "41373939766706702192632767931956456792306703628373648930105766689766586242421",
+    "potential_return": 160.0
+  },
+  {
+    "question": "Will Trump send the national guard to Detroit by December 31?",
+    "price": 0.013,
+    "outcome": "yes",
+    "condition_id": "0x1a22fdee8c6ae07d69c8a5ef1736207fde34128421326b18383d8ed1a6192cc1",
+    "token_id": "63605151331435579755735787150756054852357304270063136633699141460480636742021",
+    "potential_return": 153.84615384615384
+  },
+  {
+    "question": "Hemedti out of power by December 31?",
+    "price": 0.013,
+    "outcome": "yes",
+    "condition_id": "0xb013e2a61c4087e2d86339ebc0eb424bed22744f1b1dbafe7f504fcbfe114ef1",
+    "token_id": "103458226303280722924843281313615169972822669437249135228944434625651533742864",
+    "potential_return": 153.84615384615384
+  },
+  {
+    "question": "Will Russia capture all of Pokrovsk by December 31?",
+    "price": 0.013,
+    "outcome": "yes",
+    "condition_id": "0xab03a5adc30a70d64279a1e894b94665583fcec6ef6d6fcfd2d4687968847ef5",
+    "token_id": "104286524703442709338773198910882873014783902175935172593890170790000032325027",
+    "potential_return": 153.84615384615384
+  },
+  {
+    "question": "Will Gold close between $4500 and $4600 at the end of 2025?",
+    "price": 0.0135,
+    "outcome": "yes",
+    "condition_id": "0x87329b0a31ce002e2e8ee5a6e7fa9d835075e8fb8324769bd3f87c53b35b6934",
+    "token_id": "72867813791254727791747322083772065580604141552028961198257130696835329755581",
+    "potential_return": 148.14814814814815
+  },
+  {
+    "question": "Will Giannis Antetokounmpo lead the NBA in rebounds during the 2025\u201326 NBA seaso",
+    "price": 0.0135,
+    "outcome": "yes",
+    "condition_id": "0xb6890948522fb07d085ec6d9bf013cea6812433bc3f4044e27c426a799263d96",
+    "token_id": "107405742525831183224792053827348717297627029611428544993126635676130842624520",
+    "potential_return": 148.14814814814815
+  },
+  {
+    "question": "Will Tony Blair be named in newly released Epstein files?",
+    "price": 0.0155,
+    "outcome": "yes",
+    "condition_id": "0xd131137f1f93f7e2492083f3a27c68d4398da7c5025a035229cf6bb0384a9dbd",
+    "token_id": "15830075894761260833513659300106415836199507695140575685796019285493801077861",
+    "potential_return": 129.03225806451613
+  },
+  {
+    "question": "Will OpenAI be the first company to have an AI model hit 1500 on Chatbot Arena b",
+    "price": 0.016,
+    "outcome": "yes",
+    "condition_id": "0xfe5a3b231254aa366ba7578e260cd2a2c34e23e70a4a8ff6868775dc75263a0e",
+    "token_id": "455197862889507129794804847897469610470086329638597314799331220563575535723",
+    "potential_return": 125.0
+  },
+  {
+    "question": "Will Kel'el Ware lead the NBA in rebounds during the 2025\u201326 NBA season?",
+    "price": 0.016,
+    "outcome": "yes",
+    "condition_id": "0xee07342762446b03520f52f84b7a9b354d6fdad1d65cc4f2f942c484a9983a06",
+    "token_id": "114072279022358595369243440241758084113004983569795086972644974832333391912466",
+    "potential_return": 125.0
+  },
+  {
+    "question": "Negative GDP growth in Q4 2025?",
+    "price": 0.0165,
+    "outcome": "yes",
+    "condition_id": "0x7a66d5c411a072825a22f42fb6987746d1ab711db3644568f77d8628402ef7cf",
+    "token_id": "55638751273492498581913025406948133391951499285389844259217428247388716295969",
+    "potential_return": 121.2121212121212
+  },
+  {
+    "question": "Will Russia capture all of Myrnohrad by December 31?",
+    "price": 0.0165,
+    "outcome": "yes",
+    "condition_id": "0x2a429e6999f56ed4a01d8d0d5afe5e65b6dc68c888e80e7b441fefe413cb596e",
+    "token_id": "75933099186392876798508993770671321738765326024861718338359976106304117675984",
+    "potential_return": 121.2121212121212
+  },
+  {
+    "question": "Will the Toronto Maple Leafs win the Atlantic Division?",
+    "price": 0.0165,
+    "outcome": "yes",
+    "condition_id": "0x0ad793512bc74415702a06aefef29488ddf81754d4786dc248d68ca639f9da11",
+    "token_id": "86173172314475790206822474382925664088411672268863191344629466222597250360846",
+    "potential_return": 121.2121212121212
+  },
+  {
+    "question": "Will Luka Doncic lead the NBA in assists during the 2025\u201326 NBA season?",
+    "price": 0.017,
+    "outcome": "yes",
+    "condition_id": "0x9c2e64e0fd5c280c8aa6fc51d401d4203c32ef91cd36154d7f5cb1a7c327369f",
+    "token_id": "86742542302735761268959062240799493239184542015679436821971403637092892956362",
+    "potential_return": 117.6470588235294
+  },
+  {
+    "question": "Will Anthony Edwards lead the NBA in points during the 2025\u201326 NBA season?",
+    "price": 0.018,
+    "outcome": "yes",
+    "condition_id": "0x6024eb65c7c0119a95c1485eb4aa241b5ed124e60419ab28b36cbf59f39ead8a",
+    "token_id": "59400714658313807991141342864748084120189572777025247945505744833705517174183",
+    "potential_return": 111.11111111111111
+  },
+  {
+    "question": "X Money launch in 2025?",
+    "price": 0.018,
+    "outcome": "yes",
+    "condition_id": "0x1ec11c829527a6877d93e1145756915a2feadc16dbd343240b8ce674aaa68ba2",
+    "token_id": "110911393156699128240765920158928840337199547754402639514182164506911446042781",
+    "potential_return": 111.11111111111111
+  },
+  {
+    "question": "Lighter market cap (FDV) >$4B one day after launch?",
+    "price": 0.0185,
+    "outcome": "yes",
+    "condition_id": "0xba4493c626ec27930b6c580c956b69580e77c488a84140997180f054230a4553",
+    "token_id": "105090431466795848420500177147419402976010608107899033764467865695481603432708",
+    "potential_return": 108.10810810810811
+  },
+  {
+    "question": "Will the Columbus Blue Jackets win the Metropolitan Division?",
+    "price": 0.0195,
+    "outcome": "yes",
+    "condition_id": "0x2fae5ba4f1fdaaf96b01222114d4080f19807b71d6e6fbe375c2a4c068a0e60c",
+    "token_id": "52338493539995321516916272001288017865342568421459154706386973317270918842289",
+    "potential_return": 102.56410256410257
+  },
+  {
+    "question": "Will Trump spend >25% of 2025 presidency golfing?",
+    "price": 0.0195,
+    "outcome": "yes",
+    "condition_id": "0x4a82344b10b98ef371f09bdb08044e65929f8ac98af63e8dd2d5897c548b4e9c",
+    "token_id": "46886985268777412662393209739664378923001038516128061638395004492854292662891",
+    "potential_return": 102.56410256410257
+  },
+  {
+    "question": "Will Illinois win the 2026 NCAA Tournament?",
+    "price": 0.02,
+    "outcome": "yes",
+    "condition_id": "0x09c3c088a43266fb66135b87094d83e4f6417a336cd3dc47f5d83c9f5e14e3c9",
+    "token_id": "19735796135332805622406177693953698565455686356025222950226276515846196250176",
+    "potential_return": 100.0
+  },
+  {
+    "question": "Will Russia capture Rodynske by December 31?",
+    "price": 0.0205,
+    "outcome": "yes",
+    "condition_id": "0x2e24ca91d308d503fa3711b0ff3b4c40e0d971e72bbc8012448c0ece02328a69",
+    "token_id": "24639853672802785870179119701829212461843302492332438093808467169720819032342",
+    "potential_return": 97.5609756097561
+  },
+  {
+    "question": "Will Laura Dern be nominated for Best Supporting Actress at the 98th Academy Awa",
+    "price": 0.021,
+    "outcome": "yes",
+    "condition_id": "0xbb0087878014e2f6ddb2a7428b54c8d5f845fd4d6520cf5fa6477c13d5c30126",
+    "token_id": "79956293949100175238847321560835953121181214722722551328145280792722604487514",
+    "potential_return": 95.23809523809523
+  },
+  {
+    "question": "Epstein client list released in 2025?",
+    "price": 0.022,
+    "outcome": "yes",
+    "condition_id": "0x0576b194302d7d0a3f7bfc1b843cef4a5c9d582a3f424f879c15441feed78f01",
+    "token_id": "105419655119502407661401461816856849716322392329083638486317786795184412619195",
+    "potential_return": 90.90909090909092
+  },
+  {
+    "question": "Will UCLA win the 2026 NCAA Tournament?",
+    "price": 0.022,
+    "outcome": "yes",
+    "condition_id": "0xdede50898455581d02871924b317401d49b05453ad4c39f6a8fec11b3591881f",
+    "token_id": "108148236755859290446690112827156084671502963116610654358771331735260722946493",
+    "potential_return": 90.90909090909092
+  },
+  {
+    "question": "Will Alperen Sengun lead the NBA in rebounds during the 2025\u201326 NBA season?",
+    "price": 0.0225,
+    "outcome": "yes",
+    "condition_id": "0xbf2e2595c8601b5dc2fc26d1e73fd812e67021ef153c8a7828aeadecf0ab1cb2",
+    "token_id": "87604023974375555850716243113911917241610073202220298560005205841178889265906",
+    "potential_return": 88.88888888888889
+  },
+  {
+    "question": "Will Oprah Winfrey be named in newly released Epstein files?",
+    "price": 0.0225,
+    "outcome": "yes",
+    "condition_id": "0x1cc7468494c3d5b5f6de55043b4ee2f1a256b7bbd62416832125bbc95713381e",
+    "token_id": "54973931774811449973444849784624919550203787518241215633299240876501332462228",
+    "potential_return": 88.88888888888889
+  },
+  {
+    "question": "Will Anthropic\u2019s market cap be between $300B and $400B at market close on IPO da",
+    "price": 0.0225,
+    "outcome": "yes",
+    "condition_id": "0xff54b9602883d013580a41c1c8ab52ed9d6af837e4dc71a76804b372ec721ad3",
+    "token_id": "103262395307817397643448293620305783962194121365663113096802687661195478966769",
+    "potential_return": 88.88888888888889
+  },
+  {
+    "question": "Will 8 Fed rate cuts happen in 2026?",
+    "price": 0.023,
+    "outcome": "yes",
+    "condition_id": "0xfe28cb84a714b1a964290d7fd2587e71d57e905678c8ab64488449b24be78e52",
+    "token_id": "79224949855948800840589557145654317659028242814072850811675646040486360279565",
+    "potential_return": 86.95652173913044
+  },
+  {
+    "question": "Tesla launches unsupervised full self driving (FSD) by December 31?",
+    "price": 0.023,
+    "outcome": "yes",
+    "condition_id": "0x19e22d98e7a7f46e08247d359fb446193484e8522125b249ec0ac38a10320697",
+    "token_id": "79257663291735552444286701320835446057647453714432783408786730976056250778611",
+    "potential_return": 86.95652173913044
+  },
+  {
+    "question": "Will Trump deport 500,000-750,000- people?",
+    "price": 0.0235,
+    "outcome": "yes",
+    "condition_id": "0x2393ed0b0fdc450054c7b9071907eca75cf4fc36e385adf4a0a5f99ee62243e8",
+    "token_id": "100074770378634056601572485653252702850363676459996771990439989989293515601975",
+    "potential_return": 85.1063829787234
+  },
+  {
+    "question": "CDC issues Level 3 warning by December 31?",
+    "price": 0.024,
+    "outcome": "yes",
+    "condition_id": "0xac073f5bf637cf20b04c401b2ed6ada621b1b5776d17d2e2752eadab806b84c2",
+    "token_id": "11480559582264747441456306293906837910477366739669203650189808095934351885572",
+    "potential_return": 83.33333333333333
+  },
+  {
+    "question": "Will Umaro Sissoco Embal\u00f3 win the 2025 Guinea-Bissau presidential election?",
+    "price": 0.024,
+    "outcome": "yes",
+    "condition_id": "0x03957fd52ec3c1bc1985a566fa8fb7d1e5ee717d3ca5f83f0905aa24fbc33d96",
+    "token_id": "95507039935216817251467799435356219871689771437585117346620907704908494213017",
+    "potential_return": 83.33333333333333
+  },
+  {
+    "question": "Will Tilda Swinton be nominated for Best Supporting Actress at the 98th Academy ",
+    "price": 0.0245,
+    "outcome": "yes",
+    "condition_id": "0xaa503879aff1912299676fb9dd29275f788e6af069dc4ffcdfed1928fa932750",
+    "token_id": "75271330977135890831508922098694647081858404122790359016459864918523095985169",
+    "potential_return": 81.63265306122449
+  },
+  {
+    "question": "Will Portnoy give another 9+ review in 2025?",
+    "price": 0.0245,
+    "outcome": "yes",
+    "condition_id": "0xcfd4ac94cf04b761b33d60bc16455f13ac19be48600e955375c72f1dc4fe99eb",
+    "token_id": "50428069975402946745903449066307957144806992344362293659778354190424671420448",
+    "potential_return": 81.63265306122449
+  },
+  {
+    "question": "Will US GDP growth in 2025 be between 1.5% and 2.0%?",
+    "price": 0.0245,
+    "outcome": "yes",
+    "condition_id": "0xcca9a66bb8d351766321b76148a89127f0815d4a0cfa5c4219cac2d2043adfcb",
+    "token_id": "64636956979664924281112632890582512477072568746251062499472746167647547057659",
+    "potential_return": 81.63265306122449
+  },
+  {
+    "question": "Will Mike Kafka be the next Giants Head Coach?",
+    "price": 0.025,
+    "outcome": "yes",
+    "condition_id": "0xd9f9f903ffc2dd712b811f1535bb0fa63203d39516306aa0b6feafda88302509",
+    "token_id": "72574731070896321640106976754142804072890882554267061960930119885575081910390",
+    "potential_return": 80.0
+  },
+  {
+    "question": "Will there be exactly 3 earthquakes of magnitude 7.0 or higher worldwide by Dece",
+    "price": 0.025,
+    "outcome": "yes",
+    "condition_id": "0x2aede95caef87e83a74d53fd876eb3840d810d8eb822e009d9ae0fd9c1bf7d7e",
+    "token_id": "13912599433394082645084560800782489512205362587009908768886232408692939685466",
+    "potential_return": 80.0
+  },
+  {
+    "question": "Will Evan Mobley win the 2025\u20132026 NBA Defensive Player of the Year?",
+    "price": 0.0255,
+    "outcome": "yes",
+    "condition_id": "0x19d73d800ef411019f4cd15e277b2a913057a865bf9cb1d343056c5c7ba566c4",
+    "token_id": "83658078749579705509650404722015495517976635312446058744448907054672955069177",
+    "potential_return": 78.43137254901961
+  },
+  {
+    "question": "GTA VI released before June 2026?",
+    "price": 0.0255,
+    "outcome": "yes",
+    "condition_id": "0xcccb7e7613a087c132b69cbf3a02bece3fdcb824c1da54ae79acc8d4a562d902",
+    "token_id": "8441400852834915183759801017793514978104486628517653995211751018945988243154",
+    "potential_return": 78.43137254901961
+  },
+  {
+    "question": "Will Databricks\u2019 market cap be less than $100B at market close on IPO day?",
+    "price": 0.0255,
+    "outcome": "yes",
+    "condition_id": "0x96328426a073773bf2fce95638608f22c82b97479f2ff716b29b45b0c0c14e2e",
+    "token_id": "95283166983401852140768599286936151280161849901026954996037024891041219741938",
+    "potential_return": 78.43137254901961
+  },
+  {
+    "question": "Will Kentucky win the 2026 NCAA Tournament?",
+    "price": 0.0255,
+    "outcome": "yes",
+    "condition_id": "0xaa159eefcd3eb219dfbf85a9a798b64ee106b42f9c9bebacb56ff83b959c3c50",
+    "token_id": "57315562965549361351461788480477902291794301209992543802607195137326156758119",
+    "potential_return": 78.43137254901961
+  },
+  {
+    "question": "Will Sydney Sweeney be nominated for Best Actress at the 98th Academy Awards?",
+    "price": 0.026,
+    "outcome": "yes",
+    "condition_id": "0x62652fd704fecf4a147236f6add53bf3857d02d5828859a4a61449a02e0db4e4",
+    "token_id": "76720174028824957723347695910386496366982457579285752927738467672129279590044",
+    "potential_return": 76.92307692307692
+  },
+  {
+    "question": "Will Domantas Sabonis lead the NBA in rebounds during the 2025\u201326 NBA season?",
+    "price": 0.027,
+    "outcome": "yes",
+    "condition_id": "0x6b6594e8b1e13a85b7967c788d21a072e508133d56d0c5dbfcecd805ef4b9b94",
+    "token_id": "110220721662609517889192931515503587535910698635059903155336384390944247968777",
+    "potential_return": 74.07407407407408
+  },
+  {
+    "question": "Will Andr\u00e9s Ariel Robles Barrantes win the 2026 Costa Rican presidential electio",
+    "price": 0.0275,
+    "outcome": "yes",
+    "condition_id": "0x63dea677e8242565c3442957aa9dd09dc9910251295ed0eef81de77c02d39a9d",
+    "token_id": "8265503111681005076619257247925453417756719395338451252291425537991343392869",
+    "potential_return": 72.72727272727273
+  },
+  {
+    "question": "Will Ousmane Demb\u00e9l\u00e9 win the 2026 Ballon d'Or?",
+    "price": 0.0275,
+    "outcome": "yes",
+    "condition_id": "0x26f410f7518fa199678ef57f02637fc88be9b3b593346b00946d7ea451f4521b",
+    "token_id": "98995454929502090253677005499136815786618457974539379472945759013797338791883",
+    "potential_return": 72.72727272727273
+  },
+  {
+    "question": "Will the Ottawa Senators win the Atlantic Division?",
+    "price": 0.028,
+    "outcome": "yes",
+    "condition_id": "0x11d8dcfa0ba6d71df80ddba37757a01c5753def823121dcd165d93f04cf850e5",
+    "token_id": "56322508265521796142939560331406140641467131142796034468200515639837047185889",
+    "potential_return": 71.42857142857143
+  },
+  {
+    "question": "Will CR win the most seats in the 2026 Colombian Senate election?",
+    "price": 0.028,
+    "outcome": "yes",
+    "condition_id": "0x7e686c4e975ec785c37f24b9f6e189d874148fa19baa3f807960ccae80cc5d85",
+    "token_id": "86772438800228896362477708416110401390471014036847586004529950807407089409059",
+    "potential_return": 71.42857142857143
+  },
+  {
+    "question": "Will PUSC win the most seats in the 2026 Costa Rican Legislative Assembly electi",
+    "price": 0.028,
+    "outcome": "yes",
+    "condition_id": "0xa8b3a21034a3c40e30d96c01371e0055825878fabe88b7ddfabbbf793943ab28",
+    "token_id": "75620463906310378907835458600139530124161437071864077062876843970227219545177",
+    "potential_return": 71.42857142857143
+  },
+  {
+    "question": "Will Paul Mescal win Best Supporting Actor at the 98th Academy Awards?",
+    "price": 0.028,
+    "outcome": "yes",
+    "condition_id": "0x0144be6472958ed323631de308e6887ea7eabd748d521977d3d1a4baa9a414c8",
+    "token_id": "12098724641273122900648310523880285748381234017535789779477140735162250591681",
+    "potential_return": 71.42857142857143
+  },
+  {
+    "question": "Will Tucker Carlson win the 2028 Republican presidential nomination?",
+    "price": 0.0285,
+    "outcome": "yes",
+    "condition_id": "0x4273517fc8141d57ad1528ede46efdceebdb6a4da746d5de5bad216564209a1e",
+    "token_id": "78994573210477487932611223094751007094801552166562252085708682076112788032998",
+    "potential_return": 70.17543859649122
+  },
+  {
+    "question": "Will Springsteen: Deliver Me From Nowhere be nominated for Best Picture at the 9",
+    "price": 0.0285,
+    "outcome": "yes",
+    "condition_id": "0xdfd977d4c3db64fe3181190b80092a7398ba5dffaaa72db31aba60097cefcf85",
+    "token_id": "64484107148169309313742045881016344576385115426665237621254018395026571840142",
+    "potential_return": 70.17543859649122
+  },
+  {
+    "question": "Will the Los Angeles Chargers win Super Bowl 2026?",
+    "price": 0.0285,
+    "outcome": "yes",
+    "condition_id": "0x39be54f735f3aca38d52bd0109bc85859a78efc8c443369028a447083a0d7e77",
+    "token_id": "63531272983533372796684711562597736989178595458469513692886480786632241939105",
+    "potential_return": 70.17543859649122
+  },
+  {
+    "question": "Will Stripe\u2019s market cap be $140B or greater at market close on IPO day?",
+    "price": 0.029,
+    "outcome": "yes",
+    "condition_id": "0x4b04e14bcde7be95db753c88f6fed57423835215bb41937406e75dc22a789b0c",
+    "token_id": "195928349533315596595305126471738494775883003093487532708892885008234493544",
+    "potential_return": 68.9655172413793
+  },
+  {
+    "question": "Will BBB be part of the next Government of the Netherlands?",
+    "price": 0.029,
+    "outcome": "yes",
+    "condition_id": "0x46de9eb9e217dd44e40110ba6559dca1b3bd31f98ddc506ad9a5dc258b810f76",
+    "token_id": "79298616149597059669711371382766673342974264029234483443467655086172469685264",
+    "potential_return": 68.9655172413793
+  },
+  {
+    "question": "Will Anfernee Simons win the 2025\u20132026 NBA Sixth Man of the Year?",
+    "price": 0.03,
+    "outcome": "yes",
+    "condition_id": "0x30346424e95e8edacfc21e5154405bbb3db7147bf3c2b3b3fe6a54a0ffded0b9",
+    "token_id": "64167003805181983238041741629709166272641665691211993950978749670905657944377",
+    "potential_return": 66.66666666666667
+  },
+  {
+    "question": "Will APT (Ros\u00e9 and Bruno Mars) win Song of the Year at the 68th Annual GRAMMY Aw",
+    "price": 0.03,
+    "outcome": "yes",
+    "condition_id": "0x32821c03c1a785af6bea72291b578e722f02f7da80e204c42be3dee38694756f",
+    "token_id": "46526486688025872076957171866031437643304744954855308137561748620272587627152",
+    "potential_return": 66.66666666666667
+  },
+  {
+    "question": "Will No Doubt perform during the Super Bowl LX halftime show?",
+    "price": 0.03,
+    "outcome": "yes",
+    "condition_id": "0x11ccb8adad20a3a3bd990adb69c67788d7a05a32ff873d11db8ca9d64be7ed40",
+    "token_id": "70816533859154625944712181346597878169183960873534431618269696753278394401586",
+    "potential_return": 66.66666666666667
+  },
+  {
+    "question": "Will the Green Bay Packers win Super Bowl 2026?",
+    "price": 0.0305,
+    "outcome": "yes",
+    "condition_id": "0x632d9c1f768b65f774aa506811204f37b5d45de6d8adecc494beba3f447dfd8c",
+    "token_id": "115180637744426942159949058418963829633982406336900072654493212005540109120116",
+    "potential_return": 65.57377049180327
+  },
+  {
+    "question": "Will Kamala Harris win the 2028 US Presidential Election?",
+    "price": 0.0305,
+    "outcome": "yes",
+    "condition_id": "0xb3298af85e00aafad937c119444a5f2800a55343b7482eb75581f6e454432501",
+    "token_id": "70663352401606372246362604193214664065595751757222752105245221905399175050480",
+    "potential_return": 65.57377049180327
+  },
+  {
+    "question": "Will Stripe\u2019s market cap be between $120B and $140B at market close on IPO day?",
+    "price": 0.0305,
+    "outcome": "yes",
+    "condition_id": "0x8ec3037f6f989717b8321b9c6d297698c5827d3f17bc06fa276a6826a0b468bc",
+    "token_id": "54960339021810821002608536313392642741296500124718788520040272866772532121044",
+    "potential_return": 65.57377049180327
+  },
+  {
+    "question": "US x Venezuela military engagement by December 31?",
+    "price": 0.031,
+    "outcome": "yes",
+    "condition_id": "0x62b0cd598091a179147acbd4616400f804acfdff6f76f029944b481b37cbd45f",
+    "token_id": "58194798786674267467235696472878300864943462064955274098210719743062794563955",
+    "potential_return": 64.51612903225806
+  },
+  {
+    "question": "Will Tom Hanks be named in newly released Epstein files?",
+    "price": 0.031,
+    "outcome": "yes",
+    "condition_id": "0x91c0118b36355ea743478b5fe5b9014f3c193ac62c34c24b1b77f8db9b1de04f",
+    "token_id": "13833690363414442386316921024328463014239309188151728924688820325299374345863",
+    "potential_return": 64.51612903225806
+  },
+  {
+    "question": "Will Samantha Morton be nominated for Best Supporting Actress at the 98th Academ",
+    "price": 0.031,
+    "outcome": "yes",
+    "condition_id": "0x8f46f3044221c3f3f071f7ee9aa82ba65c4ef61318c85ec8bec4e2a75de93d12",
+    "token_id": "12277196382681262660295379589669389111434370370267879217953676370009760158519",
+    "potential_return": 64.51612903225806
+  },
+  {
+    "question": "Trump out as President by March 31?",
+    "price": 0.0315,
+    "outcome": "yes",
+    "condition_id": "0xfc9ee9c25abd5b966088767214c22dcf3ad1c72548e9a1dbef9d4328c170e5b5",
+    "token_id": "35310682957697690340134737345493711959150107013422405879293611184874706794887",
+    "potential_return": 63.492063492063494
+  },
+  {
+    "question": "Will Derrick White lead the NBA in three pointers made during the 2025\u201326 NBA se",
+    "price": 0.0315,
+    "outcome": "yes",
+    "condition_id": "0xa8355c34ff548b05f7223378f797881d179df1ee0a17974e7eb9a48815f003c3",
+    "token_id": "106072602074315884799990195167770552952665946873762031568508532473255399483010",
+    "potential_return": 63.492063492063494
+  },
+  {
+    "question": "Will US GDP growth in Q4 2025 be less than 1.0%?",
+    "price": 0.0315,
+    "outcome": "yes",
+    "condition_id": "0x5726b84c330e995ea638bbfb4b7a4b580d7334bdc708697eaf0d94c8eb3d8fb3",
+    "token_id": "108109840601795668533298198209526209639420920608144596056834106701952879117953",
+    "potential_return": 63.492063492063494
+  },
+  {
+    "question": "Timoth\u00e9e Chalamet and Kylie Jenner engaged in 2025?",
+    "price": 0.0315,
+    "outcome": "yes",
+    "condition_id": "0x4b56a82b5f168f7d72a93139f43fe5c6b7cb3ec140c914b272029d78136421b4",
+    "token_id": "106858274808699958047718052134863595727143450850086982860231443345314462228881",
+    "potential_return": 63.492063492063494
+  },
+  {
+    "question": "Will OpenAI\u2019s market cap be $1.5T or greater at market close on IPO day?",
+    "price": 0.032,
+    "outcome": "yes",
+    "condition_id": "0x4a8005d19b41af72c1cd5c619640d9d51da548dd7c3544b12ae0c520d9e6805b",
+    "token_id": "42493289531592820306292191064557160874552640520793925047778017979799601355649",
+    "potential_return": 62.5
+  },
+  {
+    "question": "Will 12 or more Fed rate cuts happen in 2026?",
+    "price": 0.0325,
+    "outcome": "yes",
+    "condition_id": "0xffa0accb74987c0dc33a70eb3780c1da160206bcfb3ef5d16c1667bc5c459c78",
+    "token_id": "9348234470735473071085620208817441102005165766524508452759679947551704787649",
+    "potential_return": 61.53846153846153
+  },
+  {
+    "question": "Will Anthropic\u2019s market cap be between $400B and $600B at market close on IPO da",
+    "price": 0.0325,
+    "outcome": "yes",
+    "condition_id": "0xdb9d3c46ca316a14d585c1657fb22a76ef24f67d7cd57ed9ecdfe7c419031189",
+    "token_id": "8363164561761349035857552741360916035907813451650923438568657749594524277933",
+    "potential_return": 61.53846153846153
+  },
+  {
+    "question": "Will Chlo\u00e9 Zhao win Best Director at the 98th Academy Awards?",
+    "price": 0.033,
+    "outcome": "yes",
+    "condition_id": "0xe9b8664d3302d33a25b0612989da47a520ec005d1da55fd73f85750a8837513d",
+    "token_id": "66955184408785136115742118295452337354001933475586643712327760758468304177541",
+    "potential_return": 60.6060606060606
+  },
+  {
+    "question": "Will Arkansas win the 2026 NCAA Tournament?",
+    "price": 0.033,
+    "outcome": "yes",
+    "condition_id": "0x2c07355b518ec81d7182027edb429cd2e203b1ad2a27ae8411f7bbc166e90578",
+    "token_id": "66418648156522021641279658052426408799790549015739957448648780309925155266112",
+    "potential_return": 60.6060606060606
+  },
+  {
+    "question": "Will the Democrats win the Idaho governor race in 2026?",
+    "price": 0.033,
+    "outcome": "yes",
+    "condition_id": "0x81cde924d7270bf4a45ba85b6d324bf26b7078a26def647277dacd3370176e24",
+    "token_id": "33422454484664318134839474897555797731651253833609657227452504228201243908837",
+    "potential_return": 60.6060606060606
+  },
+  {
+    "question": "Will Platforma Reupblicana \u201cN\u00f4 Kumpu Guin\u00e9\u201d win the most seats in the 2025 Guine",
+    "price": 0.0335,
+    "outcome": "yes",
+    "condition_id": "0x8056eea46bf4925b2a0a0366016107db0074061270f1db199b85d7abfa89f627",
+    "token_id": "32517085402570583630894072943178533482574684613382710429748822784674211419806",
+    "potential_return": 59.70149253731343
+  },
+  {
+    "question": "Will Stephen Curry win the 2025\u20132026 NBA Clutch Player of the Year?",
+    "price": 0.0335,
+    "outcome": "yes",
+    "condition_id": "0x5c8191c1fc6800490f3243152c4053616e3d9784bc2d7ff3066f06f459f54877",
+    "token_id": "102642243948733125346097502290951352558797679795048633517392931215846430974767",
+    "potential_return": 59.70149253731343
+  },
+  {
+    "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
+    "price": 0.0335,
+    "outcome": "yes",
+    "condition_id": "0x74dba1ce1ae9dd535414e85f2d9ab5ea32c0fb1acc9b7130b67e6d91217e24e1",
+    "token_id": "70071592420137476676935286377781779672157004436137616627487590484756055232944",
+    "potential_return": 59.70149253731343
+  },
+  {
+    "question": "Will BYU win the 2026 NCAA Tournament?",
+    "price": 0.034,
+    "outcome": "yes",
+    "condition_id": "0x54fa5e613f6470b9259599d574b3d29f0cdbd21bfd392426972dfc2501e2418f",
+    "token_id": "83126757544840891103486934062391025910814819913473409938996644215270018188310",
+    "potential_return": 58.8235294117647
+  },
+  {
+    "question": "Will Pink perform during the Super Bowl LX halftime show?",
+    "price": 0.034,
+    "outcome": "yes",
+    "condition_id": "0x8c3a22c300f8e415ed986eba5581c3766f8fbe70e0844e48534cdc030f3e936b",
+    "token_id": "81835336541093823106142624977619616477048358169947827806755973703565574521058",
+    "potential_return": 58.8235294117647
+  },
+  {
+    "question": "Will Chase Infiniti be nominated for Best Supporting Actress at the 98th Academy",
+    "price": 0.034,
+    "outcome": "yes",
+    "condition_id": "0xdb042644dcc644db364674d39fde65db3b8db3681c94614619836bab52395e95",
+    "token_id": "61501418198218591815311956428341135545693570155687850419489493522032157026207",
+    "potential_return": 58.8235294117647
+  },
+  {
+    "question": "Will Alabama win the 2026 NCAA Tournament?",
+    "price": 0.034,
+    "outcome": "yes",
+    "condition_id": "0xbd20296a99221f2e4426779353376c6f9f877dff7a8bbdc2bd91d52f3030f113",
+    "token_id": "41088203488418812476704827309726032889495583461306071751733744562987563327555",
+    "potential_return": 58.8235294117647
+  },
+  {
+    "question": "Will the Democrats win the Wyoming governor race in 2026?",
+    "price": 0.0345,
+    "outcome": "yes",
+    "condition_id": "0x08cf528519394c3bdbca3299cf993db6d38dabcfb78addb80cfd82d6e273a82c",
+    "token_id": "27698880682601961151205903485139737259763277359865731443999905606295817799595",
+    "potential_return": 57.97101449275362
+  },
+  {
+    "question": "Ukraine hits Moscow by December 31?",
+    "price": 0.0345,
+    "outcome": "yes",
+    "condition_id": "0x667c5b79bb2d8ffc24024e2d3e80a9e72117b2ed4b4f571f1bb1ce9252a7eee1",
+    "token_id": "63136946544702763795364299035077367984199630428187155343449215310267202897349",
+    "potential_return": 57.97101449275362
+  },
+  {
+    "question": "Will the Philadelphia 76ers win the 2025\u20132026 NBA Atlantic Division?",
+    "price": 0.0345,
+    "outcome": "yes",
+    "condition_id": "0x512759e436a0b29c350b3cf76b75cbc4d1e9960d8b8916daecac9e9a089c2165",
+    "token_id": "56938739526062230581917212246851253548264020587499314066754525280832505709573",
+    "potential_return": 57.97101449275362
+  },
+  {
+    "question": "Will Denis Lazavik win the 2025\u20132026 Speed Chess Championship?",
+    "price": 0.035,
+    "outcome": "yes",
+    "condition_id": "0x9782613fd55fa101b2b8b862fd59239a03bb4e2179e8ce8d9a0d9713c52f86a4",
+    "token_id": "88910550227596153755496643475934585510916200602922156802805167351993749891306",
+    "potential_return": 57.14285714285714
+  },
+  {
+    "question": "Will Zohran Mamdani announce a Presidential run before 2027?",
+    "price": 0.035,
+    "outcome": "yes",
+    "condition_id": "0x5c01405388eafd46554b6e95343eb7e37824b5ffcbf0081ed834500ddf39319f",
+    "token_id": "20743265654175466510701234015128685834404882341395341310702045215892897168906",
+    "potential_return": 57.14285714285714
+  },
+  {
+    "question": "Will Shai Gilgeous-Alexander lead the NBA in steals during the 2025\u201326 NBA seaso",
+    "price": 0.035,
+    "outcome": "yes",
+    "condition_id": "0xea2b684df2d41c6dccedc70d48ada2eba5d6be32874519913fd4ca828ebc3336",
+    "token_id": "22733982208885454110745496219397147886773240385364267000529752995305040418781",
+    "potential_return": 57.14285714285714
+  },
+  {
+    "question": "Will Brandon Miller lead the NBA in three pointers made during the 2025\u201326 NBA s",
+    "price": 0.035,
+    "outcome": "yes",
+    "condition_id": "0x18a9ce3f955e0ad907272ea83933507457f76aa084ef1f2c64b8be2ac083f4e4",
+    "token_id": "79812447667876035314352594771300171993275582536720714958986792086173849672675",
+    "potential_return": 57.14285714285714
+  },
+  {
+    "question": "Will Stripe\u2019s market cap be between $80B and $100B at market close on IPO day?",
+    "price": 0.0355,
+    "outcome": "yes",
+    "condition_id": "0xc7aca5ec2ab64207578a5461e4f3d2ad2362a6ca9edcaa6b6f05553a7d541819",
+    "token_id": "13986990593551346934180369322143442319151776409512592545696715177800565940569",
+    "potential_return": 56.33802816901409
+  },
+  {
+    "question": "Will Hamnet win Best Costume Design at the 98th Academy Awards?",
+    "price": 0.0355,
+    "outcome": "yes",
+    "condition_id": "0xdf0e04194ff7f25807465101e29d7d476bb9cbf7e56e950d2693cedf4787599f",
+    "token_id": "112838519090657527020403907389517191367689011522812125990685217194554034388792",
+    "potential_return": 56.33802816901409
+  },
+  {
+    "question": "Will Jeremy Allen White be nominated for Best Actor at the 98th Academy Awards?",
+    "price": 0.0355,
+    "outcome": "yes",
+    "condition_id": "0x26d47b7182b80f24a41f485c57564a732df557ab3f9b5c491715dd57630f47fd",
+    "token_id": "78864355500556305117040977065275847185583484600715579145125979567843038046786",
+    "potential_return": 56.33802816901409
+  },
+  {
+    "question": "Will Charli XCX perform during the Super Bowl LX halftime show?",
+    "price": 0.0355,
+    "outcome": "yes",
+    "condition_id": "0xd88e2a940a7c5753b54a53d8ab13907c9e7dfcb18e57d196f2e18c98e2a566d3",
+    "token_id": "33997199203602246700034123827391356970485304140711691529982815063553524181894",
+    "potential_return": 56.33802816901409
+  },
+  {
+    "question": "Will diVine launch iOS app by December 31?",
+    "price": 0.036,
+    "outcome": "yes",
+    "condition_id": "0x931c6f40704f0270a70df548fa3bda91842db84a5975d542146a55953901d70a",
+    "token_id": "52800043715012659891061671433575896693484277933924631149352978847015346374868",
+    "potential_return": 55.55555555555556
+  },
+  {
+    "question": "Will Ausar Thompson lead the NBA in steals during the 2025\u201326 NBA season?",
+    "price": 0.036,
+    "outcome": "yes",
+    "condition_id": "0x1d18ea76e6b90075064466ed428970fc6932c7fc3bf32e74855e622a982a694c",
+    "token_id": "14112881104662688741640121202814278756842613668302161011530927855172945608854",
+    "potential_return": 55.55555555555556
+  },
+  {
+    "question": "Will Treg Taylor win the 2026 Alaska governor election?",
+    "price": 0.036,
+    "outcome": "yes",
+    "condition_id": "0xbc9964ab2e4e4886796e86263769e34451476172200f99e378e74adc6e202663",
+    "token_id": "93969985011170776056000925561172416309286101442856109696106983204369499012978",
+    "potential_return": 55.55555555555556
+  },
+  {
+    "question": "Will Sombr win Best New Artist at the 68th Annual GRAMMY Awards?",
+    "price": 0.036,
+    "outcome": "yes",
+    "condition_id": "0x1278f161b546f237cf9a029d9383ff5da371ff047a5adad48ee3243a6f93b6fb",
+    "token_id": "91844810080062648436529776287166848099843976612137997296770938567257266660379",
+    "potential_return": 55.55555555555556
+  },
+  {
+    "question": "Will Volt be part of the next Government of the Netherlands?",
+    "price": 0.036,
+    "outcome": "yes",
+    "condition_id": "0x860ec01ce0019bae35193a389b01758ac253f38b2370c3041c302d54df53b7f2",
+    "token_id": "53173167664741056151854519251256969465480161541452525457635373229201785183932",
+    "potential_return": 55.55555555555556
+  },
+  {
+    "question": "Will the Sacramento Kings win more than 32.5 regular season games in 2025\u201326?",
+    "price": 0.0365,
+    "outcome": "yes",
+    "condition_id": "0x49ff81dc51cb4cec274b626a6a5200e6379523244094d4a5b87a86f52c1f75cf",
+    "token_id": "65421332775280381037409226364684179876898584579101079029235872005709266557460",
+    "potential_return": 54.79452054794521
+  },
+  {
+    "question": "Will Pope Leo XIV win the Nobel Peace Prize in 2026?",
+    "price": 0.0365,
+    "outcome": "yes",
+    "condition_id": "0xec2e51ebb99006172b05548fc53d6842d30c9c0cccaf4c34569f0431b94d4bfc",
+    "token_id": "113237755645921715758233944722306063215233909018006486973579082721270649678448",
+    "potential_return": 54.79452054794521
+  },
+  {
+    "question": "Will Justin Bieber perform during the Super Bowl LX halftime show?",
+    "price": 0.0365,
+    "outcome": "yes",
+    "condition_id": "0x0bf9d93712b33bdc690d33ae003b2e0084e177e311d03f6fa105942406cc6dc5",
+    "token_id": "9968587078680355799324928742933244110482477534053676078325276559667513206335",
+    "potential_return": 54.79452054794521
+  },
+  {
+    "question": "Will Ann Diener win the Alaska Senate race in 2026?",
+    "price": 0.0365,
+    "outcome": "yes",
+    "condition_id": "0xa26ab383a1f115fa8d2b0fcbac29bcd6a9843ec8c1d160b0a122917230c3c96a",
+    "token_id": "20310786951537091150920478212676759242565921145568245906943451694162568762258",
+    "potential_return": 54.79452054794521
+  },
+  {
+    "question": "Will no Fed rate cuts happen in 2026?",
+    "price": 0.037,
+    "outcome": "yes",
+    "condition_id": "0xd4e77ba6f29fc093509d24f508631abd445ecf506bbdc9c4c80e60256a318527",
+    "token_id": "12403602920039269077597917340921667997547115084613238528792639013246536343316",
+    "potential_return": 54.054054054054056
+  },
+  {
+    "question": "Will Hamnet win Best Picture at the 98th Academy Awards?",
+    "price": 0.038,
+    "outcome": "yes",
+    "condition_id": "0xd405c18b0df642e7f06aadf359183cb8208c1ff6b3a3bca3f8206dca2eb9532e",
+    "token_id": "17781966920345001333694873962725544399622962807536262226327461471000709887625",
+    "potential_return": 52.631578947368425
+  },
+  {
+    "question": "Will Wake Up Dead Man: A Knives Out Mystery be nominated for Best Picture at the",
+    "price": 0.038,
+    "outcome": "yes",
+    "condition_id": "0x6da419b44eb861494fc1ccb8cc13aeadd663ff349ed549d1d8420cc410d31589",
+    "token_id": "108775090810369264975228909609628340062286255798251617138812419038149106935382",
+    "potential_return": 52.631578947368425
+  },
+  {
+    "question": "Will Miles Caton be nominated for Best Supporting Actor at the 98th Academy Awar",
+    "price": 0.038,
+    "outcome": "yes",
+    "condition_id": "0x3635747b930c5b55eef598441aede4f0492781ea1d87745e7b8a84c2c7f6c79d",
+    "token_id": "93313895849519728887381522870824503460743479662461245682270064279518878911705",
+    "potential_return": 52.631578947368425
+  },
+  {
+    "question": "Will Jamie Dimon be named in newly released Epstein files?",
+    "price": 0.0385,
+    "outcome": "yes",
+    "condition_id": "0xdad3b6578786b14085a71c6d2b5ae65a2605fcd8ea44a50e28e1ad40453a57d6",
+    "token_id": "93066778958677560154377766440848844611465812073531359644729965513049574817588",
+    "potential_return": 51.94805194805195
+  },
+  {
+    "question": "AI Industry Downturn by March 31, 2026?",
+    "price": 0.039,
+    "outcome": "yes",
+    "condition_id": "0xb31b91d45d51290686752c7f2f5388c2bd7a08920ce6b97567e72279da5c78e1",
+    "token_id": "61299930917982336025435641130574656076572546351772293236236392565933346041027",
+    "potential_return": 51.282051282051285
+  },
+  {
+    "question": "Will Xavier Becerra win the California Governor Election in 2026?",
+    "price": 0.039,
+    "outcome": "yes",
+    "condition_id": "0xa5d79e71e66c9fe122f8b8b3ca6ab7a0e3048bd8508f130746944e92ed79ddf3",
+    "token_id": "60977129292396881848833910361112107174416489010090570432106122538120602786646",
+    "potential_return": 51.282051282051285
+  },
+  {
+    "question": "Will Gracie Abrams perform during the Super Bowl LX halftime show?",
+    "price": 0.0395,
+    "outcome": "yes",
+    "condition_id": "0x124e34de4c0dcc3d707756fea38b2c1e47e6095e6835741b34df23a14cdeb25d",
+    "token_id": "73410403368934227880257085884043215476205708152138618996482490631027789869729",
+    "potential_return": 50.63291139240506
+  },
+  {
+    "question": "Will Ron DeSantis win the 2028 Republican presidential nomination?",
+    "price": 0.0395,
+    "outcome": "yes",
+    "condition_id": "0x64d31a2af85518c6718a5757a35b840f08eca20c1e22c0eb1e96ec01cc55b8b6",
+    "token_id": "12127975650736113116407758794754973741525044713193258995588171654429754588610",
+    "potential_return": 50.63291139240506
+  },
+  {
+    "question": "Will Antonio Villaraigosa win the California Governor Election in 2026?",
+    "price": 0.04,
+    "outcome": "yes",
+    "condition_id": "0x555d4228698fed95802ef627c79ca8a16ff13680a7eef759311827f2c355fcf0",
+    "token_id": "36414954588752207538819032120216717092589056211565128836805997597026535658896",
+    "potential_return": 50.0
+  },
+  {
+    "question": "Will Josh Shapiro win the 2028 Democratic presidential nomination?",
+    "price": 0.04,
+    "outcome": "yes",
+    "condition_id": "0xd65891729ce093cc12236856837eba1a0872fc7998fd4294c21346f7db68079c",
+    "token_id": "71169839497420596285841847514123589847893415750912355173877524195175834054354",
+    "potential_return": 50.0
+  },
+  {
+    "question": "Will Luke Combs perform during the Super Bowl LX halftime show?",
+    "price": 0.04,
+    "outcome": "yes",
+    "condition_id": "0xa65063a44e807994ddd2a7a4ebb2a3c0f5651fb05a0e7797a41ff3be9a27c067",
+    "token_id": "64570210004354173146186637514881917539312758677621451920016976104191033839730",
+    "potential_return": 50.0
+  },
+  {
+    "question": "Will the Utah Jazz have the worst record in the NBA?",
+    "price": 0.04,
+    "outcome": "yes",
+    "condition_id": "0xc184f5fb69214d48dda4d4809764f389461414839c6f5dd7fbfdff3809e7a40b",
+    "token_id": "2923606022569369528296700675804333240401322510338986044429762870577312204174",
+    "potential_return": 50.0
+  },
+  {
+    "question": "Will Google Gemini 3 score at least 70% on the FrontierMath Benchmark?",
+    "price": 0.0405,
+    "outcome": "yes",
+    "condition_id": "0xd94caf8a5edad0c9191eda1f9bf71f0e5b7c75e3dba8327e8aa2e83055ada7f2",
+    "token_id": "25089347972424697958662047868117585537602807532614198838519941372776853159447",
+    "potential_return": 49.382716049382715
+  },
+  {
+    "question": "Will Steve Hilton win the California Governor Election in 2026?",
+    "price": 0.041,
+    "outcome": "yes",
+    "condition_id": "0x119b6b3b744ac3239c7a71100165d254234eaecea401abde5a3d303bef21d19e",
+    "token_id": "82742036522262670996662794097029680950132682539859985097974842241612036171395",
+    "potential_return": 48.78048780487805
+  },
+  {
+    "question": "Will the Democrats win the Nebraska Senate race in 2026?",
+    "price": 0.041,
+    "outcome": "yes",
+    "condition_id": "0x12ac475399b12fd74917ccf0e29ce338eb4fc76c066cc8b56d01d2f9a2b17597",
+    "token_id": "55269299240433422758148290868724152324629587438760275683104577693660207425448",
+    "potential_return": 48.78048780487805
+  },
+  {
+    "question": "Will Al Gore be named in newly released Epstein files?",
+    "price": 0.041,
+    "outcome": "yes",
+    "condition_id": "0xf7b59239de40447bc5a6e25681bdbcdfe84ac949f045f86a277e15080d1f8a4b",
+    "token_id": "91662494646113138384000660009797086748225814991368881625993362622899099381325",
+    "potential_return": 48.78048780487805
+  },
+  {
+    "question": "Will the Chicago Bears win Super Bowl 2026?",
+    "price": 0.041,
+    "outcome": "yes",
+    "condition_id": "0xeac63aba0e4483cad2138aa41401e30363f50c8b583476a774cc895fa4a51d0f",
+    "token_id": "98328612241005079298480588888413183448693837922137555607354456149974993923116",
+    "potential_return": 48.78048780487805
+  },
+  {
+    "question": "Will \u00c1lvaro Roberto Ramos Chaves win the 2026 Costa Rican presidential election?",
+    "price": 0.0415,
+    "outcome": "yes",
+    "condition_id": "0x819197b2e6c7900dccb8620a4e8b4ac03adce8ba655eeab75e1c76f88d4c51ab",
+    "token_id": "99177460255436387287580382958614506655867023290068113067354308194626839338554",
+    "potential_return": 48.192771084337345
+  },
+  {
+    "question": "Will Noah rank #1 among boy names on the SSA\u2019s official list for 2025?",
+    "price": 0.0415,
+    "outcome": "yes",
+    "condition_id": "0x059bcc0713a72d956f501c1bed124f71a33e4108952ba99aca693ebfe26986cc",
+    "token_id": "90853688460871925437528593968333122238663440355282094448115501885372178730493",
+    "potential_return": 48.192771084337345
+  },
+  {
+    "question": "Will Luka Doncic win the 2025\u20132026 NBA Clutch Player of the Year?",
+    "price": 0.0415,
+    "outcome": "yes",
+    "condition_id": "0x358bf3eccf175b98d0a213cbaf24cd26cc1caf2882ff852c30c35fda79f72a36",
+    "token_id": "54764252603864142688741176092958366386813951625730854924597692401093029285071",
+    "potential_return": 48.192771084337345
+  },
+  {
+    "question": "Will the Fed Cut\u2013Cut\u2013Pause in the next three decisions (Dec\u2013Jan\u2013Mar)?",
+    "price": 0.0415,
+    "outcome": "yes",
+    "condition_id": "0x462af602f9e70174a8ef72ec9278106a098cc40c8ff41025e6ae0766c74c9bee",
+    "token_id": "58963045515858454830597065868666985841550317246656634977337721638862607956522",
+    "potential_return": 48.192771084337345
+  },
+  {
+    "question": "Will Jimmy Kimmel be named in newly released Epstein files?",
+    "price": 0.042,
+    "outcome": "yes",
+    "condition_id": "0x9b79f2abb336a4bf4354112f0d7bfee6254f245035df49476949a6de50822ccc",
+    "token_id": "2217543481066174064525531551419384111450717317775970643528850066605320401106",
+    "potential_return": 47.61904761904761
+  },
+  {
+    "question": "Will Quentin Tarantino be named in newly released Epstein files?",
+    "price": 0.042,
+    "outcome": "yes",
+    "condition_id": "0xf8ead4a9aed4905d008521e838d41d4f59dc38627ac5f4524652bc427002efa4",
+    "token_id": "9195282053260499292636095475763214331298264934131645852678025894419811762060",
+    "potential_return": 47.61904761904761
+  },
+  {
+    "question": "Taylor Swift pregnant before marriage?",
+    "price": 0.042,
+    "outcome": "yes",
+    "condition_id": "0xfcde7eec764a4e3dd2c43e92efec3cd23d8df64cceff357914a31d2c7820a6ea",
+    "token_id": "332462812953361158016354695716232633373752944798478737086328444144960550554",
+    "potential_return": 47.61904761904761
+  },
+  {
+    "question": "Will Wildflower (Billie Eilish) win Song of the Year at the 68th Annual GRAMMY A",
+    "price": 0.0425,
+    "outcome": "yes",
+    "condition_id": "0xffe62176c4eb6eb83ccff978b60f26f2c106398fa3c12f8f10c390069f1c0327",
+    "token_id": "98032013532486965224887573635135423443725925647904190791194069311921831803628",
+    "potential_return": 47.05882352941176
+  },
+  {
+    "question": "Will Toumani Camara lead the NBA in steals during the 2025\u201326 NBA season?",
+    "price": 0.0425,
+    "outcome": "yes",
+    "condition_id": "0x36ffdcaa4ea814d2b83f9cc68c4ac40b8eda9dc7317ade4ef270b453da609752",
+    "token_id": "87656287453978025213217151216124111704906231034817962354252787979202160833076",
+    "potential_return": 47.05882352941176
+  },
+  {
+    "question": "Will A House of Dynamite be nominated for Best Picture at the 98th Academy Award",
+    "price": 0.0425,
+    "outcome": "yes",
+    "condition_id": "0xf71672196d10e35fa7ce580b330d0136d7b3496bf9670a51cc79c6f8c5347d05",
+    "token_id": "111117731063241502737446812840152265139805804424467534304632030040910475330006",
+    "potential_return": 47.05882352941176
+  },
+  {
+    "question": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
+    "price": 0.0425,
+    "outcome": "yes",
+    "condition_id": "0x909659c9436228e2be56d5582ba6188166f2f8bf3c596335512c8f2e380d01ec",
+    "token_id": "38171024903091354977195167437673496224420673639143973968032407064172828043588",
+    "potential_return": 47.05882352941176
+  },
+  {
+    "question": "Will David Koch be named in newly released Epstein files?",
+    "price": 0.0425,
+    "outcome": "yes",
+    "condition_id": "0xb243a8c5c98b67bce78389dd0d83a1d899f7b7a288c6fe7e1c2749078a6a55fd",
+    "token_id": "69165509025564821423483139365033866943587691725493169400442047267267733751340",
+    "potential_return": 47.05882352941176
+  },
+  {
+    "question": "Will Trump sell 101-1k Gold Cards in 2026?",
+    "price": 0.043,
+    "outcome": "yes",
+    "condition_id": "0x960324c7d2db73740836bbd97eec770fcb9b5372e5b46d98b2999fdbbd017f7a",
+    "token_id": "40004664463047048443131162836045703174545321215871022010023173925320272282862",
+    "potential_return": 46.51162790697675
+  },
+  {
+    "question": "Henry Cavill announced as next James Bond?",
+    "price": 0.043,
+    "outcome": "yes",
+    "condition_id": "0x16d52b2db68983b9078e0299a86096725664ca7a434017922f7ea1c06b92b034",
+    "token_id": "88217367032380103395167682111051594395803346118218216383029818059516080329712",
+    "potential_return": 46.51162790697675
+  },
+  {
+    "question": "Will Ellen Degeneres be named in newly released Epstein files?",
+    "price": 0.0435,
+    "outcome": "yes",
+    "condition_id": "0xd4f39fecd3c15a3936071bba95ec734cfcab895f44c7fbff4935c69167200c81",
+    "token_id": "5393725847579059546080693600313155722569949619725264395671125862771705628945",
+    "potential_return": 45.97701149425288
+  },
+  {
+    "question": "Will AV (Green Alliance) win the most seats in the 2026 Colombian Senate electio",
+    "price": 0.0445,
+    "outcome": "yes",
+    "condition_id": "0x83bda9d757ea1b918083066c4e88f20dc722fee92972a60fec0e7dec4fdcbf6f",
+    "token_id": "11408741853853924565318790879677641618099103276539977709031628242402663535128",
+    "potential_return": 44.943820224719104
+  },
+  {
+    "question": "Will Trump visit China by March 31?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0xffff6c984d7adab19e799c46d1a478d5ab6483479b41f9639d04617f07a8bab0",
+    "token_id": "70235644432412964121917864255900359382638971100146813592379821470215190007259",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Will the Toronto Raptors win the 2025\u20132026 NBA Atlantic Division?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0xa5762abe39c8b83cd512cff2c95f6243e239d091596b35d4df838684c33fbac0",
+    "token_id": "113955998898417151531687820928635758331932756778401603036703140500221769721680",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Will Mamdani make NYC buses free by March 31?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0xaf94780c19caff2c1f480b92c58fcb3aae64a4dcab13653cadb230e839d67c0c",
+    "token_id": "22941008078112729642088551938182252813764145213495728065700592259006162193646",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Will Nikola Jokic win the 2025\u20132026 NBA MVP?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0xf2fb4784ceb4d41ce23703da426700f710320ec5b711b6e3784bdaac24d94c23",
+    "token_id": "73768610008619570600930429495180540710817177537162503586781057110775077618432",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Will Michigan State win the 2026 NCAA Tournament?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0xedffa92c5118c91718066835df3911cac4817351162a4e0b1f6ccc64179d6f46",
+    "token_id": "106442077621018671814685163058566326323020044377770749589187818682915414193619",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Will Lee Hak-jae win the 2026 Incheon mayoral election?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0xb721a52a34271177a36ea08a0c9a7cfc42b3ac1f20d679bc389e0eb021850dd2",
+    "token_id": "114046617867242198863408884966179806694275628788888455978459984380620403721665",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Will Pete Buttigieg win the 2028 Democratic presidential nomination?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0x4c325469d9b516ef4e6b8f73a81a12607dec075e3c2fd454f91765aaeafc4760",
+    "token_id": "91031279171981959197361710127213577102576826515163085396576756946418341946256",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Claudia Sheinbaum out as President of Mexico by June 30?",
+    "price": 0.045,
+    "outcome": "yes",
+    "condition_id": "0x5649a937907e0db6814f3fcbfa68e9f78a700d8c0e38ce652a572d97e205640d",
+    "token_id": "99309837432474218579509000241868648485226597214018334052948341435179812240487",
+    "potential_return": 44.44444444444444
+  },
+  {
+    "question": "Will LaMelo Ball lead the NBA in three pointers made during the 2025\u201326 NBA seas",
+    "price": 0.0455,
+    "outcome": "yes",
+    "condition_id": "0x2f6cf09dc0979fed8148814b3b342ff54e35c83a6d4d58dff276fb9e39cffb8d",
+    "token_id": "96817228262400637786203836710348663992821983129257132987410978307234162872298",
+    "potential_return": 43.956043956043956
+  },
+  {
+    "question": "Will Marco Rubio win the 2028 US Presidential Election?",
+    "price": 0.0455,
+    "outcome": "yes",
+    "condition_id": "0x2053d8515f1b8cbeea4ccdb56e60e89c2617e43a8660d95166b8e71d27865277",
+    "token_id": "11171618905857319805355893398009978356002287408842633593535559412449299952250",
+    "potential_return": 43.956043956043956
+  },
+  {
+    "question": "Will Kirsten Gillibrand be named in newly released Epstein files?",
+    "price": 0.0455,
+    "outcome": "yes",
+    "condition_id": "0xd5160f3be9575bead67f8ef9e36521dab55d259da6029d68991cc16575549633",
+    "token_id": "61992311224447996732863938534585211374190792749771166830089278120692982695821",
+    "potential_return": 43.956043956043956
+  },
+  {
+    "question": "Will Kevin Durant win the 2025\u20132026 NBA Clutch Player of the Year?",
+    "price": 0.046,
+    "outcome": "yes",
+    "condition_id": "0xfa4d48475804bc5c06c7fd21ce72c6cac2d87145c840753a895ec51bb66cd022",
+    "token_id": "27882330421250944600655955605487441779103562364075550254271884085511714899624",
+    "potential_return": 43.47826086956522
+  },
+  {
+    "question": "Will Andr\u00e9 Ventura win the 2026 Portugal presidential election?",
+    "price": 0.0465,
+    "outcome": "yes",
+    "condition_id": "0xbcb33ad98c8141b10f2350ef687eddf0660484ecc15be42ecdae64339e64dce1",
+    "token_id": "87048058140607839077917415447158941112086606824479198286281986963033007181784",
+    "potential_return": 43.01075268817204
+  },
+  {
+    "question": "Will the Republicans win the Rhode Island governor race in 2026?",
+    "price": 0.0465,
+    "outcome": "yes",
+    "condition_id": "0xc9e6a0be2fe2d015dc1cd9d75f4dc5b48dddee1a7043935ef5d1e981c55d5ffc",
+    "token_id": "102532646565376609462398061495436415751549869365588135784659237547896983513156",
+    "potential_return": 43.01075268817204
+  },
+  {
+    "question": "Will AOI win the Defi App trading competition?",
+    "price": 0.0465,
+    "outcome": "yes",
+    "condition_id": "0x41f5655798521a5284fafac66a67b18148d6610ea085a9bbd18f26e42cd738e4",
+    "token_id": "54625506257904661338209840712892058875993970431109786225045038765073769554507",
+    "potential_return": 43.01075268817204
+  },
+  {
+    "question": "Will Jesse Minter be the next Giants Head Coach?",
+    "price": 0.0465,
+    "outcome": "yes",
+    "condition_id": "0x20802a35f793dd6bec5584e73d615dea81e0c09a6a01a91350ffacba08bc73e8",
+    "token_id": "80559861791787388517145787581794127824119085101241151240896665927577913637310",
+    "potential_return": 43.01075268817204
+  },
+  {
+    "question": "Will Michelle Bolsonaro qualify for Brazil's presidential runoff?",
+    "price": 0.047,
+    "outcome": "yes",
+    "condition_id": "0x003e6ffdf25f45a8d5679831551658e1b54094187f552fc6ef4b26bca404c971",
+    "token_id": "49058413537469145808340126520652205803369994566298859701509185048060495231532",
+    "potential_return": 42.5531914893617
+  },
+  {
+    "question": "Will Ime Udoka win the 2025\u20132026 NBA Coach of the Year?",
+    "price": 0.0475,
+    "outcome": "yes",
+    "condition_id": "0x3daa84a9a1f761721bb8e1b4b1c185ba82ec80f3e22c26e4fbad54e1fdfcd44e",
+    "token_id": "35854549796048540718044135705276190062452520110803021208692345163949404211222",
+    "potential_return": 42.10526315789474
+  },
+  {
+    "question": "Will Israel strike 1 country in 2026?",
+    "price": 0.048,
+    "outcome": "yes",
+    "condition_id": "0x32acbaf5446427b5866a608295cedced41efadb9d7db5cd295279935d04835c6",
+    "token_id": "2738812682068376776699468136271118344069088655124852810919805375758885842769",
+    "potential_return": 41.666666666666664
+  },
+  {
+    "question": "Will George Clooney be nominated for Best Actor at the 98th Academy Awards?",
+    "price": 0.048,
+    "outcome": "yes",
+    "condition_id": "0x26bae6cabb8969cb998996a797ead8c295e3eb643332cfba784d20063760ffc9",
+    "token_id": "62872395848202438116951844556029402160981275067132633784991344603187461087678",
+    "potential_return": 41.666666666666664
+  },
+  {
+    "question": "Will Sean Combs be named in newly released Epstein files?",
+    "price": 0.048,
+    "outcome": "yes",
+    "condition_id": "0x1759a4b2b972fc59dd6a4b148746d9f6f3593159daa3d6572f8f6eb0c8d22aef",
+    "token_id": "28610879580381197162209484620128862110484772475624290738155086697483989626447",
+    "potential_return": 41.666666666666664
+  },
+  {
+    "question": "Will Fernando Dias da Costa win the 2025 Guinea-Bissau presidential election?",
+    "price": 0.048,
+    "outcome": "yes",
+    "condition_id": "0x161a2b6a96bb7fd306f056914ae6331896efb7e3b431802c797d80447d8ed877",
+    "token_id": "104446228890988225409934444239145198147573782010532745421211477935368278174465",
+    "potential_return": 41.666666666666664
+  },
+  {
+    "question": "Will Donald Trump win the 2028 Republican presidential nomination?",
+    "price": 0.0485,
+    "outcome": "yes",
+    "condition_id": "0x895e01dbf3e6a33cd9a44ca0f8cdb5df1bd2b0b6ebed5300d28f8da7145145e4",
+    "token_id": "3039641309958397001906153616677074061284510636204155275446291716739429262374",
+    "potential_return": 41.23711340206185
+  },
+  {
+    "question": "Will Meta acquire TikTok?",
+    "price": 0.049,
+    "outcome": "yes",
+    "condition_id": "0x3e0b13bc9015cb70291550966d375d73d9c8bf494ffb1d2169a3e6141a1f7574",
+    "token_id": "49372751764221434001147103326275206782320924549228867963338278477320771811813",
+    "potential_return": 40.816326530612244
+  },
+  {
+    "question": "Will the Indiana Pacers make the NBA Playoffs?",
+    "price": 0.049,
+    "outcome": "yes",
+    "condition_id": "0x8805111ec19da5d84663eaf38c28e2430a6e90af8970a37f9bade2aaaba690c4",
+    "token_id": "59996518923791033771489926566112068514387005584942369646043753873285330060147",
+    "potential_return": 40.816326530612244
+  },
+  {
+    "question": "Will Onyeka Okongwu win the 2025\u20132026 NBA Sixth Man of the Year?",
+    "price": 0.049,
+    "outcome": "yes",
+    "condition_id": "0x79f38a4682dc326e5dfd964ec88d0d2ca4a19a01b013ca72a35e35396b479c9f",
+    "token_id": "115374970096798578142578267141911093596080681628629652676213356353900354555727",
+    "potential_return": 40.816326530612244
+  },
+  {
+    "question": "Will Greta Thunberg win the Nobel Peace Prize in 2026?",
+    "price": 0.0495,
+    "outcome": "yes",
+    "condition_id": "0xdd84a0f9830eb540be5cd7a22bcaaa27aedced37c7994c480f95669a341f1c4e",
+    "token_id": "110720206167890822616321575705807171983245849150110799188723045022216595670551",
+    "potential_return": 40.4040404040404
+  },
+  {
+    "question": "Will Louisville win the 2026 NCAA Tournament?",
+    "price": 0.0495,
+    "outcome": "yes",
+    "condition_id": "0x049552b069fc81add93f6cfdca930f994d73b727afc02086e92e78ef8c452cf6",
+    "token_id": "102268057426223938984740390160803171648160863905761919028729391474579863541012",
+    "potential_return": 40.4040404040404
+  }
+]
