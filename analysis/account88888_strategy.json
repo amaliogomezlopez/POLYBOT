@@ -1,0 +1,28 @@
+{
+  "timestamp": "20251230_194011",
+  "target_account": "Account88888",
+  "observed_data": {
+    "profit_total": 372147.62,
+    "positions_value": 44100,
+    "biggest_win": 42300,
+    "predictions_count": 8036,
+    "joined": "Dec 2025"
+  },
+  "strategy_analysis": {
+    "type": "DIRECTIONAL (not delta-neutral)",
+    "markets": [
+      "BTC Up/Down 15min",
+      "ETH Up/Down 15min"
+    ],
+    "preferred_side": "DOWN",
+    "order_size": "$4-$10 per trade",
+    "frequency": "Multiple trades per minute",
+    "timing": "Last minutes before market close"
+  },
+  "our_strategy_comparison": {
+    "type": "Delta-Neutral Arbitrage",
+    "risk": "Low (buy both sides)",
+    "profit_source": "Spread < $1.00",
+    "expected_roi": "1-5% per trade"
+  }
+}

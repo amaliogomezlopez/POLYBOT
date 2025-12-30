@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-12-30T19:41:30.121524",
+  "config": {
+    "min_trade_size": 2.0,
+    "max_trade_size": 5.0,
+    "min_profit_threshold": 0.01
+  },
+  "opportunities_found": 0,
+  "trades_executed": 0,
+  "opportunities": [],
+  "trades": [],
+  "summary": {
+    "total_invested": 0,
+    "total_expected_profit": 0,
+    "avg_latency_ms": 0,
+    "success_rate": 0
+  }
+}
