@@ -1,0 +1,42 @@
+{
+  "report_id": "validation-20251230-181239",
+  "generated_at": "2025-12-30T18:12:39.719276",
+  "period_start": "2025-12-30T17:12:39.719276",
+  "period_end": "2025-12-30T18:12:39.719276",
+  "duration_hours": 1.0,
+  "total_positions": 0,
+  "successful_positions": 0,
+  "failed_positions": 0,
+  "partial_positions": 0,
+  "total_invested": 0,
+  "total_fees": 0,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0,
+  "net_pnl": 0,
+  "roi_pct": 0,
+  "winning_trades": 0,
+  "losing_trades": 0,
+  "win_rate": 0,
+  "avg_win": 0,
+  "avg_loss": 0,
+  "profit_factor": 999.99,
+  "total_slippage": 0,
+  "avg_slippage_pct": 0,
+  "max_slippage_pct": 0,
+  "trades_with_slippage": 0,
+  "avg_execution_latency_ms": 0,
+  "p95_execution_latency_ms": 0,
+  "max_execution_latency_ms": 0,
+  "latency_threshold_breaches": 0,
+  "positions": [],
+  "alerts": [
+    {
+      "severity": "high",
+      "type": "low_win_rate",
+      "message": "Win rate below 50%: 0.0%"
+    }
+  ],
+  "recommendations": [
+    "Review opportunity detection thresholds"
+  ]
+}
