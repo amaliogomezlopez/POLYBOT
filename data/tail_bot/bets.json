@@ -9,7 +9,7 @@
     "stake": 2.0,
     "size": 1333.33,
     "potential_return": 1333.3333333333333,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -24,7 +24,7 @@
     "stake": 2.0,
     "size": 1333.33,
     "potential_return": 1333.3333333333333,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -39,7 +39,7 @@
     "stake": 2.0,
     "size": 1000.0,
     "potential_return": 1000.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -54,7 +54,7 @@
     "stake": 2.0,
     "size": 1000.0,
     "potential_return": 1000.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -69,7 +69,7 @@
     "stake": 2.0,
     "size": 800.0,
     "potential_return": 800.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -84,7 +84,7 @@
     "stake": 2.0,
     "size": 800.0,
     "potential_return": 800.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -99,7 +99,7 @@
     "stake": 2.0,
     "size": 800.0,
     "potential_return": 800.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -114,7 +114,7 @@
     "stake": 2.0,
     "size": 800.0,
     "potential_return": 800.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -129,7 +129,7 @@
     "stake": 2.0,
     "size": 800.0,
     "potential_return": 800.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -144,7 +144,7 @@
     "stake": 2.0,
     "size": 666.67,
     "potential_return": 666.6666666666666,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -159,7 +159,7 @@
     "stake": 2.0,
     "size": 666.67,
     "potential_return": 666.6666666666666,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -174,7 +174,7 @@
     "stake": 2.0,
     "size": 666.67,
     "potential_return": 666.6666666666666,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -189,7 +189,7 @@
     "stake": 2.0,
     "size": 666.67,
     "potential_return": 666.6666666666666,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -204,7 +204,7 @@
     "stake": 2.0,
     "size": 666.67,
     "potential_return": 666.6666666666666,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -219,7 +219,7 @@
     "stake": 2.0,
     "size": 666.67,
     "potential_return": 666.6666666666666,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -234,7 +234,7 @@
     "stake": 2.0,
     "size": 571.43,
     "potential_return": 571.4285714285714,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -249,7 +249,7 @@
     "stake": 2.0,
     "size": 571.43,
     "potential_return": 571.4285714285714,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -264,7 +264,7 @@
     "stake": 2.0,
     "size": 571.43,
     "potential_return": 571.4285714285714,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -279,7 +279,7 @@
     "stake": 2.0,
     "size": 571.43,
     "potential_return": 571.4285714285714,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -294,7 +294,7 @@
     "stake": 2.0,
     "size": 500.0,
     "potential_return": 500.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -309,7 +309,7 @@
     "stake": 2.0,
     "size": 444.44,
     "potential_return": 444.44444444444446,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -324,7 +324,7 @@
     "stake": 2.0,
     "size": 444.44,
     "potential_return": 444.44444444444446,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -339,7 +339,7 @@
     "stake": 2.0,
     "size": 400.0,
     "potential_return": 400.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -354,7 +354,7 @@
     "stake": 2.0,
     "size": 400.0,
     "potential_return": 400.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -369,7 +369,7 @@
     "stake": 2.0,
     "size": 400.0,
     "potential_return": 400.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -384,7 +384,7 @@
     "stake": 2.0,
     "size": 363.64,
     "potential_return": 363.6363636363637,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -399,7 +399,7 @@
     "stake": 2.0,
     "size": 363.64,
     "potential_return": 363.6363636363637,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -414,7 +414,7 @@
     "stake": 2.0,
     "size": 307.69,
     "potential_return": 307.6923076923077,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -429,7 +429,7 @@
     "stake": 2.0,
     "size": 285.71,
     "potential_return": 285.7142857142857,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -444,7 +444,7 @@
     "stake": 2.0,
     "size": 266.67,
     "potential_return": 266.6666666666667,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -459,7 +459,7 @@
     "stake": 2.0,
     "size": 250.0,
     "potential_return": 250.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -474,7 +474,7 @@
     "stake": 2.0,
     "size": 250.0,
     "potential_return": 250.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -489,7 +489,7 @@
     "stake": 2.0,
     "size": 250.0,
     "potential_return": 250.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -504,7 +504,7 @@
     "stake": 2.0,
     "size": 235.29,
     "potential_return": 235.2941176470588,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -519,7 +519,7 @@
     "stake": 2.0,
     "size": 200.0,
     "potential_return": 200.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -534,7 +534,7 @@
     "stake": 2.0,
     "size": 200.0,
     "potential_return": 200.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -549,7 +549,7 @@
     "stake": 2.0,
     "size": 190.48,
     "potential_return": 190.47619047619045,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -564,7 +564,7 @@
     "stake": 2.0,
     "size": 190.48,
     "potential_return": 190.47619047619045,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -579,7 +579,7 @@
     "stake": 2.0,
     "size": 173.91,
     "potential_return": 173.91304347826087,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -594,7 +594,7 @@
     "stake": 2.0,
     "size": 166.67,
     "potential_return": 166.66666666666666,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -609,7 +609,7 @@
     "stake": 2.0,
     "size": 160.0,
     "potential_return": 160.0,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -624,7 +624,7 @@
     "stake": 2.0,
     "size": 153.85,
     "potential_return": 153.84615384615384,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -639,7 +639,7 @@
     "stake": 2.0,
     "size": 153.85,
     "potential_return": 153.84615384615384,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
@@ -654,7 +654,7 @@
     "stake": 2.0,
     "size": 153.85,
     "potential_return": 153.84615384615384,
-    "status": "OPEN",
+    "status": "pending",
     "exit_price": null,
     "pnl": 0.0,
     "resolved_at": null
