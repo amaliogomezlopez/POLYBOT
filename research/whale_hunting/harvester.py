@@ -23,6 +23,9 @@ logger = structlog.get_logger(__name__)
 # Format: {display_name: wallet_address}
 WHALE_LIST = {
     "Account88888": "0x7f69983eb28245bba0d5083502a78744a8f66162",
+    "tsybka": "0xd5ccdf772f795547e299de57f47966e24de8dea4",
+    "XPredicter1": "0x6c16abad96d6989efe1b0333cb9af9158f548bfa",
+    "LlamaEnjoyer": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
 }
 
 # API Configuration - using data-api (same as browser network calls)
