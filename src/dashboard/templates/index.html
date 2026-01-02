@@ -113,13 +113,13 @@
 
         <!-- Strategy Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <!-- ARB Strategy -->
+            <!-- Internal ARB Strategy -->
             <div class="bg-cyber-card border border-cyber-border rounded-lg p-4 card-glow">
                 <div class="flex justify-between items-center mb-3">
-                    <span class="text-cyber-accent font-bold">🔀 ARB</span>
-                    <span class="text-xs px-2 py-1 bg-blue-900/50 text-blue-400 rounded">PREDICTBASE</span>
+                    <span class="text-cyber-accent font-bold">🎯 INTERNAL ARB</span>
+                    <span class="text-xs px-2 py-1 bg-cyan-900/50 text-cyan-400 rounded">RISK-FREE</span>
                 </div>
-                <div class="text-xs text-gray-500 mb-2">Cross-Exchange Arbitrage</div>
+                <div class="text-xs text-gray-500 mb-2">Orderbook Inefficiencies (Sum &lt; 1)</div>
                 <div class="grid grid-cols-3 gap-2 text-center">
                     <div>
                         <div id="arb-trades" class="text-xl font-bold text-white">0</div>
@@ -378,8 +378,8 @@
             // Strategy cards
             const strategies = data.strategies || {};
             
-            // ARB
-            const arb = strategies['ARB_PREDICTBASE_V1'] || {};
+            // Internal ARB (new) or Legacy ARB (old)
+            const arb = strategies['ARB_INTERNAL_V1'] || strategies['ARB_PREDICTBASE_V1'] || {};
             document.getElementById('arb-trades').textContent = arb.trades || 0;
             document.getElementById('arb-wins').textContent = arb.wins || 0;
             document.getElementById('arb-pnl').innerHTML = formatPnL(arb.pnl);

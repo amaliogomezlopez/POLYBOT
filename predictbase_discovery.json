@@ -1,0 +1,2230 @@
+{
+  "timestamp": "2026-01-02T17:57:34.778726",
+  "target_url": "https://predictbase.app/",
+  "total_requests": 183,
+  "total_responses": 67,
+  "api_candidates": [
+    {
+      "url": "https://predictbase.app/api/get_resolved_markets_v2",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "array",
+        "length": 1000,
+        "items": {
+          "type": "object",
+          "keys": [
+            "id",
+            "creator",
+            "question",
+            "status",
+            "details",
+            "categories",
+            "image",
+            "volume",
+            "endsAt",
+            "createdAt",
+            "updatedAt",
+            "optionTitles",
+            "optionPrices",
+            "optionVolumes",
+            "shares",
+            "winningOption",
+            "creatorRevenue",
+            "platformRevenue"
+          ],
+          "sample_values": {
+            "id": {
+              "type": "string",
+              "sample": "11650"
+            },
+            "creator": {
+              "type": "string",
+              "sample": "0x2d70267a862e9dee895b53d822b898d3e089d937"
+            },
+            "question": {
+              "type": "string",
+              "sample": "Bitcoin above $90,000 on January 2, 5pm UTC?"
+            },
+            "status": {
+              "type": "int"
+            },
+            "details": {
+              "type": "string",
+              "sample": "<p>This market will resolve to <strong>\u201cYes\u201d</stro"
+            },
+            "categories": {
+              "type": "array",
+              "length": 2,
+              "items": {
+                "type": "string",
+                "sample": "crypto"
+              }
+            },
+            "image": {
+              "type": "string",
+              "sample": "https://predictbase4d290ceff64b4b7098a5be70e4ba06d"
+            },
+            "volume": {
+              "type": "string",
+              "sample": "5195998176"
+            },
+            "endsAt": {
+              "type": "string",
+              "sample": "1767373200"
+            },
+            "createdAt": {
+              "type": "string",
+              "sample": "1767341949"
+            }
+          }
+        }
+      },
+      "sample_data": [
+        {
+          "id": "11650",
+          "creator": "0x2d70267a862e9dee895b53d822b898d3e089d937",
+          "question": "Bitcoin above $90,000 on January 2, 5pm UTC?",
+          "status": 1,
+          "details": "<p>This market will resolve to <strong>\u201cYes\u201d</strong> if the <strong>Close</strong> price of the <strong>Binance BTC/USDT 1-minute candle</strong> at <strong>5:00 PM UTC on January 2, 2026</strong> is <strong>above $90,000</strong>. It will resolve to <strong>\u201cNo\u201d</strong> if the Close price at that time is <strong>below $90,000</strong>. The resolution source is <strong>Binance</strong>, using the <strong>BTC/USDT 1-minute Close price</strong> available at https://www.binance.com/en/trade/BTC_USDT with <strong>\u201c1m\u201d</strong> and <strong>\u201cCandles\u201d</strong> selected.</p>",
+          "categories": [
+            "crypto",
+            "bitcoin"
+          ],
+          "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.amazonaws.com/market/profile/btc.png",
+          "volume": "5195998176",
+          "endsAt": "1767373200",
+          "createdAt": "1767341949",
+          "updatedAt": "1767373297",
+          "optionTitles": [
+            "Yes",
+            "No"
+          ],
+          "optionPrices": [
+            "985000",
+            "100510"
+          ],
+          "optionVolumes": [
+            "2803074503",
+            "2392923673"
+          ],
+          "shares": [
+            "11500000000",
+            "11500000000"
+          ],
+          "winningOption": "0",
+          "creatorRevenue": "51959964",
+          "platformRevenue": "51959964"
+        },
+        {
+          "id": "11638",
+          "creator": "0x7a60a5ba6a24b62f867875bc45490b4de1dae95d",
+          "question": "NHL: Canucks vs. Kraken",
+          "status": 1,
+          "details": "This market resolves based on the outcome of the NHL game between the Vancouver Canucks and the Seattle Kraken on January 2, 2026, at Rogers Arena in Vancouver. The result includes overtime and shootout if applicable.",
+          "categories": [
+            "sports",
+            "nhl"
+          ],
+          "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.amazonaws.com/market/profile/predi.png",
+          "volume": "0",
+          "endsAt": "1767308400",
+          "createdAt": "1767325189",
+          "updatedAt": "1767332293",
+          "optionTitles": [
+            "Canucks",
+            "Kraken"
+          ],
+          "optionPrices": [
+            "0",
+            "0"
+          ],
+          "optionVolumes": [
+            "0",
+            "0"
+          ],
+          "shares": [
+            "1000000",
+            "1000000"
+          ],
+          "winningOption": "1",
+          "creatorRevenue": "0",
+          "platformRevenue": "0"
+        },
+        {
+          "id": "11561",
+          "creator": "0x761aefe4d864703dd34e6b7fb89ba67fd554aaab",
+          "question": "Premier League: Crystal Palace vs. Fulham",
+          "status": 1,
+          "details": "This market resolves based on the outcome of the Premier League match between Crystal Palace and Fulham at Selhurst Park on January 1, 2026. The result is determined at the end of regular time (90 minutes plus injury time), excluding extra time and penalty shootouts.",
+          "categories": [
+            "sports",
+            "soccer",
+            "football"
+          ],
+          "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/market/profile/1767237460694_IMG_1648.jpeg",
+          "volume": "81414482",
+          "endsAt": "1767288600",
+          "createdAt": "1767237463",
+          "updatedAt": "1767296287",
+          "optionTitles": [
+            "Crystal Palace",
+            "Draw",
+            "Fulham"
+          ],
+          "optionPrices": [
+            "662857",
+            "942500",
+            "269285"
+          ],
+          "optionVolumes": [
+            "26988006",
+            "53928297",
+            "498179"
+          ],
+          "shares": [
+            "1000000000",
+            "1000000000",
+            "1000000000"
+          ],
+          "winningOption": "1",
+          "creatorRevenue": "814141",
+          "platformRevenue": "814141"
+        }
+      ],
+      "score": 75
+    },
+    {
+      "url": "https://predictbase.app/api/get_recent_markets_v2",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "array",
+        "length": 5,
+        "items": {
+          "type": "object",
+          "keys": [
+            "id",
+            "creator",
+            "question",
+            "status",
+            "details",
+            "categories",
+            "image",
+            "volume",
+            "endsAt",
+            "createdAt",
+            "updatedAt",
+            "optionTitles",
+            "optionPrices",
+            "optionVolumes",
+            "shares",
+            "winningOption",
+            "creatorRevenue",
+            "platformRevenue"
+          ],
+          "sample_values": {
+            "id": {
+              "type": "string",
+              "sample": "11666"
+            },
+            "creator": {
+              "type": "string",
+              "sample": "0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6"
+            },
+            "question": {
+              "type": "string",
+              "sample": "Premier League: Bournemouth vs. Arsenal"
+            },
+            "status": {
+              "type": "int"
+            },
+            "details": {
+              "type": "string",
+              "sample": "This market will resolve based on the outcome of t"
+            },
+            "categories": {
+              "type": "array",
+              "length": 2,
+              "items": {
+                "type": "string",
+                "sample": "sports"
+              }
+            },
+            "image": {
+              "type": "string",
+              "sample": "https://predictbase4d290ceff64b4b7098a5be70e4ba06d"
+            },
+            "volume": {
+              "type": "string",
+              "sample": "0"
+            },
+            "endsAt": {
+              "type": "string",
+              "sample": "1767461400"
+            },
+            "createdAt": {
+              "type": "string",
+              "sample": "1767366245"
+            }
+          }
+        }
+      },
+      "sample_data": [
+        {
+          "id": "11666",
+          "creator": "0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6",
+          "question": "Premier League: Bournemouth vs. Arsenal",
+          "status": 0,
+          "details": "This market will resolve based on the outcome of the Premier League match between AFC Bournemouth and Arsenal FC, scheduled for January 3, 2026, at 17:30 UTC. The result will be determined by the score at the end of regular time (90 minutes plus injury time), excluding extra time and penalty shootouts.",
+          "categories": [
+            "sports",
+            "soccer"
+          ],
+          "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/market/profile/1767366245498_1000003491.webp",
+          "volume": "0",
+          "endsAt": "1767461400",
+          "createdAt": "1767366245",
+          "updatedAt": "1767366245",
+          "optionTitles": [
+            "Bournemouth",
+            "Draw",
+            "Arsenal"
+          ],
+          "optionPrices": [
+            "0",
+            "0",
+            "0"
+          ],
+          "optionVolumes": [
+            "0",
+            "0",
+            "0"
+          ],
+          "shares": [
+            "0",
+            "0",
+            "0"
+          ],
+          "winningOption": "18446744073709551615",
+          "creatorRevenue": "0",
+          "platformRevenue": "0"
+        },
+        {
+          "id": "11665",
+          "creator": "0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6",
+          "question": "La Liga: Espanyol vs. Barcelona",
+          "status": 0,
+          "details": "This market will resolve based on the outcome of the La Liga match between Espanyol and Barcelona scheduled for January 3, 2026, at 15:00 UTC. The result will be determined by the score at the end of regular time (90 minutes plus injury time), excluding extra time and penalty shootouts.",
+          "categories": [
+            "sports",
+            "soccer"
+          ],
+          "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/market/profile/1767366084200_1000003490.jpg",
+          "volume": "0",
+          "endsAt": "1767470400",
+          "createdAt": "1767366085",
+          "updatedAt": "1767366085",
+          "optionTitles": [
+            "Espanyol",
+            "Draw",
+            "Barcelona"
+          ],
+          "optionPrices": [
+            "0",
+            "0",
+            "0"
+          ],
+          "optionVolumes": [
+            "0",
+            "0",
+            "0"
+          ],
+          "shares": [
+            "0",
+            "0",
+            "0"
+          ],
+          "winningOption": "18446744073709551615",
+          "creatorRevenue": "0",
+          "platformRevenue": "0"
+        },
+        {
+          "id": "11664",
+          "creator": "0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6",
+          "question": "EPL: Chelsea vs. Man City",
+          "status": 0,
+          "details": "This market resolves based on the outcome of the English Premier League match between Chelsea and Manchester City, scheduled for April 11, 2026, at Stamford Bridge. The result will be determined at the end of regular time (90 minutes plus injury time), excluding extra time and penalty shootouts.",
+          "categories": [
+            "sports",
+            "soccer"
+          ],
+          "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/market/profile/1767365738856_1000003489.webp",
+          "volume": "0",
+          "endsAt": "1775925000",
+          "createdAt": "1767365739",
+          "updatedAt": "1767365739",
+          "optionTitles": [
+            "Chelsea",
+            "Draw",
+            "Man City"
+          ],
+          "optionPrices": [
+            "0",
+            "0",
+            "0"
+          ],
+          "optionVolumes": [
+            "0",
+            "0",
+            "0"
+          ],
+          "shares": [
+            "0",
+            "0",
+            "0"
+          ],
+          "winningOption": "18446744073709551615",
+          "creatorRevenue": "0",
+          "platformRevenue": "0"
+        }
+      ],
+      "score": 55
+    },
+    {
+      "url": "https://predictbase.app/api/get_recent_claims_v2",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "array",
+        "length": 5,
+        "items": {
+          "type": "object",
+          "keys": [
+            "id",
+            "user",
+            "optionIndex",
+            "shares",
+            "totalCost",
+            "avgCost",
+            "claimed",
+            "claimedAmount",
+            "isRefund",
+            "placedAt",
+            "claimedAt",
+            "market",
+            "Trades"
+          ],
+          "sample_values": {
+            "id": {
+              "type": "string",
+              "sample": "11650-0-0x4f1bdb085f193823076cef0726ee235a63494c9e"
+            },
+            "user": {
+              "type": "object",
+              "keys": [
+                "id"
+              ],
+              "sample_values": {
+                "id": {
+                  "type": "string",
+                  "sample": "0x4f1bdb085f193823076cef0726ee235a63494c9e"
+                }
+              }
+            },
+            "optionIndex": {
+              "type": "int"
+            },
+            "shares": {
+              "type": "string",
+              "sample": "10580000"
+            },
+            "totalCost": {
+              "type": "string",
+              "sample": "2045483"
+            },
+            "avgCost": {
+              "type": "string",
+              "sample": "193334"
+            },
+            "claimed": {
+              "type": "bool"
+            },
+            "claimedAmount": {
+              "type": "string",
+              "sample": "10580000"
+            },
+            "isRefund": {
+              "type": "bool"
+            },
+            "placedAt": {
+              "type": "string",
+              "sample": "1767369809"
+            }
+          }
+        }
+      },
+      "sample_data": [
+        {
+          "id": "11650-0-0x4f1bdb085f193823076cef0726ee235a63494c9e",
+          "user": {
+            "id": "0x4f1bdb085f193823076cef0726ee235a63494c9e"
+          },
+          "optionIndex": 0,
+          "shares": "10580000",
+          "totalCost": "2045483",
+          "avgCost": "193334",
+          "claimed": true,
+          "claimedAmount": "10580000",
+          "isRefund": false,
+          "placedAt": "1767369809",
+          "claimedAt": "1767373909",
+          "market": {
+            "id": "11650",
+            "question": "Bitcoin above $90,000 on January 2, 5pm UTC?",
+            "status": 1,
+            "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.amazonaws.com/market/profile/btc.png",
+            "endsAt": "1767373200",
+            "optionTitles": [
+              "Yes",
+              "No"
+            ]
+          },
+          "Trades": [
+            {
+              "id": "0x67fbd1e8930e1b13eb2ece0308d19e06f19148a2ff554e7a83ce720b09c42e3f-199-BUY",
+              "type": "BUY",
+              "amount": "999574",
+              "shares": "5850000",
+              "placedAt": "1767369809"
+            },
+            {
+              "id": "0x7776ceda9333484a01c7c56ec8889de7c60d638e41c74db9e77c1cba9a71a9ab-325-BUY",
+              "type": "BUY",
+              "amount": "1045909",
+              "shares": "4730000",
+              "placedAt": "1767368003"
+            }
+          ]
+        },
+        {
+          "id": "11650-0-0x553c0be749141ac55d6b1501b883f9ab8fb72524",
+          "user": {
+            "id": "0x553c0be749141ac55d6b1501b883f9ab8fb72524"
+          },
+          "optionIndex": 0,
+          "shares": "8208180000",
+          "totalCost": "2746180803",
+          "avgCost": "334566",
+          "claimed": true,
+          "claimedAmount": "8208180000",
+          "isRefund": false,
+          "placedAt": "1767365673",
+          "claimedAt": "1767373787",
+          "market": {
+            "id": "11650",
+            "question": "Bitcoin above $90,000 on January 2, 5pm UTC?",
+            "status": 1,
+            "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.amazonaws.com/market/profile/btc.png",
+            "endsAt": "1767373200",
+            "optionTitles": [
+              "Yes",
+              "No"
+            ]
+          },
+          "Trades": [
+            {
+              "id": "0x666d2b529743c323be831307308625c2de83402218d7151dddecd037b34aa61b-100-BUY",
+              "type": "BUY",
+              "amount": "976187868",
+              "shares": "2368860000",
+              "placedAt": "1767365341"
+            },
+            {
+              "id": "0x681d62347ae0907c46e26ae427ac8fd3538d2a877970ecf5107d25be1fa72041-847-BUY",
+              "type": "BUY",
+              "amount": "749998398",
+              "shares": "3244310000",
+              "placedAt": "1767365265"
+            },
+            {
+              "id": "0xc212132d1b27587ff8116abd192a08d55f5b87a6dbeab28e1a0eddb5acab1663-83-BUY",
+              "type": "BUY",
+              "amount": "1009996988",
+              "shares": "2576590000",
+              "placedAt": "1767365673"
+            },
+            {
+              "id": "0xcd59ed1fcace8ed292607dce6f54f7cbd4bde5a5b3868a99d7d206265d50fcc6-594-BUY",
+              "type": "BUY",
+              "amount": "9997549",
+              "shares": "18420000",
+              "placedAt": "1767365475"
+            }
+          ]
+        },
+        {
+          "id": "11486-0-0x553c0be749141ac55d6b1501b883f9ab8fb72524",
+          "user": {
+            "id": "0x553c0be749141ac55d6b1501b883f9ab8fb72524"
+          },
+          "optionIndex": 0,
+          "shares": "5203690000",
+          "totalCost": "4999977295",
+          "avgCost": "960852",
+          "claimed": true,
+          "claimedAmount": "5203690000",
+          "isRefund": false,
+          "placedAt": "1767365963",
+          "claimedAt": "1767373785",
+          "market": {
+            "id": "11486",
+            "question": "Ethereum above $3,000 on January 2nd, 5pm UTC?",
+            "status": 1,
+            "image": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.amazonaws.com/market/profile/eth.png",
+            "endsAt": "1767373200",
+            "optionTitles": [
+              "Yes",
+              "No"
+            ]
+          },
+          "Trades": [
+            {
+              "id": "0x552671b20385113d6622cb614c61fdc38588a27eb05c81d5f5bb425cf46563f1-409-BUY",
+              "type": "BUY",
+              "amount": "499990824",
+              "shares": "518180000",
+              "placedAt": "1767365963"
+            },
+            {
+              "id": "0x9c512882f7bbdcd25bc5067dcbe08e92a820b96f1ab4e575cf6a03e5cc9f59a4-937-BUY",
+              "type": "BUY",
+              "amount": "1999993753",
+              "shares": "2094570000",
+              "placedAt": "1767365181"
+            },
+            {
+              "id": "0xb3c1b5bf9a2beeb9830156b8cc5ce1565432073a1b794d67b95e9bb702c9cd51-166-BUY",
+              "type": "BUY",
+              "amount": "2499992718",
+              "shares": "2590940000",
+              "placedAt": "1767365609"
+            }
+          ]
+        }
+      ],
+      "score": 50
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x30f89f5f4cf25f457b4d9cbfb64a64a97f00bed0",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x30f89f5f4cf25f457b4d9cbfb64a64a97f00bed0"
+          },
+          "name": {
+            "type": "null"
+          },
+          "profilePicture": {
+            "type": "null"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "string",
+                "sample": "eyJ2ZXJzaW9uIjozLCJ0b2tlbiI6IkFnVjRiR1JpalVPQXpwVk"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "object",
+            "keys": [
+              "id",
+              "volume",
+              "balance",
+              "revenue",
+              "bet_count",
+              "profit",
+              "market_count",
+              "is_admin",
+              "is_operator",
+              "createdAt",
+              "updatedAt",
+              "__typename"
+            ],
+            "sample_values": {
+              "id": {
+                "type": "string",
+                "sample": "0x30f89f5f4cf25f457b4d9cbfb64a64a97f00bed0"
+              },
+              "volume": {
+                "type": "int"
+              },
+              "balance": {
+                "type": "int"
+              },
+              "revenue": {
+                "type": "int"
+              },
+              "bet_count": {
+                "type": "int"
+              },
+              "profit": {
+                "type": "int"
+              },
+              "market_count": {
+                "type": "int"
+              },
+              "is_admin": {
+                "type": "bool"
+              },
+              "is_operator": {
+                "type": "bool"
+              },
+              "createdAt": {
+                "type": "string",
+                "sample": "2025-12-26T21:36:24.352Z"
+              }
+            }
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x30f89f5f4cf25f457b4d9cbfb64a64a97f00bed0",
+        "name": null,
+        "profilePicture": null
+      },
+      "score": 40
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x4f1bdb085f193823076cef0726ee235a63494c9e",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x4f1bdb085f193823076cef0726ee235a63494c9e"
+          },
+          "name": {
+            "type": "string",
+            "sample": "Fscrypt"
+          },
+          "profilePicture": {
+            "type": "string",
+            "sample": "https://predictbase4d290ceff64b4b7098a5be70e4ba06d"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "string",
+                "sample": "eyJ2ZXJzaW9uIjozLCJ0b2tlbiI6IkFnVjRQTWNsQ2lRQ2pkan"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x4f1bdb085f193823076cef0726ee235a63494c9e",
+        "name": "Fscrypt",
+        "profilePicture": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/user/profile/1762096061177_avatar.jpg"
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x9820c366ad2a0b77bffe9239634e377b871ffbd9",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x9820c366ad2a0b77bffe9239634e377b871ffbd9"
+          },
+          "name": {
+            "type": "string",
+            "sample": "Gravity Shmavity"
+          },
+          "profilePicture": {
+            "type": "null"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "object",
+            "keys": [
+              "id",
+              "volume",
+              "balance",
+              "revenue",
+              "bet_count",
+              "profit",
+              "market_count",
+              "is_admin",
+              "is_operator",
+              "createdAt",
+              "updatedAt",
+              "__typename"
+            ],
+            "sample_values": {
+              "id": {
+                "type": "string",
+                "sample": "0x9820c366ad2a0b77bffe9239634e377b871ffbd9"
+              },
+              "volume": {
+                "type": "int"
+              },
+              "balance": {
+                "type": "int"
+              },
+              "revenue": {
+                "type": "int"
+              },
+              "bet_count": {
+                "type": "int"
+              },
+              "profit": {
+                "type": "int"
+              },
+              "market_count": {
+                "type": "int"
+              },
+              "is_admin": {
+                "type": "bool"
+              },
+              "is_operator": {
+                "type": "bool"
+              },
+              "createdAt": {
+                "type": "string",
+                "sample": "2025-12-30T03:31:53.216Z"
+              }
+            }
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x9820c366ad2a0b77bffe9239634e377b871ffbd9",
+        "name": "Gravity Shmavity",
+        "profilePicture": null
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x553c0be749141ac55d6b1501b883f9ab8fb72524",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x553c0be749141ac55d6b1501b883f9ab8fb72524"
+          },
+          "name": {
+            "type": "string",
+            "sample": "Moe"
+          },
+          "profilePicture": {
+            "type": "string",
+            "sample": "https://predictbase4d290ceff64b4b7098a5be70e4ba06d"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x553c0be749141ac55d6b1501b883f9ab8fb72524",
+        "name": "Moe",
+        "profilePicture": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/user/profile/1754428981613_IMG_8331.jpeg"
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x2d70267a862e9dee895b53d822b898d3e089d937",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x2d70267a862e9dee895b53d822b898d3e089d937"
+          },
+          "name": {
+            "type": "string",
+            "sample": "PredictBase"
+          },
+          "profilePicture": {
+            "type": "string",
+            "sample": "https://predictbase4d290ceff64b4b7098a5be70e4ba06d"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "string",
+                "sample": "eyJ2ZXJzaW9uIjozLCJ0b2tlbiI6IkFnVjRUTGppRk5abjdyMk"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x2d70267a862e9dee895b53d822b898d3e089d937",
+        "name": "PredictBase",
+        "profilePicture": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/user/profile/1766455981505_avatar.jpg"
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6"
+          },
+          "name": {
+            "type": "string",
+            "sample": "llbodoll.base.eth"
+          },
+          "profilePicture": {
+            "type": "string",
+            "sample": "https://tba-mobile.mypinata.cloud/ipfs/QmPYDdpigwS"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "string",
+                "sample": "eyJ2ZXJzaW9uIjozLCJ0b2tlbiI6IkFnVjRRZHR6U0pTaGtRRn"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6",
+        "name": "llbodoll.base.eth",
+        "profilePicture": "https://tba-mobile.mypinata.cloud/ipfs/QmPYDdpigwSEyAZ6JRrtv8u9r3iA6jzqiECXMfyRiGb93p?pinataGatewayToken=3nq0UVhtd3rYmgYDdb1I9qv7rHsw-_DzwdWkZPRQ-QW1avFI9dCS8knaSfq_R5_q"
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x6e6e343a6faa21cb910864a910fae4e33952b1d6",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x6e6e343a6faa21cb910864a910fae4e33952b1d6"
+          },
+          "name": {
+            "type": "string",
+            "sample": "Katze"
+          },
+          "profilePicture": {
+            "type": "string",
+            "sample": "https://predictbase4d290ceff64b4b7098a5be70e4ba06d"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "string",
+                "sample": "eyJ2ZXJzaW9uIjozLCJ0b2tlbiI6IkFnVjQzRTlMWXRUN0hWS0"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x6e6e343a6faa21cb910864a910fae4e33952b1d6",
+        "name": "Katze",
+        "profilePicture": "https://predictbase4d290ceff64b4b7098a5be70e4ba06dc9c897-prod.s3.us-east-2.amazonaws.com/user/profile/1763979746444_avatar.jpg"
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x3cab8c72be9477a4b4153a75b6baa6559022dce6",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "address",
+          "revenue",
+          "volume"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x3cab8c72be9477a4b4153a75b6baa6559022dce6"
+          },
+          "name": {
+            "type": "null"
+          },
+          "profilePicture": {
+            "type": "null"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x3cab8c72be9477a4b4153a75b6baa6559022dce6",
+        "name": null,
+        "profilePicture": null
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x5f6ea24d17cbd39b4ad49acd11399574e0fe2c9e",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x5f6ea24d17cbd39b4ad49acd11399574e0fe2c9e"
+          },
+          "name": {
+            "type": "null"
+          },
+          "profilePicture": {
+            "type": "null"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "string",
+                "sample": "eyJ2ZXJzaW9uIjozLCJ0b2tlbiI6IkFnVjRYeVRhV1E3M3FGZi"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x5f6ea24d17cbd39b4ad49acd11399574e0fe2c9e",
+        "name": null,
+        "profilePicture": null
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0x9992c07e6b45ba49aced9d8970edbc4bbff909b8",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0x9992c07e6b45ba49aced9d8970edbc4bbff909b8"
+          },
+          "name": {
+            "type": "string",
+            "sample": "Quant"
+          },
+          "profilePicture": {
+            "type": "null"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0x9992c07e6b45ba49aced9d8970edbc4bbff909b8",
+        "name": "Quant",
+        "profilePicture": null
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0xcc11ac84397f7428165dc5aaf8a62599fb00bd2c",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "address",
+          "revenue",
+          "volume"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0xcc11ac84397f7428165dc5aaf8a62599fb00bd2c"
+          },
+          "name": {
+            "type": "string",
+            "sample": "caler.base.eth"
+          },
+          "profilePicture": {
+            "type": "string",
+            "sample": "https://res.cloudinary.com/base-app/image/upload/f"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "null"
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0xcc11ac84397f7428165dc5aaf8a62599fb00bd2c",
+        "name": "caler.base.eth",
+        "profilePicture": "https://res.cloudinary.com/base-app/image/upload/f_auto/v1761691933/IMG_8464.jpg.heic"
+      },
+      "score": 30
+    },
+    {
+      "url": "https://predictbase.app/api/get_user?userid=0xdcfb1c4ae41c230ad984be69dab1e4fb571f284c",
+      "method": "GET",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://predictbase.app/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"HeadlessChrome\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "data_structure": {
+        "type": "object",
+        "keys": [
+          "id",
+          "name",
+          "profilePicture",
+          "acceptedTerms",
+          "referrer",
+          "referral",
+          "saveMarkets",
+          "comments",
+          "notifications",
+          "account",
+          "intakeOrders",
+          "apiKey",
+          "points",
+          "prediBalance",
+          "createdAt",
+          "updatedAt",
+          "__typename",
+          "isAdmin",
+          "volume",
+          "revenue"
+        ],
+        "sample_values": {
+          "id": {
+            "type": "string",
+            "sample": "0xdcfb1c4ae41c230ad984be69dab1e4fb571f284c"
+          },
+          "name": {
+            "type": "string",
+            "sample": "xargs.base.eth"
+          },
+          "profilePicture": {
+            "type": "string",
+            "sample": "https://tba-mobile.mypinata.cloud/ipfs/QmQCy5MZLWu"
+          },
+          "acceptedTerms": {
+            "type": "bool"
+          },
+          "referrer": {
+            "type": "null"
+          },
+          "referral": {
+            "type": "null"
+          },
+          "saveMarkets": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelSavedMarketConnection"
+              }
+            }
+          },
+          "comments": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelCommentConnection"
+              }
+            }
+          },
+          "notifications": {
+            "type": "object",
+            "keys": [
+              "nextToken",
+              "__typename"
+            ],
+            "sample_values": {
+              "nextToken": {
+                "type": "null"
+              },
+              "__typename": {
+                "type": "string",
+                "sample": "ModelNotificationConnection"
+              }
+            }
+          },
+          "account": {
+            "type": "object",
+            "keys": [
+              "id",
+              "volume",
+              "balance",
+              "revenue",
+              "bet_count",
+              "profit",
+              "market_count",
+              "is_admin",
+              "is_operator",
+              "createdAt",
+              "updatedAt",
+              "__typename"
+            ],
+            "sample_values": {
+              "id": {
+                "type": "string",
+                "sample": "0xdcfb1c4ae41c230ad984be69dab1e4fb571f284c"
+              },
+              "volume": {
+                "type": "int"
+              },
+              "balance": {
+                "type": "int"
+              },
+              "revenue": {
+                "type": "int"
+              },
+              "bet_count": {
+                "type": "int"
+              },
+              "profit": {
+                "type": "int"
+              },
+              "market_count": {
+                "type": "int"
+              },
+              "is_admin": {
+                "type": "bool"
+              },
+              "is_operator": {
+                "type": "bool"
+              },
+              "createdAt": {
+                "type": "string",
+                "sample": "2025-12-26T21:36:24.155Z"
+              }
+            }
+          }
+        }
+      },
+      "sample_data": {
+        "id": "0xdcfb1c4ae41c230ad984be69dab1e4fb571f284c",
+        "name": "xargs.base.eth",
+        "profilePicture": "https://tba-mobile.mypinata.cloud/ipfs/QmQCy5MZLWuGefrST8RYnPNf1SQRQqSsuqY7q5q3vcSy2e?pinataGatewayToken=3nq0UVhtd3rYmgYDdb1I9qv7rHsw-_DzwdWkZPRQ-QW1avFI9dCS8knaSfq_R5_q"
+      },
+      "score": 30
+    }
+  ],
+  "all_json_urls": [
+    "https://predictbase.app/cdn-cgi/speculation",
+    "https://predictbase.app/api/get_recent_claims_v2",
+    "https://predictbase.app/api/get_user?userid=0x4f1bdb085f193823076cef0726ee235a63494c9e",
+    "https://predictbase.app/api/get_user?userid=0x9820c366ad2a0b77bffe9239634e377b871ffbd9",
+    "https://api.web3modal.org/appkit/v1/config?projectId=2a5dbdb02c50ef8eeb575bbf632bf401&st=appkit&sv=html-core-1.7.8",
+    "https://predictbase.app/api/get_daily_volumes_v2",
+    "https://predictbase.app/api/get_protocol_stats_v2",
+    "https://cognito-identity.us-east-2.amazonaws.com/",
+    "https://cognito-identity.us-east-2.amazonaws.com/",
+    "https://predictbase.app/api/get_protocol_stats",
+    "https://predictbase.app/api/get_user?userid=0x553c0be749141ac55d6b1501b883f9ab8fb72524",
+    "https://predictbase.app/api/get_daily_volumes",
+    "https://predictbase.app/api/get_user?userid=0x2d70267a862e9dee895b53d822b898d3e089d937",
+    "https://predictbase.app/api/get_daily_volumes_v2",
+    "https://cognito-identity.us-east-2.amazonaws.com/",
+    "https://cognito-identity.us-east-2.amazonaws.com/",
+    "https://predictbase.app/api/get_daily_volumes",
+    "https://predictbase.app/api/get_resolved_markets_v2",
+    "https://predictbase.app/api/get_recent_markets_v2",
+    "https://predictbase.app/api/get_user?userid=0xc15721a57c1b0d251cb20582bbcf68e5cbb279f6",
+    "https://predictbase.app/api/get_user?userid=0x6e6e343a6faa21cb910864a910fae4e33952b1d6",
+    "https://predictbase.app/api/get_user?userid=0x3cab8c72be9477a4b4153a75b6baa6559022dce6",
+    "https://predictbase.app/api/get_user?userid=0x5f6ea24d17cbd39b4ad49acd11399574e0fe2c9e",
+    "https://predictbase.app/api/get_user?userid=0x9992c07e6b45ba49aced9d8970edbc4bbff909b8",
+    "https://predictbase.app/api/get_user?userid=0xcc11ac84397f7428165dc5aaf8a62599fb00bd2c",
+    "https://predictbase.app/api/get_user?userid=0xdcfb1c4ae41c230ad984be69dab1e4fb571f284c",
+    "https://predictbase.app/api/get_user?userid=0x30f89f5f4cf25f457b4d9cbfb64a64a97f00bed0"
+  ]
+}

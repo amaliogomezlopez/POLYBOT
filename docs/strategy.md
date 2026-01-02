@@ -8,41 +8,72 @@ El bot ejecuta un **sistema multi-estrategia** que evalúa cada mercado con 3 es
 
 | ID | Nombre | Tipo | Trigger | Stake | ROI Esperado |
 |----|--------|------|---------|-------|--------------|
-| `ARB_PREDICTBASE_V1` | Cross-Exchange Arbitrage | Arbitrage | Spread > 3% entre Polymarket y PredictBase | $10 | 3-15% |
+| `ARB_PREDICTBASE_V1` | Cross-Exchange Arbitrage | Arbitrage | ROI > 2.5% (synthetic) | $50 | 2.5-25% |
 | `SNIPER_MICRO_V1` | Microstructure Sniper | Dual Mode | Crash Detection + Stink Bids | $5-10 | 50-500% |
 | `TAIL_BETTING_V1` | Tail Betting | Tail | YES < $0.04, ML Score > 55% | $2 | 25-1000x |
 
 ---
 
-## 🔀 Estrategia A: Cross-Exchange Arbitrage
+## 🔀 Estrategia A: Cross-Exchange Arbitrage (v2 - ARBScanner)
 
 **ID**: `ARB_PREDICTBASE_V1`  
-**Archivo**: `src/trading/strategies/arbitrage_strategy.py`
+**Archivos**: 
+- `src/scanner/arb_scanner.py` (batch scanner)
+- `src/trading/strategies/arbitrage_strategy.py` (strategy wrapper)
 
 ### Concepto
-Detecta oportunidades cuando el costo combinado de comprar YES en Polymarket + NO en PredictBase es menor a $0.95 (5% de margen).
+Detecta oportunidades de **arbitraje sintético** cuando:
+- `Poly_YES + PB_NO < $0.975` (2.5% profit margin)
+- `Poly_NO + PB_YES < $0.975`
 
-### Fórmula
+**Nota Importante**: PredictBase es un mercado de predicciones SEPARADO en Base chain, 
+NO un agregador de Polymarket. Las oportunidades de arbitraje solo existen cuando 
+mercados similares están listados en AMBAS plataformas.
+
+### Tipos de Arbitraje
+
+#### 1. Arbitraje Sintético (Principal)
 ```
-Arbitrage Spread = 1 - (Poly_YES + PB_NO)
-Si Spread > 3% → SEÑAL DE COMPRA
+Total Cost = Poly_YES + PB_NO
+ROI = (1.0 - Total Cost) / Total Cost * 100
+
+Ejemplo:
+  Poly YES = $0.45
+  PB NO    = $0.52
+  Cost     = $0.97
+  Profit   = $0.03 (3.1% ROI)
 ```
 
-### Parámetros
+#### 2. Arbitraje Directo (Informativo)
+```
+Price Diff = |Poly_YES - PB_YES|
+Edge = Price Diff / min(Poly, PB) * 100
+
+Requiere capacidad de venta/short en una plataforma.
+```
+
+### Parámetros v2
 | Parámetro | Valor | Descripción |
 |-----------|-------|-------------|
-| `min_spread_pct` | 3% | Spread mínimo para trigger |
-| `max_spread_pct` | 15% | Spread máximo (evita datos erróneos) |
-| `fuzzy_threshold` | 85 | Score mínimo de matching entre mercados |
-| `stake_size` | $10 | Tamaño de posición |
+| `min_roi_pct` | 2.5% | ROI mínimo (cubre fees de bridging) |
+| `max_roi_pct` | 25% | ROI máximo (evita datos erróneos) |
+| `fuzzy_threshold` | 85 | Score mínimo de matching (token_sort_ratio) |
+| `stake_size` | $50 | Tamaño de posición (más alto por bajo riesgo) |
+| `scan_interval` | 60s | Intervalo entre scans |
 
-### Flujo de Ejecución
-1. Recibe `MarketData` con precios de Polymarket
-2. Cliente PredictBase busca mercado equivalente (fuzzy matching)
-3. Si match score > 85%:
-   - Calcula spread sintético
-   - Si spread > 3%, genera señal
-4. Signal incluye hedge side para PredictBase
+### Flujo de Ejecución (v2 - Batch)
+1. **Batch Fetch**: Obtiene ~200 mercados de PredictBase
+2. **Batch Match**: Fuzzy matching usando `thefuzz.token_sort_ratio`
+3. **Ambiguity Check**: Detecta indicadores opuestos ("NOT", "under", etc.)
+4. **ROI Calculation**: Calcula ambas direcciones (YES+NO, NO+YES)
+5. **Signal Generation**: Genera `TradeSignal` si ROI > 2.5%
+
+### Limitaciones Actuales (Enero 2025)
+- **PredictBase**: Principalmente deportes (NHL, NBA, Premier League)
+- **Polymarket**: Principalmente política/macro (elecciones, películas)
+- **Overlap**: Muy bajo - pocas oportunidades reales de arbitraje
+- **Acción**: El scanner está implementado y funcionando, pero las señales
+  serán raras hasta que haya más mercados superpuestos.
 
 ---
 

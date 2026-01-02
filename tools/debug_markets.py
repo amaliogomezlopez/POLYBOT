@@ -1,87 +1,82 @@
 #!/usr/bin/env python3
-"""Debug: Ver qué mercados hay disponibles"""
+"""Debug: Compare actual markets between Poly and PB."""
 
+import asyncio
 import httpx
-import json
+import sys
+sys.path.insert(0, r'c:\Users\amalio\Desktop\PROGRAMACION\01-VS_CODE\32-POLYMARKET-BOT')
 
-def debug_markets():
-    print("DEPURACIÓN DE MERCADOS POLYMARKET")
-    print("=" * 80)
-    
-    response = httpx.get(
-        'https://gamma-api.polymarket.com/markets',
-        params={'limit': 50, 'active': True},
-        timeout=15
-    )
-    
-    markets = response.json()
-    print(f"\nTotal mercados activos: {len(markets)}")
-    
-    print("\n" + "-" * 80)
-    print("PRIMEROS 20 MERCADOS:")
-    print("-" * 80)
-    
-    for i, m in enumerate(markets[:20], 1):
-        q = m.get('question', 'N/A')[:60]
-        outcomes = m.get('outcomePrices', '')
-        enable_book = m.get('enableOrderBook', False)
+from src.scanner.arb_scanner import clean_question, calculate_match_score, _is_sports_question
+
+async def main():
+    async with httpx.AsyncClient() as client:
+        # Get PredictBase markets
+        r = await client.get('https://predictbase.app/api/get_recent_markets_v2')
+        pb_raw = r.json()
         
-        try:
-            prices = json.loads(outcomes) if outcomes else []
-        except:
-            prices = []
+        r2 = await client.get('https://predictbase.app/api/get_resolved_markets_v2')
+        pb_resolved = r2.json()
         
-        print(f"\n{i}. {q}...")
-        print(f"   OrderBook: {enable_book}")
-        print(f"   Precios: {prices[:2] if prices else 'N/A'}")
-    
-    # Buscar mercados de crypto
-    print("\n" + "=" * 80)
-    print("BUSCANDO MERCADOS DE CRYPTO/FLASH:")
-    print("-" * 80)
-    
-    crypto_keywords = ['btc', 'bitcoin', 'eth', 'ethereum', 'sol', 'solana', 
-                      'crypto', 'price', 'up or down', 'higher', 'lower']
-    
-    crypto_markets = []
-    for m in markets:
-        q = m.get('question', '').lower()
-        if any(kw in q for kw in crypto_keywords):
-            crypto_markets.append(m)
-    
-    print(f"\nMercados de crypto encontrados: {len(crypto_markets)}")
-    
-    for m in crypto_markets[:15]:
-        q = m.get('question', '')[:70]
-        outcomes = m.get('outcomePrices', '')
-        try:
-            prices = json.loads(outcomes) if outcomes else []
-            if len(prices) >= 2:
-                spread = float(prices[0]) + float(prices[1])
-                print(f"\n• {q}...")
-                print(f"  Precios: {prices[0]} + {prices[1]} = {spread:.4f}")
-        except:
-            print(f"\n• {q}...")
-            print(f"  Precios: {outcomes[:50]}")
+        print("=" * 70)
+        print("PREDICTBASE MARKETS (Recent)")
+        print("=" * 70)
+        for m in pb_raw[:20]:
+            title = m.get('title') or m.get('question') or m.get('name', 'N/A')
+            print(f"  {title}")
+        
+        print(f"\nTotal recent: {len(pb_raw)}")
+        print(f"Total resolved: {len(pb_resolved)}")
+        
+        # Get Polymarket sports markets
+        r = await client.get(
+            'https://gamma-api.polymarket.com/markets',
+            params={"limit": 100, "active": "true", "closed": "false"}
+        )
+        poly = r.json()
+        
+        # Filter for sports
+        sports_poly = [m for m in poly if _is_sports_question(m.get('question', ''))]
+        
+        print("\n" + "=" * 70)
+        print("POLYMARKET SPORTS MARKETS")
+        print("=" * 70)
+        for m in sports_poly[:20]:
+            print(f"  {m.get('question', 'N/A')[:70]}")
+        
+        print(f"\nTotal sports: {len(sports_poly)}")
+        
+        # Try matching
+        print("\n" + "=" * 70)
+        print("MATCHING ATTEMPTS (threshold=50)")
+        print("=" * 70)
+        
+        matches_found = 0
+        for pb in pb_raw[:30]:
+            pb_q = pb.get('title') or pb.get('question') or pb.get('name', '')
+            pb_clean = clean_question(pb_q)
+            
+            for poly in sports_poly:
+                poly_q = poly.get('question', '')
+                poly_clean = clean_question(poly_q)
+                
+                score = calculate_match_score(poly_clean, pb_clean)
+                
+                if score >= 50:
+                    matches_found += 1
+                    print(f"\n  PB: {pb_q[:60]}")
+                    print(f"  Poly: {poly_q[:60]}")
+                    print(f"  Score: {score}")
+        
+        if not matches_found:
+            print("  NO MATCHES FOUND!")
+            
+            print("\n  Sample cleaned questions:")
+            for i, pb in enumerate(pb_raw[:5]):
+                pb_q = pb.get('title') or pb.get('question') or pb.get('name', '')
+                print(f"    PB[{i}]: {clean_question(pb_q)}")
+            
+            for i, poly in enumerate(sports_poly[:5]):
+                poly_q = poly.get('question', '')
+                print(f"    Poly[{i}]: {clean_question(poly_q)}")
 
-    # Buscar en eventos específicos de crypto
-    print("\n" + "=" * 80)
-    print("BUSCANDO EVENTOS DE CRYPTO:")
-    print("-" * 80)
-    
-    events_response = httpx.get(
-        'https://gamma-api.polymarket.com/events',
-        params={'limit': 30, 'active': True},
-        timeout=15
-    )
-    
-    events = events_response.json()
-    
-    for e in events:
-        title = e.get('title', '').lower()
-        if any(kw in title for kw in ['btc', 'bitcoin', 'eth', 'crypto', 'price']):
-            print(f"\n• {e.get('title', 'N/A')}")
-            print(f"  Slug: {e.get('slug', 'N/A')}")
-
-if __name__ == "__main__":
-    debug_markets()
+asyncio.run(main())

@@ -4,20 +4,24 @@
 Multi-strategy trading system with Strategy Pattern.
 
 Strategies:
-- ArbitrageStrategy: Cross-exchange arbitrage (Polymarket vs PredictBase)
+- InternalArbStrategy: Internal arbitrage (orderbook inefficiencies) [NEW]
 - SniperStrategy: Microstructure sniper (panic drop rebounds)
 - TailStrategy: Tail betting (low price, high multiplier)
+- EsportsOracleStrategy: Esports live betting with Riot API
+
+DEPRECATED:
+- ArbitrageStrategy: Cross-exchange arbitrage (PredictBase has 0 liquidity)
 
 Usage:
     from src.trading.strategies import (
-        ArbitrageStrategy,
+        InternalArbStrategy,
         SniperStrategy, 
         TailStrategy,
         strategy_registry
     )
     
     # Register strategies
-    strategy_registry.register(ArbitrageStrategy())
+    strategy_registry.register(InternalArbStrategy())
     strategy_registry.register(SniperStrategy())
     strategy_registry.register(TailStrategy())
     
@@ -34,9 +38,27 @@ from .base_strategy import (
     strategy_registry
 )
 
-from .arbitrage_strategy import ArbitrageStrategy, ArbitrageDetector
+# ACTIVE STRATEGIES
+from .internal_arb import (
+    InternalArbStrategy,
+    InternalArbDetector,
+    InternalArbScanner,
+    InternalArbOpportunity,
+    calculate_internal_arb,
+)
 from .sniper_strategy import SniperStrategy
 from .tail_strategy import TailStrategy, TailScorer
+from .esports_oracle import (
+    EsportsOracleStrategy,
+    OracleStrategyRunner,
+    OracleSignal,
+    GameEvent,
+    StrategyState,
+)
+
+# DEPRECATED - PredictBase has 0 liquidity (Jan 2026 analysis)
+# Kept for backwards compatibility but should not be used
+from .arbitrage_strategy import ArbitrageStrategy, ArbitrageDetector
 
 __all__ = [
     # Base
@@ -47,12 +69,26 @@ __all__ = [
     'StrategyRegistry',
     'strategy_registry',
     
-    # Strategies
-    'ArbitrageStrategy',
+    # Active Strategies
+    'InternalArbStrategy',
     'SniperStrategy',
     'TailStrategy',
+    'EsportsOracleStrategy',
+    'OracleStrategyRunner',
+    
+    # Internal ARB utilities
+    'InternalArbDetector',
+    'InternalArbScanner',
+    'InternalArbOpportunity',
+    'calculate_internal_arb',
     
     # Utilities
-    'ArbitrageDetector',
     'TailScorer',
+    'OracleSignal',
+    'GameEvent',
+    'StrategyState',
+    
+    # DEPRECATED (PredictBase 0 liquidity)
+    'ArbitrageStrategy',
+    'ArbitrageDetector',
 ]

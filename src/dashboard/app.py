@@ -151,7 +151,7 @@ async def get_stats(user: str = Depends(verify_credentials)) -> Dict[str, Any]:
             COALESCE(SUM(stake), 0) as stake_today
         FROM trades
         WHERE paper_mode = true
-        AND created_at >= CURRENT_DATE
+        AND signal_at >= CURRENT_DATE
     """)
     
     # Calculate overall stats
@@ -204,21 +204,21 @@ async def get_trades(limit: int = 50, user: str = Depends(verify_credentials)) -
             stake,
             status,
             realized_pnl,
-            created_at,
+            signal_at,
             resolved_at
         FROM trades
         WHERE paper_mode = true
-        ORDER BY created_at DESC
+        ORDER BY signal_at DESC
         LIMIT %s
     """, (limit,))
     
     # Format for frontend
     for t in trades:
-        t['created_at'] = t['created_at'].isoformat() if t['created_at'] else None
-        t['resolved_at'] = t['resolved_at'].isoformat() if t['resolved_at'] else None
-        t['entry_price'] = float(t['entry_price']) if t['entry_price'] else 0
-        t['stake'] = float(t['stake']) if t['stake'] else 0
-        t['realized_pnl'] = float(t['realized_pnl']) if t['realized_pnl'] else 0
+        t['created_at'] = t['signal_at'].isoformat() if t.get('signal_at') else None
+        t['resolved_at'] = t['resolved_at'].isoformat() if t.get('resolved_at') else None
+        t['entry_price'] = float(t['entry_price']) if t.get('entry_price') else 0
+        t['stake'] = float(t['stake']) if t.get('stake') else 0
+        t['realized_pnl'] = float(t['realized_pnl']) if t.get('realized_pnl') else 0
     
     return trades
 

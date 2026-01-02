@@ -4,15 +4,19 @@
 Polymarket vs PredictBase arbitrage detection.
 
 Logic:
-- Find matching markets across exchanges
-- Calculate synthetic arbitrage: Cost(Poly_YES) + Cost(PB_NO) < 0.95
-- If spread > 3%, generate signal
+- Find matching markets across exchanges using fuzzy matching
+- Calculate synthetic arbitrage: Cost(Poly_YES) + Cost(PB_NO) < 0.975
+- Minimum 2.5% ROI threshold (covers bridging fees)
+- If profitable, generate BUY signal
 
 Features:
-- Fuzzy matching for market pairing
-- Date validation for same-event confirmation
-- Spread calculation with safety margins
-- Lazy PredictBase lookup (only for promising markets)
+- Batch fuzzy matching for efficiency (ARBScanner)
+- Ambiguity detection (opposite indicators like "NOT")
+- Two arbitrage types: DIRECT and SYNTHETIC
+- Circuit breaker for fault tolerance
+
+Strategy ID: ARB_PREDICTBASE_V1
+Scan Interval: 60 seconds (non-blocking asyncio.create_task)
 """
 
 import asyncio
@@ -41,20 +45,31 @@ except ImportError:
     PB_AVAILABLE = False
     logger.warning("PredictBase client not available")
 
+# Try to import ARB Scanner (new efficient batch scanner)
+try:
+    from src.scanner.arb_scanner import ARBScanner, ArbSignal
+    ARB_SCANNER_AVAILABLE = True
+except ImportError:
+    ARB_SCANNER_AVAILABLE = False
+    logger.warning("ARBScanner not available - using legacy per-market lookup")
+
 
 class ArbitrageStrategy(BaseStrategy):
     """
     Cross-exchange arbitrage between Polymarket and PredictBase.
     
-    Looks for opportunities where:
-    - Poly YES + PB NO < 0.95 (5% profit margin)
-    - Or Poly NO + PB YES < 0.95
+    NEW: Uses ARBScanner for batch processing (much more efficient).
+    
+    Looks for SYNTHETIC arbitrage where:
+    - Poly YES + PB NO < 0.975 (2.5% profit margin to cover bridging)
+    - Or Poly NO + PB YES < 0.975
     
     Parameters:
-        min_spread_pct: Minimum spread to trigger (default: 3%)
-        max_spread_pct: Maximum spread (avoid suspicious spreads)
+        min_spread_pct: Minimum ROI to trigger (default: 2.5%)
+        max_spread_pct: Maximum ROI (avoid suspicious spreads)
         fuzzy_threshold: Minimum fuzzy match score (0-100)
         min_liquidity: Minimum volume for trade
+        scan_interval: Seconds between ARB scans (default: 60)
     """
     
     STRATEGY_ID = "ARB_PREDICTBASE_V1"
@@ -62,18 +77,19 @@ class ArbitrageStrategy(BaseStrategy):
     def __init__(
         self,
         paper_mode: bool = True,
-        stake_size: float = 10.0,  # Higher stake for arb
-        min_spread_pct: float = 3.0,
-        max_spread_pct: float = 15.0,
+        stake_size: float = 50.0,  # Higher stake for arb
+        min_spread_pct: float = 2.5,  # Lower threshold (bridging costs)
+        max_spread_pct: float = 25.0,
         fuzzy_threshold: int = 85,
         min_liquidity: float = 1000,
+        scan_interval: int = 60,
         **kwargs
     ):
         super().__init__(
             strategy_id=self.STRATEGY_ID,
             paper_mode=paper_mode,
             stake_size=stake_size,
-            max_daily_trades=20,
+            max_daily_trades=50,  # More trades for arb
             **kwargs
         )
         
@@ -81,14 +97,23 @@ class ArbitrageStrategy(BaseStrategy):
         self.max_spread_pct = max_spread_pct
         self.fuzzy_threshold = fuzzy_threshold
         self.min_liquidity = min_liquidity
+        self.scan_interval = scan_interval
         
-        # PredictBase client (lazy init)
+        # ARB Scanner (new efficient batch scanner)
+        self._arb_scanner: Optional[ARBScanner] = None if not ARB_SCANNER_AVAILABLE else None
+        self._scanner_initialized = False
+        
+        # Legacy: PredictBase client (fallback)
         self._pb_client: Optional[PredictBaseClient] = None
         self._pb_initialized = False
         
         # Cache for matched markets
         self._matched_pairs: Dict[str, dict] = {}  # question_hash -> pb_data
         self._match_cache_ttl = 600  # 10 minutes
+        
+        # Track pending signals from batch scan
+        self._pending_signals: List = []
+        self._last_batch_scan: Optional[datetime] = None
     
     def get_config(self) -> Dict:
         return {
@@ -100,11 +125,110 @@ class ArbitrageStrategy(BaseStrategy):
             "min_liquidity": self.min_liquidity,
             "stake_size": self.stake_size,
             "paper_mode": self.paper_mode,
+            "scan_interval": self.scan_interval,
             "pb_available": PB_AVAILABLE,
+            "arb_scanner_available": ARB_SCANNER_AVAILABLE,
         }
     
+    async def _ensure_arb_scanner(self):
+        """Initialize ARB Scanner lazily."""
+        if not ARB_SCANNER_AVAILABLE:
+            return await self._ensure_pb_client()  # Fallback
+        
+        if not self._scanner_initialized:
+            try:
+                self._arb_scanner = ARBScanner(
+                    min_roi_pct=self.min_spread_pct,
+                    max_roi_pct=self.max_spread_pct,
+                    fuzzy_threshold=self.fuzzy_threshold,
+                    stake_size=self.stake_size,
+                    paper_mode=self.paper_mode,
+                )
+                await self._arb_scanner.__aenter__()
+                self._scanner_initialized = True
+                logger.info("✅ ARBScanner initialized")
+            except Exception as e:
+                logger.warning(f"⚠️ Failed to init ARBScanner: {e}")
+                self._scanner_initialized = True  # Don't retry
+                return await self._ensure_pb_client()  # Fallback
+    
+    async def run_batch_scan(self, poly_markets: List[Dict]) -> List[TradeSignal]:
+        """
+        Run batch ARB scan across all markets.
+        
+        This is MORE EFFICIENT than per-market lookup because:
+        - Single API call to PredictBase
+        - Batch fuzzy matching
+        - Parallelized arbitrage detection
+        
+        Args:
+            poly_markets: List of Polymarket market dicts
+            
+        Returns:
+            List of TradeSignal objects
+        """
+        await self._ensure_arb_scanner()
+        
+        if not self._arb_scanner:
+            logger.warning("ARBScanner not available, skipping batch scan")
+            return []
+        
+        signals: List[TradeSignal] = []
+        
+        try:
+            # Run batch scan
+            arb_signals = await self._arb_scanner.scan(poly_markets)
+            
+            # Convert ARBSignals to TradeSignals
+            for arb_sig in arb_signals:
+                trade_signal = self._convert_arb_signal(arb_sig)
+                if trade_signal:
+                    signals.append(trade_signal)
+            
+            self._last_batch_scan = datetime.utcnow()
+            logger.info(f"🔀 ARB batch scan complete: {len(signals)} signals")
+            
+        except Exception as e:
+            logger.error(f"❌ ARB batch scan error: {e}")
+        
+        return signals
+    
+    def _convert_arb_signal(self, arb_sig) -> Optional[TradeSignal]:
+        """Convert ARBSignal to TradeSignal for unified recording."""
+        try:
+            return TradeSignal(
+                strategy_id=self.strategy_id,
+                signal_type=SignalType.BUY,
+                condition_id=arb_sig.poly_condition_id,
+                token_id=arb_sig.poly_token_id,
+                question=arb_sig.question,
+                outcome=arb_sig.poly_side,
+                entry_price=arb_sig.poly_price,
+                stake=arb_sig.poly_stake * arb_sig.poly_price,  # USD value
+                confidence=arb_sig.confidence,
+                expected_value=arb_sig.gross_profit,
+                trigger_reason=f"arb_{arb_sig.arb_type.lower()}_{arb_sig.roi_pct:.1f}pct",
+                signal_data={
+                    "arb_type": arb_sig.arb_type,
+                    "poly_side": arb_sig.poly_side,
+                    "poly_price": arb_sig.poly_price,
+                    "pb_side": arb_sig.pb_side,
+                    "pb_price": arb_sig.pb_price,
+                    "pb_market_id": arb_sig.pb_market_id,
+                    "total_cost": arb_sig.total_cost,
+                    "gross_profit": arb_sig.gross_profit,
+                    "roi_pct": arb_sig.roi_pct,
+                    "match_score": arb_sig.match_score,
+                    "hedge_exchange": "predictbase",
+                },
+                snapshot_data={},
+            )
+        except Exception as e:
+            logger.error(f"Failed to convert ARB signal: {e}")
+            return None
+    
     async def _ensure_pb_client(self):
-        """Initialize PredictBase client lazily."""
+        """Initialize PredictBase client lazily (legacy fallback)."""
         if not PB_AVAILABLE:
             return
         

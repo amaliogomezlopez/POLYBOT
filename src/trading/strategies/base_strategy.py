@@ -55,9 +55,10 @@ class MarketData:
     mid_price: float = 0.0
     spread_bps: float = 0.0
     
-    # Volume
+    # Volume & Liquidity
     volume_24h: float = 0.0
     volume_1h: float = 0.0
+    liquidity: float = 0.0  # Total liquidity in orderbook
     
     # Orderbook (optional, for advanced strategies)
     bid_depth: Dict[str, float] = field(default_factory=dict)
