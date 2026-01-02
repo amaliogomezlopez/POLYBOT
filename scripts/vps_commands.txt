@@ -1,0 +1,134 @@
+# ===============================================
+# VPS SETUP COMMANDS - EXECUTE STEP BY STEP
+# ===============================================
+# VPS: 94.143.138.8
+# User: root
+# Password: p4RCcQUr
+#
+# Connect via SSH:
+# ssh root@94.143.138.8
+# ===============================================
+
+# ------------------
+# STEP 1: CLEAN UP
+# ------------------
+rm -rf /opt/polymarket-bot
+mkdir -p /opt/polymarket-bot
+
+# ------------------
+# STEP 2: SYSTEM UPDATE
+# ------------------
+apt update && apt upgrade -y
+
+# ------------------
+# STEP 3: INSTALL DEPENDENCIES
+# ------------------
+apt install -y python3 python3-pip python3-venv git curl wget gnupg2 lsb-release
+
+# ------------------
+# STEP 4: INSTALL POSTGRESQL
+# ------------------
+# Add PostgreSQL repository
+sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+
+apt update
+apt install -y postgresql-16 postgresql-contrib
+
+# Start PostgreSQL
+systemctl start postgresql
+systemctl enable postgresql
+
+# ------------------
+# STEP 5: INSTALL TIMESCALEDB (OPTIONAL)
+# ------------------
+# Add TimescaleDB repository
+echo "deb https://packagecloud.io/timescale/timescaledb/ubuntu/ $(lsb_release -c -s) main" | tee /etc/apt/sources.list.d/timescaledb.list
+wget --quiet -O - https://packagecloud.io/timescale/timescaledb/gpgkey | apt-key add -
+
+apt update
+apt install -y timescaledb-2-postgresql-16
+
+# Configure TimescaleDB
+timescaledb-tune --quiet --yes
+
+# Restart PostgreSQL
+systemctl restart postgresql
+
+# ------------------
+# STEP 6: CREATE DATABASE
+# ------------------
+# Create database and user
+sudo -u postgres psql << 'EOF'
+CREATE USER polybot WITH PASSWORD 'PolyBot2026Trading!';
+CREATE DATABASE polymarket OWNER polybot;
+GRANT ALL PRIVILEGES ON DATABASE polymarket TO polybot;
+\c polymarket
+CREATE EXTENSION IF NOT EXISTS timescaledb;
+EOF
+
+# ------------------
+# STEP 7: CLONE REPOSITORY
+# ------------------
+cd /opt
+git clone https://github.com/amaliogomezlopez/POLYBOT.git polymarket-bot
+cd /opt/polymarket-bot
+
+# ------------------
+# STEP 8: CREATE .ENV FILE
+# ------------------
+cat > /opt/polymarket-bot/.env << 'EOF'
+# Database
+DATABASE_URL=postgresql://polybot:PolyBot2026Trading!@localhost:5432/polymarket
+
+# Polymarket (add your keys when ready for live trading)
+PK=
+CLOB_API_KEY=
+FUNDER=
+
+# VPS Info
+VPS_IP=94.143.138.8
+VPS_USER=root
+EOF
+
+# ------------------
+# STEP 9: SETUP PYTHON ENVIRONMENT
+# ------------------
+cd /opt/polymarket-bot
+python3 -m venv venv
+source venv/bin/activate
+
+pip install --upgrade pip
+pip install httpx rich sqlalchemy psycopg2-binary asyncpg python-dotenv
+
+# ------------------
+# STEP 10: CREATE DATA DIRECTORIES
+# ------------------
+mkdir -p /opt/polymarket-bot/data/tail_bot
+mkdir -p /opt/polymarket-bot/logs
+
+# ------------------
+# STEP 11: INITIALIZE DATABASE
+# ------------------
+cd /opt/polymarket-bot
+source venv/bin/activate
+python scripts/init_database.py --verify
+python scripts/init_database.py --init
+
+# ------------------
+# STEP 12: START DAEMON
+# ------------------
+cd /opt/polymarket-bot
+source venv/bin/activate
+nohup python scripts/production_monitor.py --daemon --interval 30 > logs/daemon.log 2>&1 &
+
+# Check if running
+ps aux | grep production_monitor
+
+# ------------------
+# USEFUL COMMANDS
+# ------------------
+# View logs: tail -f /opt/polymarket-bot/logs/daemon.log
+# Stop daemon: pkill -f production_monitor.py
+# Check database: psql -U polybot -d polymarket -h localhost
+# View stats: cd /opt/polymarket-bot && source venv/bin/activate && python scripts/init_database.py --stats
