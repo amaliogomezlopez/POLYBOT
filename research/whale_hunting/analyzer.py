@@ -30,8 +30,8 @@ def load_all_trades() -> dict[str, pd.DataFrame]:
     """Load all parquet files from the data directory."""
     trades = {}
     
-    for parquet_file in DATA_DIR.glob("*_trades.parquet"):
-        username = parquet_file.stem.replace("_trades", "")
+    for parquet_file in DATA_DIR.glob("*_activity.parquet"):
+        username = parquet_file.stem.replace("_activity", "")
         try:
             df = pd.read_parquet(parquet_file)
             trades[username] = df
