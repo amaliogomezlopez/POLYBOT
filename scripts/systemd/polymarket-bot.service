@@ -1,0 +1,39 @@
+[Unit]
+Description=Polymarket Tail Betting Bot
+Documentation=https://github.com/amaliogomezlopez/POLYBOT
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/polymarket-bot
+
+# Environment - load from .env file
+EnvironmentFile=/opt/polymarket-bot/.env
+
+# Python virtual environment activation + script execution
+ExecStart=/opt/polymarket-bot/venv/bin/python /opt/polymarket-bot/scripts/production_monitor.py --daemon --interval 30
+
+# Restart policy - always restart on failure
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+# Logging - use journal (systemd's native logging)
+StandardOutput=append:/opt/polymarket-bot/logs/daemon.log
+StandardError=append:/opt/polymarket-bot/logs/daemon.log
+
+# Security hardening (optional but recommended)
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/polymarket-bot
+
+# Resource limits
+MemoryMax=512M
+CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target

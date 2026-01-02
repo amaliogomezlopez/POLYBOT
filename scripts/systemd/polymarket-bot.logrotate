@@ -1,0 +1,21 @@
+/opt/polymarket-bot/logs/*.log {
+    daily
+    rotate 14
+    compress
+    delaycompress
+    missingok
+    notifempty
+    create 0644 root root
+    size 50M
+    dateext
+    dateformat -%Y%m%d
+    
+    # Truncate logs instead of moving (keeps file descriptors valid)
+    copytruncate
+    
+    # Post-rotation script (optional - for notifications)
+    postrotate
+        # Reload systemd service to pick up new log file if needed
+        systemctl reload polymarket-bot.service 2>/dev/null || true
+    endscript
+}
