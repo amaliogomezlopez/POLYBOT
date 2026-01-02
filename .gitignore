@@ -57,3 +57,9 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Research Data (large parquet files)
+research/whale_hunting/data/*.parquet
+research/whale_hunting/report.md
+analysis/*.csv
+analysis/*.json

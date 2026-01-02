@@ -1,0 +1,9 @@
+# Whale Hunting Research Requirements
+# Install with: pip install -r research/whale_hunting/requirements.txt
+
+pandas>=2.0.0
+pyarrow>=14.0.0
+aiohttp>=3.9.0
+structlog>=24.0.0
+matplotlib>=3.8.0
+polars>=0.20.0
