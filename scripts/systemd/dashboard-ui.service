@@ -16,9 +16,12 @@ Environment="DB_NAME=polymarket"
 Environment="DB_USER=polybot"
 Environment="DB_PASSWORD=PolyBot2026Trading!"
 Environment="LOG_FILE=/opt/polymarket-bot/logs/multi_strategy.log"
+# Dashboard Auth Credentials
+Environment="DASHBOARD_USER=polybot"
+Environment="DASHBOARD_PASS=Poly2026Dashboard!"
 
-# Run uvicorn with minimal workers for low memory
-ExecStart=/opt/polymarket-bot/venv/bin/uvicorn src.dashboard.app:app --host 0.0.0.0 --port 8000 --workers 1
+# Run uvicorn on port 80 (standard HTTP) for easier access
+ExecStart=/opt/polymarket-bot/venv/bin/uvicorn src.dashboard.app:app --host 0.0.0.0 --port 80 --workers 1
 
 # Restart policy
 Restart=always

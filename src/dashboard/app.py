@@ -8,6 +8,7 @@ Tech Stack:
 - Raw SQL queries (no heavy ORM)
 - Tailwind CSS via CDN
 - Auto-refresh every 5 seconds
+- HTTP Basic Auth for security
 
 Memory target: <50MB RAM
 
@@ -17,15 +18,16 @@ Usage:
 
 import os
 import asyncio
+import secrets
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from collections import deque
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Depends, HTTPException, status
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
 # Use psycopg2 directly for minimal memory footprint
 try:
@@ -40,6 +42,29 @@ app = FastAPI(
     description="Multi-Strategy Trading Bot Monitor",
     version="1.0.0"
 )
+
+# =============================================================================
+# SECURITY - HTTP BASIC AUTH
+# =============================================================================
+
+security = HTTPBasic()
+
+# Credentials from environment or defaults
+DASHBOARD_USER = os.getenv("DASHBOARD_USER", "polybot")
+DASHBOARD_PASS = os.getenv("DASHBOARD_PASS", "Poly2026Dashboard!")
+
+def verify_credentials(credentials: HTTPBasicCredentials = Depends(security)):
+    """Verify HTTP Basic Auth credentials."""
+    correct_username = secrets.compare_digest(credentials.username, DASHBOARD_USER)
+    correct_password = secrets.compare_digest(credentials.password, DASHBOARD_PASS)
+    
+    if not (correct_username and correct_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid credentials",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials.username
 
 # Templates
 TEMPLATE_DIR = Path(__file__).parent / "templates"
@@ -97,11 +122,11 @@ def execute_query(query: str, params: tuple = None) -> List[Dict]:
 
 
 # =============================================================================
-# API ENDPOINTS
+# API ENDPOINTS (Protected with HTTP Basic Auth)
 # =============================================================================
 
 @app.get("/api/stats")
-async def get_stats() -> Dict[str, Any]:
+async def get_stats(user: str = Depends(verify_credentials)) -> Dict[str, Any]:
     """Get overall bot statistics."""
     
     # Get trade stats by strategy
@@ -167,7 +192,7 @@ async def get_stats() -> Dict[str, Any]:
 
 
 @app.get("/api/trades")
-async def get_trades(limit: int = 50) -> List[Dict]:
+async def get_trades(limit: int = 50, user: str = Depends(verify_credentials)) -> List[Dict]:
     """Get recent trades."""
     trades = execute_query("""
         SELECT 
@@ -199,7 +224,7 @@ async def get_trades(limit: int = 50) -> List[Dict]:
 
 
 @app.get("/api/logs")
-async def get_logs(lines: int = 50) -> Dict[str, Any]:
+async def get_logs(lines: int = 50, user: str = Depends(verify_credentials)) -> Dict[str, Any]:
     """Get recent log lines."""
     log_lines = []
     near_misses = []
@@ -228,7 +253,7 @@ async def get_logs(lines: int = 50) -> Dict[str, Any]:
 
 
 @app.get("/api/near-misses")
-async def get_near_misses() -> List[Dict]:
+async def get_near_misses(user: str = Depends(verify_credentials)) -> List[Dict]:
     """Get near miss opportunities."""
     return list(NEAR_MISS_CACHE)
 
@@ -305,11 +330,11 @@ def get_uptime() -> str:
 
 
 # =============================================================================
-# FRONTEND ROUTE
+# FRONTEND ROUTE (Protected)
 # =============================================================================
 
 @app.get("/", response_class=HTMLResponse)
-async def dashboard(request: Request):
+async def dashboard(request: Request, user: str = Depends(verify_credentials)):
     """Serve the main dashboard."""
     return templates.TemplateResponse("index.html", {"request": request})
 
