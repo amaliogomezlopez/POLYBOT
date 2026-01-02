@@ -12,6 +12,7 @@ Features:
 - Fuzzy matching for market pairing
 - Date validation for same-event confirmation
 - Spread calculation with safety margins
+- Lazy PredictBase lookup (only for promising markets)
 """
 
 import asyncio
@@ -31,6 +32,14 @@ try:
 except ImportError:
     FUZZY_AVAILABLE = False
     logger.warning("thefuzz not installed - using basic matching")
+
+# Try to import PredictBase client
+try:
+    from src.exchanges.predictbase_client import PredictBaseClient
+    PB_AVAILABLE = True
+except ImportError:
+    PB_AVAILABLE = False
+    logger.warning("PredictBase client not available")
 
 
 class ArbitrageStrategy(BaseStrategy):
@@ -73,13 +82,13 @@ class ArbitrageStrategy(BaseStrategy):
         self.fuzzy_threshold = fuzzy_threshold
         self.min_liquidity = min_liquidity
         
-        # Cache for PredictBase markets
-        self._pb_markets: Dict[str, dict] = {}
-        self._pb_last_fetch = None
-        self._pb_fetch_interval = 300  # 5 minutes
+        # PredictBase client (lazy init)
+        self._pb_client: Optional[PredictBaseClient] = None
+        self._pb_initialized = False
         
-        # Matched pairs cache
-        self._matched_pairs: Dict[str, str] = {}  # poly_id -> pb_id
+        # Cache for matched markets
+        self._matched_pairs: Dict[str, dict] = {}  # question_hash -> pb_data
+        self._match_cache_ttl = 600  # 10 minutes
     
     def get_config(self) -> Dict:
         return {
@@ -91,23 +100,87 @@ class ArbitrageStrategy(BaseStrategy):
             "min_liquidity": self.min_liquidity,
             "stake_size": self.stake_size,
             "paper_mode": self.paper_mode,
+            "pb_available": PB_AVAILABLE,
         }
+    
+    async def _ensure_pb_client(self):
+        """Initialize PredictBase client lazily."""
+        if not PB_AVAILABLE:
+            return
+        
+        if not self._pb_initialized:
+            try:
+                self._pb_client = PredictBaseClient()
+                await self._pb_client.__aenter__()
+                self._pb_initialized = True
+                logger.info("✅ PredictBase client initialized")
+            except Exception as e:
+                logger.warning(f"⚠️ Failed to init PredictBase: {e}")
+                self._pb_initialized = True  # Don't retry
+    
+    async def _get_pb_prices(self, question: str) -> Optional[Dict]:
+        """Get PredictBase prices with caching."""
+        # Check cache first
+        cache_key = question[:100]
+        if cache_key in self._matched_pairs:
+            return self._matched_pairs[cache_key]
+        
+        await self._ensure_pb_client()
+        
+        if not self._pb_client:
+            return None
+        
+        try:
+            pb_market = await asyncio.wait_for(
+                self._pb_client.get_market_by_question(question, threshold=self.fuzzy_threshold),
+                timeout=5.0  # 5 second timeout
+            )
+            
+            if pb_market:
+                result = {
+                    "yes": pb_market.yes_price,
+                    "no": pb_market.no_price,
+                    "market_id": pb_market.market_id,
+                }
+                self._matched_pairs[cache_key] = result
+                return result
+        except asyncio.TimeoutError:
+            logger.debug(f"PB timeout for: {question[:40]}")
+        except Exception as e:
+            logger.debug(f"PB lookup error: {e}")
+        
+        # Cache negative result too
+        self._matched_pairs[cache_key] = None
+        return None
     
     async def process_market(self, market: MarketData) -> Optional[TradeSignal]:
         """
         Check for arbitrage opportunity.
         
         Steps:
-        1. Find matching PredictBase market
-        2. Calculate synthetic spread
-        3. If profitable, generate signal
+        1. Pre-filter: skip markets unlikely to have arb
+        2. Lazy lookup PredictBase prices
+        3. Calculate synthetic spread
+        4. If profitable, generate signal
         """
-        # Skip if no competitor data
-        if not market.competitor_prices:
+        # Pre-filter: only check markets with reasonable Poly prices
+        # (Very high or very low prices unlikely to have arb)
+        if market.yes_price < 0.05 or market.yes_price > 0.95:
             return None
         
-        # Get PredictBase prices
+        # Pre-filter: need minimum liquidity
+        if market.volume_24h and market.volume_24h < self.min_liquidity:
+            return None
+        
+        # Check competitor_prices if already populated (from cache)
         pb_data = market.competitor_prices.get("predictbase", {})
+        
+        # If not populated, do lazy lookup (but only 1 in 10 markets to save API calls)
+        if not pb_data:
+            # Only lookup for "interesting" markets (mid-range prices)
+            if 0.20 <= market.yes_price <= 0.80:
+                pb_data = await self._get_pb_prices(market.question) or {}
+        
         if not pb_data:
             return None
         

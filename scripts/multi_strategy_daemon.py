@@ -236,18 +236,9 @@ class MarketScanner:
                 except:
                     pass
             
-            # Get competitor prices (for arbitrage)
+            # NOTE: competitor_prices se obtienen en ArbitrageStrategy, no aquí
+            # Esto evita llamar a PredictBase para CADA mercado
             competitor_prices = {}
-            if self.pb_client and PB_AVAILABLE:
-                try:
-                    pb_market = await self.pb_client.get_market_by_question(question, threshold=0.85)
-                    if pb_market:
-                        competitor_prices["predictbase"] = {
-                            "yes": pb_market.yes_price,
-                            "no": pb_market.no_price,
-                        }
-                except:
-                    pass
             
             return MarketData(
                 condition_id=cid,
