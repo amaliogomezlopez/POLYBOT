@@ -388,6 +388,15 @@ class SniperStrategy(BaseStrategy):
         
         # We want negative change (drop)
         if price_change > -self.price_drop_threshold:
+            # ⚠️ NEAR MISS: Check if drop is close (80%+ of threshold)
+            if price_change < 0:  # Some drop occurred
+                price_drop = abs(price_change)
+                near_miss_threshold = self.price_drop_threshold * 0.8
+                if price_drop >= near_miss_threshold:
+                    logger.info(
+                        f"⚠️ NEAR_MISS [CRASH]: {price_drop:.0%} drop (need {self.price_drop_threshold:.0%}) | "
+                        f"${market.yes_price:.3f} | {market.question[:40]}..."
+                    )
             return None
         
         price_drop = abs(price_change)
@@ -398,6 +407,14 @@ class SniperStrategy(BaseStrategy):
         volume_multiple = recent_volume / avg_volume if avg_volume > 0 else 0
         
         if volume_multiple < self.volume_spike_multiplier:
+            # ⚠️ NEAR MISS: Check if close to threshold (80%+)
+            near_miss_threshold = self.price_drop_threshold * 0.8  # 80% of required drop
+            if price_drop >= near_miss_threshold:
+                logger.info(
+                    f"⚠️ NEAR_MISS [CRASH]: {price_drop:.0%} drop (threshold: {self.price_drop_threshold:.0%}) | "
+                    f"Vol: {volume_multiple:.1f}x (need {self.volume_spike_multiplier}x) | "
+                    f"{market.question[:40]}..."
+                )
             return None
         
         # 🚨 CRASH DETECTED - Generate signal
@@ -483,6 +500,13 @@ class SniperStrategy(BaseStrategy):
         
         # Volume requirement (higher than crash detector)
         if market.volume_24h < self.stink_bid_min_volume:
+            # ⚠️ NEAR MISS: Volume close to threshold (70%+)
+            near_miss_vol = self.stink_bid_min_volume * 0.7
+            if market.volume_24h >= near_miss_vol:
+                logger.info(
+                    f"⚠️ NEAR_MISS [STINK]: Vol ${market.volume_24h:,.0f} (need ${self.stink_bid_min_volume:,.0f}) | "
+                    f"${market.yes_price:.3f} | {market.question[:40]}..."
+                )
             return
         
         # Must have expiry data

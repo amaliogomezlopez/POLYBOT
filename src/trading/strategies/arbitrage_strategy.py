@@ -208,6 +208,14 @@ class ArbitrageStrategy(BaseStrategy):
         best_spread = max(spread_1_pct, spread_2_pct)
         
         if best_spread < self.min_spread_pct:
+            # ⚠️ NEAR MISS: Spread close to threshold (50%+)
+            near_miss_spread = self.min_spread_pct * 0.5
+            if best_spread >= near_miss_spread:
+                logger.info(
+                    f"⚠️ NEAR_MISS [ARB]: {best_spread:.1f}% spread (need {self.min_spread_pct:.1f}%) | "
+                    f"Poly: ${poly_yes:.3f}/{poly_no:.3f} | PB: ${pb_yes:.3f}/{pb_no:.3f} | "
+                    f"{market.question[:40]}..."
+                )
             return None
         
         if best_spread > self.max_spread_pct:

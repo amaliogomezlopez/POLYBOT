@@ -1,0 +1,37 @@
+[Unit]
+Description=PolyBot Dashboard Web UI
+Documentation=https://github.com/amaliogomezlopez/POLYBOT
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/polymarket-bot
+Environment="PATH=/opt/polymarket-bot/venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="DB_HOST=localhost"
+Environment="DB_PORT=5432"
+Environment="DB_NAME=polymarket"
+Environment="DB_USER=polybot"
+Environment="DB_PASSWORD=PolyBot2026Trading!"
+Environment="LOG_FILE=/opt/polymarket-bot/logs/multi_strategy.log"
+
+# Run uvicorn with minimal workers for low memory
+ExecStart=/opt/polymarket-bot/venv/bin/uvicorn src.dashboard.app:app --host 0.0.0.0 --port 8000 --workers 1
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Memory limit (50MB target)
+MemoryMax=100M
+MemoryHigh=80M
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=polybot-dashboard
+
+[Install]
+WantedBy=multi-user.target

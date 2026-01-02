@@ -118,6 +118,12 @@ class TailStrategy(BaseStrategy):
         """
         # Price filter
         if not (self.min_price < market.yes_price < self.max_price):
+            # ⚠️ NEAR MISS: Price just above threshold
+            if self.max_price <= market.yes_price <= self.max_price * 1.5:  # Up to 50% above threshold
+                logger.info(
+                    f"⚠️ NEAR_MISS [TAIL]: Price ${market.yes_price:.3f} (need <${self.max_price:.3f}) | "
+                    f"Multiplier {1/market.yes_price:.0f}x | {market.question[:40]}..."
+                )
             return None
         
         # Calculate multiplier
@@ -132,6 +138,14 @@ class TailStrategy(BaseStrategy):
         
         # Check threshold
         if ml_score < self.min_ml_score:
+            # ⚠️ NEAR MISS: Score close to threshold (80%+)
+            near_miss_score = self.min_ml_score * 0.9  # 90% of threshold
+            if ml_score >= near_miss_score:
+                logger.info(
+                    f"⚠️ NEAR_MISS [TAIL]: ML Score {ml_score:.0%} (need {self.min_ml_score:.0%}) | "
+                    f"${market.yes_price:.3f} ({1/market.yes_price:.0f}x) | "
+                    f"{market.question[:40]}..."
+                )
             return None
         
         # Calculate expected value
