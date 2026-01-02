@@ -57,8 +57,8 @@ from .esports_oracle import (
 )
 
 # DEPRECATED - PredictBase has 0 liquidity (Jan 2026 analysis)
-# Kept for backwards compatibility but should not be used
-from .arbitrage_strategy import ArbitrageStrategy, ArbitrageDetector
+# ArbitrageStrategy removed - it depended on predictbase_client which is archived
+# If you need it, import directly: from .arbitrage_strategy import ArbitrageStrategy
 
 __all__ = [
     # Base
@@ -87,8 +87,4 @@ __all__ = [
     'OracleSignal',
     'GameEvent',
     'StrategyState',
-    
-    # DEPRECATED (PredictBase 0 liquidity)
-    'ArbitrageStrategy',
-    'ArbitrageDetector',
 ]

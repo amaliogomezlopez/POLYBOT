@@ -61,6 +61,34 @@ logging.getLogger("httpcore").setLevel(logging.WARNING)
 # IMPORTS (with graceful fallbacks)
 # =============================================================================
 
+# CRITICAL: Import MarketData first (needed for type hints even if strategies fail)
+try:
+    from src.trading.strategies.base_strategy import MarketData, TradeSignal, SignalType
+    MARKET_DATA_AVAILABLE = True
+except Exception as e:
+    MARKET_DATA_AVAILABLE = False
+    logger.error(f"❌ CRITICAL: MarketData not available: {e}")
+    # Create a dummy MarketData for type hints (daemon will fail gracefully)
+    from dataclasses import dataclass, field
+    from typing import Dict, Any, List
+    from datetime import datetime
+    
+    @dataclass
+    class MarketData:
+        condition_id: str = ""
+        question: str = ""
+        token_id: str = ""
+        yes_price: float = 0.0
+        no_price: float = 0.0
+        volume_24h: float = 0.0
+        liquidity: float = 0.0
+    
+    class SignalType:
+        BUY = "BUY"
+        SELL = "SELL"
+    
+    TradeSignal = None
+
 # Try database
 try:
     from src.db.multi_strategy_models import (
@@ -73,12 +101,9 @@ except Exception as e:
     DB_AVAILABLE = False
     logger.warning(f"⚠️ Database not available: {e}")
 
-# Try strategies
+# Try strategies (MarketData/TradeSignal/SignalType already imported above)
 try:
     from src.trading.strategies import (
-        MarketData,
-        TradeSignal,
-        SignalType,
         strategy_registry,
         InternalArbStrategy,  # NEW: Internal orderbook arbitrage
         SniperStrategy,
@@ -87,6 +112,7 @@ try:
         OracleStrategyRunner,
     )
     STRATEGIES_AVAILABLE = True
+    logger.info("✅ Strategies available")
 except Exception as e:
     STRATEGIES_AVAILABLE = False
     logger.error(f"❌ Strategies not available: {e}")
