@@ -1,52 +1,295 @@
-# Trading Strategy: Delta-Neutral Arbitrage
+# 🎯 Trading Strategies
 
-The bot implements a delta-neutral arbitrage strategy specifically tuned for Polymarket's **15-minute crypto flash markets**.
+El bot ejecuta un **sistema multi-estrategia** que evalúa cada mercado con 3 estrategias independientes en paralelo. Cada estrategia tiene sus propios triggers, parámetros y métricas de rendimiento.
 
-## 1. The Opportunity
-Polymarket offers binary outcome markets on whether a cryptocurrency (BTC, ETH, SOL) will be "UP" or "DOWN" over a 15-minute window.
-Because these markets are outcomes of a binary event, at expiration:
-- The winning token is worth **$1.00**.
-- The losing token is worth **$0.00**.
+---
 
-An arbitrage opportunity exists when the combined cost to purchase both tokens is **less than $1.00**.
+## 📊 Resumen de Estrategias
 
-## 2. Mathematical Foundation
-Let:
-- $P_{up}$ = Best Ask price of the UP token.
-- $P_{down}$ = Best Ask price of the DOWN token.
+| ID | Nombre | Tipo | Trigger | Stake | ROI Esperado |
+|----|--------|------|---------|-------|--------------|
+| `ARB_PREDICTBASE_V1` | Cross-Exchange Arbitrage | Arbitrage | Spread > 3% entre Polymarket y PredictBase | $10 | 3-15% |
+| `SNIPER_MICRO_V1` | Microstructure Sniper | Dual Mode | Crash Detection + Stink Bids | $5-10 | 50-500% |
+| `TAIL_BETTING_V1` | Tail Betting | Tail | YES < $0.04, ML Score > 55% | $2 | 25-1000x |
 
-The **Total Cost** ($C$) of a delta-neutral position is:
-$$C = P_{up} + P_{down}$$
+---
 
-If $C < 1.0$, the guaranteed profit ($G$) is:
-$$G = 1.0 - C$$
+## 🔀 Estrategia A: Cross-Exchange Arbitrage
 
-### Example
-- Buy 1 UP @ $0.48$
-- Buy 1 DOWN @ $0.49$
-- **Total Cost**: $0.97$
-- **Guaranteed Payout**: $1.00$
-- **Net Profit**: $0.03$ (~3.1% ROI)
+**ID**: `ARB_PREDICTBASE_V1`  
+**Archivo**: `src/trading/strategies/arbitrage_strategy.py`
 
-## 3. Market Selection: Flash Markets
-Flash markets are ideal for this strategy because:
-1.  **High Frequency**: New markets every 15 minutes.
-2.  **Concentrated Liquidity**: High volume in a short timeframe.
-3.  **Short Duration**: Capital is only locked for a few minutes.
-4.  **Mispricing**: Rapid price movements in the underlying crypto often cause the individual tokens (UP/DOWN) to de-sync from their fair value sum.
+### Concepto
+Detecta oportunidades cuando el costo combinado de comprar YES en Polymarket + NO en PredictBase es menor a $0.95 (5% de margen).
 
-## 4. Execution Workflow
+### Fórmula
+```
+Arbitrage Spread = 1 - (Poly_YES + PB_NO)
+Si Spread > 3% → SEÑAL DE COMPRA
+```
 
-1.  **Scan**: Filter for 15-minute duration markets.
-2.  **Monitor**: Subscribe to real-time order books for both tokens in a pair.
-3.  **Analyze**: Continuously calculate `AskPrice(UP) + AskPrice(DOWN)`.
-4.  **Validate**: Check if spread > `min_profit_threshold` and if there is enough liquidity for the target size.
-5.  **Risk Check**: Verify that adding the position doesn't exceed `max_exposure`.
-6.  **Execute**: Place simultaneous market orders (or FOK orders) for both outcomes.
-7.  **Manage**: Track the position until the market resolves or until a profitable exit exists (though holding to resolution is the baseline).
+### Parámetros
+| Parámetro | Valor | Descripción |
+|-----------|-------|-------------|
+| `min_spread_pct` | 3% | Spread mínimo para trigger |
+| `max_spread_pct` | 15% | Spread máximo (evita datos erróneos) |
+| `fuzzy_threshold` | 85 | Score mínimo de matching entre mercados |
+| `stake_size` | $10 | Tamaño de posición |
 
-## 5. Potential Risks
-- **Legging Risk**: Executing one side but failing to fill the other side, leaving the bot directionally exposed.
-- **Slippage**: Final execution price being worse than detected price due to low liquidity or competing bots.
-- **Latency**: Being slower than competitors who take the same liquidity.
-- **Fees**: Transaction fees on Polygon must be accounted for (though they are negligible, CLOB fees might apply).
+### Flujo de Ejecución
+1. Recibe `MarketData` con precios de Polymarket
+2. Cliente PredictBase busca mercado equivalente (fuzzy matching)
+3. Si match score > 85%:
+   - Calcula spread sintético
+   - Si spread > 3%, genera señal
+4. Signal incluye hedge side para PredictBase
+
+---
+
+## 🎯 Estrategia B: Microstructure Sniper (DUAL MODE)
+
+**ID**: `SNIPER_MICRO_V1`  
+**Archivo**: `src/trading/strategies/sniper_strategy.py`
+
+Esta estrategia opera en **dos modos simultáneos**:
+
+### MODE 1: CRASH DETECTOR (Reactivo) 🚨
+
+Detecta y captura rebotes después de ventas de pánico.
+
+#### Trigger
+```
+SI Precio_Actual < (Precio_Medio_5min * 0.85)  // Caída del 15%
+Y  Volumen_2min > (Volumen_Promedio * 2)       // Spike de volumen
+→  COMPRAR con Limit Order 1% sobre Best Bid
+```
+
+#### Parámetros Mode 1
+| Parámetro | Valor | Descripción |
+|-----------|-------|-------------|
+| `price_drop_threshold` | 15% | Caída mínima para trigger |
+| `volume_spike_multiplier` | 2x | Múltiplo de volumen requerido |
+| `lookback_minutes` | 5 | Ventana de análisis |
+| `bid_offset_pct` | 1% | Offset sobre best bid |
+
+#### Flujo Mode 1
+1. Mantiene `PriceBuffer` rolling de 5 minutos por mercado
+2. Calcula `price_change_pct` en cada update
+3. Si detecta caída > 15%:
+   - Verifica spike de volumen (panic selling)
+   - Genera señal con target = precio medio (rebound)
+
+---
+
+### MODE 2: STINK BID (Proactivo) 🪤
+
+Coloca órdenes "trampa" a precios ridículamente bajos esperando flash crashes.
+
+#### Concepto
+Un "Stink Bid" es una orden límite a precio muy bajo ($0.02-$0.05) que espera pasivamente a que el mercado caiga hasta ese nivel durante un flash crash.
+
+#### Criterios para Colocar Stink Bid
+```
+SI Volumen_24h > $50,000
+Y  Expiry < 24 horas
+Y  Precio_YES > $0.05 (no es ya muy barato)
+Y  No hay stink bid activo en este mercado
+Y  Active_Stink_Bids < MAX_CONCURRENT (10)
+→  COLOCAR STINK BID
+```
+
+#### Parámetros Mode 2
+| Parámetro | Valor | Descripción |
+|-----------|-------|-------------|
+| `stink_bid_min_price` | $0.02 | Precio mínimo del bid |
+| `stink_bid_max_price` | $0.05 | Precio máximo del bid |
+| `stink_bid_min_volume` | $50,000 | Volumen mínimo requerido |
+| `stink_bid_ttl_minutes` | 30 | Tiempo antes de rotar bid |
+| `max_active_stink_bids` | 10 | Máximo de bids concurrentes |
+| `stink_bid_stake` | $10 | Stake por stink bid |
+
+#### Flujo Mode 2
+
+**Fase 1: Colocación**
+```python
+# Calcular precio del bid basado en liquidez
+liquidity_factor = min(1.0, volume_24h / 200000)
+bid_price = min_price + (max_price - min_price) * liquidity_factor
+
+# Crear StinkBid
+stink_bid = StinkBid(
+    bid_price=bid_price,
+    target_exit=current_price * 0.9,
+    stake=10,
+    expires_at=now + 30min
+)
+```
+
+**Fase 2: Monitoreo de Fill**
+```python
+# En cada market update, verificar si el precio tocó nuestro bid
+if best_ask <= stink_bid.bid_price:
+    # ¡FILLED! 
+    fill_price = best_ask
+    exit_price = current_price  # Rebound price
+    profit = (exit_price / fill_price - 1) * stake
+    # ROI típico: 100-500%
+```
+
+**Fase 3: Rotación**
+```python
+# Cada 30 minutos, expirar bids no llenados
+if stink_bid.is_expired:
+    del active_stink_bids[bid_id]
+    # El mercado puede ser reconsiderado
+```
+
+#### Ejemplo de Fill
+
+```
+Mercado: "Will BTC hit $100k today?"
+Precio actual: $0.45
+Stink Bid colocado: $0.03
+
+[Flash Crash ocurre - whale vende en pánico]
+Best Ask cae a: $0.025
+
+✅ STINK BID FILLED @ $0.025
+→ Exit inmediato @ $0.35 (rebound)
+→ ROI: 1300%
+→ Profit: $10 → $140
+```
+
+---
+
+## 🎰 Estrategia C: Tail Betting
+
+**ID**: `TAIL_BETTING_V1`  
+**Archivo**: `src/trading/strategies/tail_strategy.py`
+
+### Concepto
+Apuestas de bajo costo ($2) en eventos con baja probabilidad pero alto multiplicador (25-1000x). Basado en el enfoque de @Spon.
+
+### Trigger
+```
+SI $0.001 < Precio_YES < $0.04
+Y  ML_Score > 55%
+→  APOSTAR $2
+```
+
+### ML Scoring
+El score se calcula basándose en:
+
+| Factor | Peso | Descripción |
+|--------|------|-------------|
+| Crypto keywords | +12% | bitcoin, ethereum, crypto |
+| Stock keywords | +8% | nvidia, tesla, apple |
+| AI keywords | +8% | ai, openai, gpt |
+| Sports keywords | -5% | nba, nfl, sports |
+| High multiplier (>500x) | +5% | Bonus por alto multiplicador |
+| High volume (>$100k) | +3% | Mercados más líquidos |
+
+### Parámetros
+| Parámetro | Valor | Descripción |
+|-----------|-------|-------------|
+| `max_price` | $0.04 | Precio máximo de entrada |
+| `min_price` | $0.001 | Precio mínimo de entrada |
+| `min_multiplier` | 25x | Multiplicador mínimo |
+| `min_ml_score` | 55% | Score ML mínimo |
+| `stake_size` | $2 | Stake fijo por apuesta |
+
+### Matemáticas del Tail Betting
+```
+100 apuestas × $2 = $200 invertido
+Multiplicador promedio: 50x
+Para break-even: necesitas 1 win (0.5% hit rate)
+Con 2% hit rate: 2 wins × $100 = $200 profit → +100% ROI
+```
+
+---
+
+## 🔧 Implementación Técnica
+
+### Base Strategy Pattern
+
+Todas las estrategias heredan de `BaseStrategy`:
+
+```python
+class BaseStrategy(ABC):
+    @abstractmethod
+    async def process_market(self, market: MarketData) -> Optional[TradeSignal]:
+        """Evalúa mercado y retorna señal si aplica."""
+        pass
+    
+    @abstractmethod
+    def get_config(self) -> Dict:
+        """Retorna configuración de la estrategia."""
+        pass
+```
+
+### TradeSignal Structure
+
+```python
+@dataclass
+class TradeSignal:
+    strategy_id: str          # "SNIPER_MICRO_V1"
+    signal_type: SignalType   # BUY, SELL, HOLD
+    condition_id: str         # Polymarket condition ID
+    outcome: str              # "YES" or "NO"
+    entry_price: float        # Precio de entrada
+    stake: float              # USD a invertir
+    confidence: float         # 0-1
+    expected_value: float     # EV calculado
+    trigger_reason: str       # "crash_drop_15%_vol_2.5x"
+    signal_data: Dict         # Metadata específica
+    snapshot_data: Dict       # Estado del mercado (para ML)
+```
+
+### Strategy Registry
+
+```python
+# Registro y ejecución paralela
+strategy_registry.register(ArbitrageStrategy())
+strategy_registry.register(SniperStrategy())
+strategy_registry.register(TailStrategy())
+
+# Procesar mercado con todas las estrategias
+signals = await strategy_registry.process_all(market_data)
+```
+
+---
+
+## 📈 Métricas por Estrategia
+
+El sistema trackea métricas independientes por estrategia:
+
+```sql
+SELECT 
+    strategy_id,
+    COUNT(*) as total_signals,
+    SUM(CASE WHEN status = 'RESOLVED_WIN' THEN 1 ELSE 0 END) as wins,
+    SUM(realized_pnl) as total_pnl
+FROM trades
+WHERE paper_mode = true
+GROUP BY strategy_id;
+```
+
+---
+
+## ⚠️ Riesgos por Estrategia
+
+| Estrategia | Riesgo Principal | Mitigación |
+|------------|------------------|------------|
+| Arbitrage | Datos desactualizados de PredictBase | Max spread 15%, verificación de timestamps |
+| Sniper (Crash) | False positives en caídas normales | Requiere volume spike confirmación |
+| Sniper (Stink) | Capital bloqueado sin fills | TTL de 30 min, rotación automática |
+| Tail | Alta tasa de pérdida (>95%) | Stake bajo ($2), diversificación |
+
+---
+
+## 🔄 Próximos Pasos
+
+1. **Backtesting**: Simular estrategias con datos históricos
+2. **XGBoost Training**: Entrenar modelo con `training_data` acumulada
+3. **Live Trading**: Activar con capital real después de validar paper results
+4. **WebSocket Integration**: Cambiar de polling a WebSocket para Sniper
