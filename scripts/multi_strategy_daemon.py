@@ -551,6 +551,7 @@ class MarketScanner:
 class SignalRecorder:
     """
     Records signals to database and JSON backup.
+    Thread-safe for async usage.
     """
     
     def __init__(self):
@@ -565,35 +566,41 @@ class SignalRecorder:
             except:
                 self._signals_today = []
     
-    def record(self, signal: TradeSignal) -> str:
+    async def record(self, signal: TradeSignal) -> str:
         """
-        Record a signal to database and JSON.
+        Record a signal to database and JSON (async-safe).
+        
+        Uses asyncio.to_thread() to run sync DB operations in a thread pool,
+        avoiding greenlet/async conflicts.
         
         Returns:
             Trade ID
         """
         trade_id = f"{signal.strategy_id}-{int(datetime.utcnow().timestamp())}"
         
-        # Save to database
+        # Save to database (run sync function in thread pool)
         if DB_AVAILABLE:
             try:
-                trade = record_trade(
+                # Run sync record_trade in a thread to avoid greenlet issues
+                trade = await asyncio.to_thread(
+                    record_trade,
                     strategy_id=signal.strategy_id,
                     condition_id=signal.condition_id,
                     outcome=signal.outcome,
                     entry_price=signal.entry_price,
                     stake=signal.stake,
-                    snapshot_data=signal.snapshot_data,
-                    signal_data=signal.signal_data,
+                    snapshot_data=signal.snapshot_data or {},
+                    signal_data=signal.signal_data or {},
                     paper_mode=True,
                     token_id=signal.token_id,
                     question=signal.question
                 )
                 trade_id = trade.trade_id
+                logger.debug(f"Trade saved to DB: {trade_id}")
             except Exception as e:
                 logger.error(f"DB record error: {e}")
         
-        # Save to JSON backup
+        # Save to JSON backup (sync, but fast)
         signal_dict = {
             "trade_id": trade_id,
             "strategy_id": signal.strategy_id,
@@ -886,8 +893,8 @@ class MultiStrategyOrchestrator:
                     
                     for signal in signals:
                         if signal and signal.signal_type == SignalType.BUY:
-                            # Record signal
-                            trade_id = self.recorder.record(signal)
+                            # Record signal (async to avoid greenlet issues)
+                            trade_id = await self.recorder.record(signal)
                             
                             results["signals"].append({
                                 "trade_id": trade_id,
