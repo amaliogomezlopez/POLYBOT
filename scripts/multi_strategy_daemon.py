@@ -105,14 +105,17 @@ except Exception as e:
 try:
     from src.trading.strategies import (
         strategy_registry,
-        InternalArbStrategy,  # NEW: Internal orderbook arbitrage
+        InternalArbStrategy,  # Legacy: Internal orderbook arbitrage
         SniperStrategy,
         TailStrategy,
         EsportsOracleStrategy,
         OracleStrategyRunner,
+        # NEW V2 STRATEGIES (from Whale Hunting research)
+        FlashSniperStrategy,
+        ContrarianNoStrategy,
     )
     STRATEGIES_AVAILABLE = True
-    logger.info("✅ Strategies available")
+    logger.info("✅ Strategies available (including V2: Flash Sniper, Contrarian NO)")
 except Exception as e:
     STRATEGIES_AVAILABLE = False
     logger.error(f"❌ Strategies not available: {e}")
@@ -811,7 +814,7 @@ class MultiStrategyOrchestrator:
             logger.error(f"Error recording ORACLE signal: {e}")
     
     def _register_strategies(self):
-        """Register all strategies."""
+        """Register all strategies including V2 (Flash Sniper, Contrarian NO)."""
         if not STRATEGIES_AVAILABLE:
             logger.error("Strategies not available!")
             return
@@ -819,7 +822,7 @@ class MultiStrategyOrchestrator:
         # Clear existing
         strategy_registry._strategies.clear()
         
-        # Create Internal ARB strategy (risk-free orderbook inefficiencies)
+        # Create Internal ARB strategy (legacy, risk-free orderbook inefficiencies)
         self._internal_arb_strategy = InternalArbStrategy(
             paper_mode=self.paper_mode, 
             stake_size=50.0,
@@ -827,17 +830,40 @@ class MultiStrategyOrchestrator:
             min_cost=0.90,  # Avoid dead markets
         )
         
-        # Register each strategy
+        # V2 STRATEGIES (from Whale Hunting research)
+        self._flash_sniper = FlashSniperStrategy(
+            paper_mode=self.paper_mode,
+            stake_size=100.0,  # $100 per leg
+            min_spread=0.002,  # 0.2% minimum
+            max_combined_cost=0.998,
+            max_daily_trades=500,  # High frequency
+        )
+        
+        self._contrarian_no = ContrarianNoStrategy(
+            paper_mode=self.paper_mode,
+            stake_size=200.0,  # $200 base (high conviction)
+            min_yes_price=0.08,
+            max_yes_price=0.40,
+            max_daily_trades=10,  # Low frequency (tsybka style)
+        )
+        
+        # Register all strategies
         strategies = [
+            # Legacy
             self._internal_arb_strategy,
             SniperStrategy(paper_mode=self.paper_mode, stake_size=5.0),
             TailStrategy(paper_mode=self.paper_mode, stake_size=2.0),
+            # V2 (Whale Hunting)
+            self._flash_sniper,
+            self._contrarian_no,
         ]
         
         for s in strategies:
             strategy_registry.register(s)
             s._is_running = True
             logger.info(f"   📊 {s.strategy_id}: {s.get_config()}")
+        
+        logger.info(f"✅ Registered {len(strategies)} strategies (including 2 V2)")
     
     async def _check_internal_arb(self, market: MarketData) -> Optional[TradeSignal]:
         """

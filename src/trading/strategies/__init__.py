@@ -4,10 +4,12 @@
 Multi-strategy trading system with Strategy Pattern.
 
 Strategies:
-- InternalArbStrategy: Internal arbitrage (orderbook inefficiencies) [NEW]
+- InternalArbStrategy: Internal arbitrage (orderbook inefficiencies)
 - SniperStrategy: Microstructure sniper (panic drop rebounds)
 - TailStrategy: Tail betting (low price, high multiplier)
 - EsportsOracleStrategy: Esports live betting with Riot API
+- FlashSniperStrategy: Ultra-HFT for 15-min crypto flash markets [NEW v2]
+- ContrarianNoStrategy: "Nothing Ever Happens" mean reversion [NEW v2]
 
 DEPRECATED:
 - ArbitrageStrategy: Cross-exchange arbitrage (PredictBase has 0 liquidity)
@@ -17,16 +19,10 @@ Usage:
         InternalArbStrategy,
         SniperStrategy, 
         TailStrategy,
+        FlashSniperStrategy,
+        ContrarianNoStrategy,
         strategy_registry
     )
-    
-    # Register strategies
-    strategy_registry.register(InternalArbStrategy())
-    strategy_registry.register(SniperStrategy())
-    strategy_registry.register(TailStrategy())
-    
-    # Process market
-    signals = await strategy_registry.process_all(market_data)
 """
 
 from .base_strategy import (
@@ -38,7 +34,7 @@ from .base_strategy import (
     strategy_registry
 )
 
-# ACTIVE STRATEGIES
+# ACTIVE STRATEGIES (Legacy)
 from .internal_arb import (
     InternalArbStrategy,
     InternalArbDetector,
@@ -56,9 +52,9 @@ from .esports_oracle import (
     StrategyState,
 )
 
-# DEPRECATED - PredictBase has 0 liquidity (Jan 2026 analysis)
-# ArbitrageStrategy removed - it depended on predictbase_client which is archived
-# If you need it, import directly: from .arbitrage_strategy import ArbitrageStrategy
+# NEW V2 STRATEGIES (from Whale Hunting research)
+from .flash_sniper import FlashSniperStrategy
+from .contrarian_no import ContrarianNoStrategy
 
 __all__ = [
     # Base
@@ -69,12 +65,16 @@ __all__ = [
     'StrategyRegistry',
     'strategy_registry',
     
-    # Active Strategies
+    # Legacy Strategies
     'InternalArbStrategy',
     'SniperStrategy',
     'TailStrategy',
     'EsportsOracleStrategy',
     'OracleStrategyRunner',
+    
+    # NEW V2 Strategies
+    'FlashSniperStrategy',
+    'ContrarianNoStrategy',
     
     # Internal ARB utilities
     'InternalArbDetector',
@@ -88,3 +88,4 @@ __all__ = [
     'GameEvent',
     'StrategyState',
 ]
+
