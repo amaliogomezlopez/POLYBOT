@@ -1,0 +1,39 @@
+[Unit]
+Description=Polymarket Multi-Strategy Trading Bot
+Documentation=https://github.com/amaliogomezlopez/POLYBOT
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/polymarket-bot
+
+# Environment
+EnvironmentFile=/opt/polymarket-bot/.env
+
+# Multi-strategy daemon with 60s interval
+ExecStart=/opt/polymarket-bot/venv/bin/python /opt/polymarket-bot/scripts/multi_strategy_daemon.py --daemon --interval 60
+
+# Restart policy
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+# Logging
+StandardOutput=append:/opt/polymarket-bot/logs/multi_strategy.log
+StandardError=append:/opt/polymarket-bot/logs/multi_strategy.log
+
+# Security
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/polymarket-bot
+
+# Resource limits (512MB VPS compatible)
+MemoryMax=400M
+CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target
